@@ -1066,6 +1066,7 @@ footer {
 }
 
 .places {
+	
 	background-color: #lib.colors[blueDark];
 	color: #fff;
 
@@ -1122,17 +1123,31 @@ footer {
 	}
 
 	.image {
+		border-radius: 0 0 0 20px;
+		background-color: #lib.colors[blue];
+
+		.glider-slide {
+			margin: 0;
+		}
+
+		.glider-prev, .glider-next {
+			color: #fff;
+			left: 20px;
+		}
+
+		.glider-next {
+			right: 20px;
+			left: auto;
+		}
+
 		img {
 			width: 100%;
 			height: auto;
 		}
 
 		.legend {
-			background-color: #lib.colors[blue];
 			padding: 20px;
 			font-size: .9rem;
-			border-radius: 0 0 0 20px;
-			margin-top: -5px;
 
 			strong {
 				font-size: 1.2rem;
@@ -1146,14 +1161,28 @@ footer {
 
 	@media (min-width: 1100px) {
 		.container {
-			display: grid;
-	    grid-template-columns: 1fr 1fr;
-	    max-width: 1500px;
+			display: flex;
+	    max-width: 1920px;
 	    align-items: center;
+
+	    .image {
+	    	width: 50%;
+
+	    	.img {
+	    		height: 600px;
+	    		object-fit: cover;
+
+	    		img {
+	    			height: 100%;
+	    			object-fit: cover;
+	    		}
+	    	}
+	    }
 		}
 
 		.content {
 			padding: 0 10% 0 15%;
+			width: 50%;
 		}
 	}
 }

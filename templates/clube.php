@@ -85,8 +85,20 @@
 					<a class="btn" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
 				</div>
 				<div class="image">
-					<img src="<?php the_sub_field('imagem') ?>"/>
-					<div class="legend"><?php the_sub_field('legenda_da_imagem'); ?></div>
+					<div class="glider-contain">
+				    	<div class="where">
+					    	<?php if( have_rows('carousel') ): ?>
+					    		<?php while( have_rows('carousel') ): the_row(); ?>
+					    			<div>
+										<div class="img"><img src="<?php the_sub_field('imagem') ?>"/></div>
+										<div class="legend"><?php the_sub_field('legenda_da_imagem'); ?></div>
+									</div>
+					    		<?php endwhile; ?>
+					    	<?php endif; ?>				    	
+					    </div>
+					    <button class="glider-prev whr">&lsaquo;</button>
+				        <button class="glider-next whr">&rsaquo;</button>
+					</div>
 				</div>
 			<?php endwhile; else : endif; ?>
 		</div>

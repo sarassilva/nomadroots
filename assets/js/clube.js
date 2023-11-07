@@ -131,6 +131,21 @@ window.addEventListener('load',function(){
 	});
 });
 
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.where'), {
+	  // Mobile-first defaults
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  scrollLock: false,
+	  draggable: true,
+	  rewind: true,
+	  arrows: {
+	    prev: '.glider-prev.whr',
+	    next: '.glider-next.whr'
+	  },
+	});
+});
+
 const faqBox = document.querySelector('.faqBox');
 function faq() {
 	faqBox.classList.toggle('open');
