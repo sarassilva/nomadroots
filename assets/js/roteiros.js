@@ -111,31 +111,6 @@ window.addEventListener('load',function(){
 });
 
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.stps'), {
-	    slidesToShow: 1.5,
-	    slidesToScroll: 1,
-	    itemWidth: 400,
-	    draggable: true,
-	    scrollLock: false,
-	    dots: false,
-	    rewind: true,
-	    arrows: false,
-	    responsive: [
-		{
-	      // screens greater than >= 1024px
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 2.5,
-	        slidesToScroll: 1,
-	        itemWidth: 150,
-	        duration: 0.25
-	      }
-	    }
-	  ]
-	});
-});
-
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.testimonial'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
@@ -160,4 +135,33 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
+});
+
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.galeria'), {
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    draggable: true,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
+	    arrows: {
+		    prev: '.glider-prev.gllr',
+		    next: '.glider-next.gllr'
+		  },
+	});
+});
+
+
+//menu collapsed
+$(function () { 
+	$("button.number").click(function() {        
+	    $(this).next().toggle();
+
+	    if($('.content:visible').length > 1) {
+	        $('.content:visible').hide();
+	        $(this).next().show();
+	    }
+	}); 
+
 });

@@ -202,7 +202,38 @@
 			<h2><?php the_field('titulo_passo') ?></h2>
 			<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
 
-			
+			<div class="hold">
+				<div class="gallery">
+					<div class="glider-contain">
+						<div class="galeria">
+					    	<?php if( have_rows('imagens') ): ?>
+					    		<?php while( have_rows('imagens') ): the_row(); ?>
+					    			<div>
+					    				<img src="<?php the_sub_field('imagem') ?>" />
+					    			</div>
+					    		<?php endwhile; ?>
+					    	<?php endif; ?>				    	
+					    </div>
+					    <button class="glider-prev gllr">&lsaquo;</button>
+		        		<button class="glider-next gllr">&rsaquo;</button>
+					</div>
+				</div>
+
+				<div class="stps">
+			    	<?php if( have_rows('passo_a_passo') ): ?>
+			    		<?php while( have_rows('passo_a_passo') ): the_row(); ?>
+			    			<div class="flex">
+			    				<button class="number">
+		    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
+		    					</button>
+		    					<div class="content">
+			    					<?php the_sub_field('texto'); ?>
+			    				</div>
+			    			</div>
+			    		<?php endwhile; ?>
+			    	<?php endif; ?>				    	
+			    </div>
+			</div>
 		</div>
 	</section>
 
