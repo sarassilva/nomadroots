@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Clearface';
+    src: url('../fonts/Clearface-Regular.woff2') format('woff2'),
+        url('../fonts/Clearface-Regular.woff') format('woff'),
+        url('../fonts/Clearface-Regular.svg#Clearface-Regular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Book.woff') format('woff'),
+        url('../fonts/FuturaLT-Book.svg#FuturaLT-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura LT';
+    src: url('../fonts/FuturaLT-Light.woff2') format('woff2'),
+        url('../fonts/FuturaLT-Light.woff') format('woff'),
+        url('../fonts/FuturaLT-Light.svg#FuturaLT-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/Futura-Medium.woff2') format('woff2'),
+        url('../fonts/Futura-Medium.woff') format('woff'),
+        url('../fonts/Futura-Medium.svg#Futura-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Planc';
+    src: url('../fonts/Planc-Medium.woff2') format('woff2'),
+        url('../fonts/Planc-Medium.woff') format('woff'),
+        url('../fonts/Planc-Medium.svg#Planc-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
