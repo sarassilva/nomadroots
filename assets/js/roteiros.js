@@ -158,8 +158,8 @@ $(function () {
 	$("button.number").click(function() {        
 	    $(this).next().toggle();
 
-	    if($('.content:visible').length > 1) {
-	        $('.content:visible').hide();
+	    if($('.contnt:visible').length > 1) {
+	        $('.contnt:visible').hide();
 	        $(this).next().show();
 	    }
 	}); 

@@ -226,7 +226,7 @@
 			    				<button class="number">
 		    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
 		    					</button>
-		    					<div class="content">
+		    					<div class="contnt">
 			    					<?php the_sub_field('texto'); ?>
 			    				</div>
 			    			</div>

@@ -39,7 +39,7 @@
 							    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 						        <div>
-						        	<a class="interno" href="<?php the_permalink(); ?>">
+						        	<a class="interno">
 						        		<div class="img">
 						            			<?php  if ( has_post_thumbnail() ) {
 											    the_post_thumbnail();
@@ -151,7 +151,7 @@
 						    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 					        <div>
-					        	<a class="interno" href="<?php the_permalink(); ?>">
+					        	<a class="interno">
 					        		<div class="img">
 					            			<?php  if ( has_post_thumbnail() ) {
 										    the_post_thumbnail();
@@ -189,7 +189,7 @@
 						    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 					        <div>
-					        	<a class="interno" href="<?php the_permalink(); ?>">
+					        	<a class="interno">
 					        		<div class="img">
 					            			<?php  if ( has_post_thumbnail() ) {
 										    the_post_thumbnail();
