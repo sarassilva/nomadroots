@@ -33,6 +33,13 @@
 							    $new_loop = new WP_Query( array(
 							    'post_type' => 'roteiro',
 							    'posts_per_page' => 10,
+							    'tax_query' => array(
+						            array(
+						                'taxonomy' => 'destino',
+						                'field' => 'slug',
+						                'terms' => array( 'destaque' ),
+						            ),
+						        ),
 							    ) ); ?>
 
 							    <?php if ( $new_loop->have_posts() ) : ?>

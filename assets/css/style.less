@@ -107,7 +107,7 @@ a {
   letter-spacing: 3px;
   border: 0;
   border-radius: 5px;
-  font-size: .6rem;
+  font-size: .7rem;
   display: inline-block;
   cursor: pointer;
 
@@ -193,19 +193,27 @@ header {
 
 			li {
 				list-style: none;
-			}
-		}
 
-		a {
-			color:#lib.colors[greenDark];
-			font-family: 'Clearface';
-			font-size: 1.5rem;
+				a {
+					color:#lib.colors[greenDark];
+					font-family: 'Clearface';
+					font-size: 1.5rem;
 
-			&:hover {
-				text-decoration: none;
-				background-color: #lib.colors[orange];
+					&:hover {
+						text-decoration: none;
+						background-color: #lib.colors[orange];
+					}
+				}
+
+				&.club {
+					a {
+						&:hover {
+							background-color: #lib.colors[blue];
+						}
+					}
+				}
 			}
-		}
+		}		
 	}
 
 	.logo { 
@@ -380,7 +388,7 @@ header {
 		}
 
 		p {
-			padding: 12px 25px;
+			padding: 20px 25px;
 			margin: auto;
 			font-family: 'Clearface';
 			font-size: 1.1rem;
@@ -724,7 +732,7 @@ header {
 			 	font-weight: 600;
 		    letter-spacing: 3px;  			    
 		    font-size: 0.6rem;
-		    max-width: 655px;
+		    max-width: 500px;
 
 				&[type=submit] {
 					background-color: #lib.colors[orange];
@@ -785,8 +793,8 @@ header {
 
 			.aspas {
 				background-image: url(../images/aspas1.webp);
-				width: 43px;
-    		height: 37px;
+				width: 39px;
+    		height: 36px;
 				background-size: 100%;
 				margin: 0 auto 30px;
 				background-repeat: no-repeat;
@@ -830,6 +838,12 @@ footer {
 			li {
 				list-style: none;				
 			}
+		}
+
+		.flex {
+			display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
 		}
 
 		img {
@@ -932,7 +946,7 @@ footer {
 		}
 
 		.content { 
-			max-width: 280px;
+			max-width: 300px;
 	    margin: auto;
 	    display: flex;
 	    flex-direction: column;
@@ -1065,8 +1079,7 @@ footer {
 	}
 }
 
-.places {
-	
+.places {	
 	background-color: #lib.colors[blueDark];
 	color: #fff;
 
@@ -1087,6 +1100,12 @@ footer {
 		    top: -13px;
 		    left: -5px;
 		    background-repeat: no-repeat;
+			}
+
+			@media (min-width: 1400px && max-width: 1100px) {
+				&::before {
+					display: none;
+				}
 			}
 		}
 	}
@@ -1301,6 +1320,8 @@ footer {
 
 		p.center {
 			text-align: center;
+			font-family: 'Futura';
+			letter-spacing: 1px;
 		}
 	}
 
@@ -1321,6 +1342,15 @@ footer {
 	    align-items: center;
 	    flex-direction: column;
 	    gap: 10px;
+
+	    ::placeholder {
+			  color: #lib.colors[blue];
+			  opacity: 1; /* Firefox */
+			}
+
+			::-ms-input-placeholder { /* Edge 12 -18 */
+			  color: #lib.colors[blue];
+			}
 
 	    input {
 	    	border: 0;
@@ -1413,12 +1443,13 @@ footer {
     gap: 20px;
     align-items: center;
     border-radius: 15px;
+    width: 100%;
 
     .value {
-    	font-size: 1rem;
+    	font-size: 1.1rem;
 
     	span {
-    		font-size: 2rem;
+    		font-size: 4rem;
     		#lib.titleS1();
     	}
     }
@@ -1436,15 +1467,9 @@ footer {
 		}
 
 		.price {
-			width: 280px;
+			width: 400px;
     	justify-content: center;
     	padding: 40px 0;
-
-    	.value {
-    		span {
-	    		font-size: 2.5rem;
-	    	}
-    	}
 		}
 	}
 }
@@ -1490,6 +1515,7 @@ footer {
 			.btns {
 				display: flex;
 				gap: 20px;
+				margin-top: 45px;
 			}
 		}
 
@@ -1517,6 +1543,10 @@ footer {
 		top: 0;
 		border-radius: 10px;
 		transition: all .2s linear;
+		bottom: 0;
+    display: block;
+    height: fit-content;
+
 
 		ul {
 			padding: 0;
@@ -1757,8 +1787,8 @@ footer {
 
 			.aspas {
 				background-image: url(../images/aspa3.webp);
-				width: 55px;
-    		height: 47px;
+				width: 39px;
+    		height: 36px;
 				background-size: 100%;
 				margin: 0 auto 30px;
 			}
