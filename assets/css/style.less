@@ -1117,7 +1117,13 @@ footer {
 		    background-repeat: no-repeat;
 			}
 
-			@media (min-width: 1400px) and (max-width: 1100px) and (max-width: 420px) {
+			@media (max-width: 420px) {
+				&::before {
+					display: none;
+				}
+			}
+
+			@media (min-width: 1400px) and (max-width: 1100px) {
 				&::before {
 					display: none;
 				}
