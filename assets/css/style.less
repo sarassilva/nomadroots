@@ -2197,18 +2197,29 @@ footer {
 		    display: flex;
 		    justify-content: flex-start;
 		    align-items: end;
-		    overflow-y: scroll;
-	    }
+		    transition: all .2s linear;
 
-	    h4 {
-				#lib.titleS2();
-				color: #lib.colors[beige];
-				margin: 0;
-				font-size: 2rem;
-	    }
+		    h4 {
+					#lib.titleS2();
+					color: #lib.colors[beige];
+					margin: 0;
+					font-size: 2rem;
+		    }
 
-	    p {
-	    	display: none;
+		    p {
+		    	height: 0px;
+		    	visibility: hidden;
+		    }
+
+		    &:hover {
+		    	overflow-y: scroll;
+		    	transition: all .2s linear;
+
+		    	p {
+		    		height: auto;
+		    		visibility: visible;
+		    	}
+		    }
 	    }
 		}
 	}
