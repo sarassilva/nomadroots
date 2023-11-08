@@ -35,12 +35,14 @@
 			    	<?php if( have_rows('carousel_nomad') ): ?>
 			    		<?php while( have_rows('carousel_nomad') ): the_row(); ?>
 			    			<div class="content">
-								<h4><?php the_field('titulo') ?></h4>
-								<p><?php the_field('texo') ?></p>
+								<h4><?php the_sub_field('titulo') ?></h4>
+								<p><?php the_sub_field('texo') ?></p>
 			    			</div>
 			    		<?php endwhile; ?>
 			    	<?php endif; ?>				    	
 			    </div>
+			    <button class="glider-prev nc">&lsaquo;</button>
+			    <button class="glider-next nc">&rsaquo;</button>
 			</div>
 
 		</div>
@@ -48,5 +50,9 @@
 
 
 </main>
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/sobre.js"></script>
 
 <?php get_footer(); ?>
