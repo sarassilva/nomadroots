@@ -165,7 +165,7 @@
 		        while( have_rows('clube_nomad') ) : the_row();
 		    ?>
 		    	<div class="content">
-		    		<h2><?php the_sub_field('titulo'); ?></h2>
+		    		<h2><?php the_sub_field('titulo'); ?><span></span></h2>
 					<?php the_sub_field('mini_texto'); ?>
 		    	</div>
 
