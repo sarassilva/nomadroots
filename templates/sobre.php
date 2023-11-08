@@ -35,8 +35,10 @@
 			    	<?php if( have_rows('carousel_nomad') ): ?>
 			    		<?php while( have_rows('carousel_nomad') ): the_row(); ?>
 			    			<div class="content">
-								<h4><?php the_sub_field('titulo') ?></h4>
-								<p><?php the_sub_field('texo') ?></p>
+			    				<div class="scroll">
+									<h4><?php the_sub_field('titulo') ?></h4>
+									<p><?php the_sub_field('texo') ?></p>
+								</div>
 			    			</div>
 			    		<?php endwhile; ?>
 			    	<?php endif; ?>				    	

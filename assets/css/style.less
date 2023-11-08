@@ -2161,7 +2161,6 @@ footer {
 		#video{
 		  object-fit: initial;
 		  width: 100%;
-		  height: 600px;
 		}
 	}
 
@@ -2170,8 +2169,6 @@ footer {
 		padding: 60px 0;
 
 		.container {
-			width: 100%;
-			padding-left: 15%;
 		}
 
 		h2 {
@@ -2181,13 +2178,38 @@ footer {
 		}
 
 		h3 {
-			#lib.titleS1();
-			color: #lib.colors[green];
+			font-weight: 500;
+	    color: #cdc1a2;
+	    margin: 15px 0 40px;
+	    font-family: 'Planc';
+	    font-size: 1.3rem;
 		}
 
 		.content {
 			background-color: #lib.colors[green];
 			color: #lib.colors[beige];
+			padding: 25px 30px;
+	    border-radius: 14px;
+	    
+
+	    .scroll {
+	    	height: 400px !important;
+		    display: flex;
+		    justify-content: flex-start;
+		    align-items: end;
+		    overflow-y: scroll;
+	    }
+
+	    h4 {
+				#lib.titleS2();
+				color: #lib.colors[beige];
+				margin: 0;
+				font-size: 2rem;
+	    }
+
+	    p {
+	    	display: none;
+	    }
 		}
 	}
 }
