@@ -2255,13 +2255,15 @@ footer {
 		    h4 {
 					#lib.titleS2();
 					color: #lib.colors[beige];
-					margin: 0;
-					font-size: 2rem;
+			    margin: auto auto 0 0;
+			    font-size: 2.2rem;
+			    width: 250px;
 		    }
 
 		    p {
 		    	height: 0px;
 		    	visibility: hidden;
+		    	transition: all .2s linear;
 		    }
 
 		    &:hover {
@@ -2271,6 +2273,7 @@ footer {
 		    	p {
 		    		height: auto;
 		    		visibility: visible;
+		    		transition: all .2s linear;
 		    	}
 		    }
 	    }
