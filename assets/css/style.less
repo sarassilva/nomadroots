@@ -318,7 +318,8 @@ header {
 	#lib.bgOrange();
 	#lib.borderRound();
 	text-align: center;
-	padding: 60px 0;	
+	padding: 60px 0;
+	font-size: 1.1rem;
 
 	h2 {
 		#lib.titleS1();
@@ -354,6 +355,7 @@ header {
 	z-index: 99;
 	position: relative;
 	background-color: #lib.colors[beige];
+	font-size: 1.1rem;
 
 	h2 {
 		#lib.titleS2();
@@ -673,8 +675,6 @@ header {
 			display: flex;
 			gap: 40px;
 			align-items: center;
-			max-width: 1000px;
-
 		}
 
 		.content {
@@ -753,24 +753,31 @@ header {
 
 	h3 {
 		#lib.titleS1();
-		font-size: 2.3rem;
+		font-size: 2.2rem;
 		margin: 0;
 	}
 
 	@media (min-width: 1024px) {
 		.container {
 			display: flex;
+			gap: 60px;
 		}
 
 		.image {
-			width: 600px;
-			height: 400px;
+			width: 560px;
+			height: 320px;
+		}
+
+		p {
+			max-width: 400px;
+    	margin-left: auto;
 		}
 
 		.content {
-			width: calc(100% - 600px);
-			padding: 0 10% 0 5%;
+			width: calc(100% - 620px);
+			padding: 0 0 0 5%;
 			text-align: right;
+			font-size: 1.1rem;
 
 			.mc4wp-form-fields {
 				align-items: end;
@@ -1908,7 +1915,6 @@ footer {
 	.nomads {
 		color: #lib.colors[greenDark];
 		background-color: #lib.colors[orangeLight];
-		font-size: 1.1rem;
 
 		h3 {
     	#lib.titleS1();
@@ -2154,7 +2160,6 @@ footer {
 	.nomads {
 		background-color: #lib.colors[beige];
 		color: #lib.colors[greenDark];
-		font-size: 1.1rem;
 	}
 
 	.video {
