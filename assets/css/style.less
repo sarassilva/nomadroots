@@ -1423,7 +1423,8 @@ footer {
 .clubeN {
 	background-color: #lib.colors[blueDark];
 	padding: 60px 0;
-	color: #fff;	
+	color: #fff;
+	font-size: 1.1rem;
 
 	.container {
 		display: flex;
@@ -1436,11 +1437,11 @@ footer {
 	h2 {
 		#lib.titleS2();
 		color: #lib.colors[beige];
-		display: flex;
-    align-items: center;
+		display: flex;    
     gap: 10px;
+    flex-direction: column;
 
-		span {
+		span.clubNomadLogo {
 			background-image: url('../images/clubnomad.webp');
 	    background-repeat: no-repeat;
 	    background-size: 100%;
@@ -1460,11 +1461,11 @@ footer {
     width: 100%;
 
     .value {
-    	font-size: 1.1rem;
+    	font-size: 1.2rem;
 
-    	span {
-    		font-size: 4rem;
+    	span {    		
     		#lib.titleS1();
+    		font-size: 4rem;
     	}
     }
 	}
@@ -1484,6 +1485,13 @@ footer {
 			width: 400px;
     	justify-content: center;
     	padding: 40px 0;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		h2 {
+			flex-direction: row;
+			align-items: center;
 		}
 	}
 }
