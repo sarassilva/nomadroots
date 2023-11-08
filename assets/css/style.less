@@ -2251,6 +2251,8 @@ footer {
 		    justify-content: flex-start;
 		    align-items: end;
 		    transition: all .2s linear;
+		    flex-direction: column;
+		    overflow: hidden;
 
 		    h4 {
 					#lib.titleS2();
@@ -2264,6 +2266,7 @@ footer {
 		    	height: 0px;
 		    	visibility: hidden;
 		    	transition: all .2s linear;
+		    	transform: translateY(20px);
 		    }
 
 		    &:hover {
@@ -2274,9 +2277,33 @@ footer {
 		    		height: auto;
 		    		visibility: visible;
 		    		transition: all .2s linear;
+		    		transform: translateY(0);
 		    	}
 		    }
 	    }
 		}
 	}
 }
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #0d2605 #d3c2a2;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #d3c2a2;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0d2605;
+    border-radius: 1px;
+    border: 0px solid #ffffff;
+  }
