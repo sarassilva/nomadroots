@@ -12,7 +12,13 @@
 			<h1><?php the_field('titulo_h1') ?></h1>
 		</div>
 	</section>
-	
+
+	<section class="nomads">
+		<div class="container">
+			<?php the_field('descricao') ?>      		
+		</div>
+	</section>
+
 </main>
 
 <?php get_footer(); ?>
