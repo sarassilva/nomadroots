@@ -2355,21 +2355,54 @@ footer {
 
 	.houseNomad {
 		width: 100%;
-		padding: 100px 0;
+		padding: 200px 0;
 		background-size: cover;
 		color: #lib.colors[beige];
+		font-size: 1.1rem;
+		background-position: center;
 
 		h3 {
 			#lib.titleS2();
+			margin: 0 auto 45px;
 		}
+
+		@media (min-width: 1200px) {
+			.texto {
+				max-width: 600px;
+			}
+		}
+	}
+
+	.midia {
+		background-color: #lib.colors[blue];
+		padding: 60px 0;
 	}
 
 	.partners {
 		background-color: #lib.colors[beigeMedium];
 		padding: 60px 0;
+
+		h3 {
+			display: none;
+		}
+
+		h4 {
+			#lib.titleS2();
+		}
+
+		.texto {
+
+		}
 	}
 }
 
+.page-template-sobre {
+	footer {
+		.partners {
+			display: none;
+		}
+	}
+}
 
 
 

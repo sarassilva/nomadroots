@@ -95,8 +95,8 @@
 
 	<section class="partners">
 		<div class="container">
-			<h3><?php the_field('titulo_partnes') ?></h3>
-			<p><?php the_field('texto_partnes') ?></p>
+			<h4><?php the_field('titulo_partnes') ?></h4>
+			<div class="texto"><?php the_field('texto_partnes') ?></div>
 			<?php if(is_active_sidebar('wdg2')){ dynamic_sidebar('wdg2'); } ?>
 		</div>
 	</section>
