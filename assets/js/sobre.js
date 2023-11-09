@@ -1,6 +1,6 @@
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.nCarousel'), {
-	    slidesToShow: 1,
+	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
 	    itemWidth: 400,
 	    draggable: true,
