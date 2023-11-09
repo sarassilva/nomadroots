@@ -77,7 +77,7 @@
 		</div>
 	</section>
 
-	<section class="houseNomad" style="background-image('<?php the_field('imagem_casanomad') ?>')">
+	<section class="houseNomad" style="background-image: url('<?php the_field('imagem_casanomad') ?>')">
 		<div class="container">
 			<h3><?php the_field('titulo_casanomad') ?></h3>
 			<div class="texto">
