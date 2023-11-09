@@ -28,14 +28,24 @@ window.addEventListener('load',function(){
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.mCarousel'), {
-	    slidesToShow: 1,
-	    slidesToScroll: 1,
+	    slidesToShow: 1.5,
+	    slidesToScroll: 1.5,
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
 	    rewind: true,
 	    arrows: false,
 	    responsive: [
+	   	{
+	      // screens greater than >= 1024px
+	      breakpoint: 700,
+	      settings: {
+	        slidesToShow: 2.5,
+	        slidesToScroll: 1.5,
+	        itemWidth: 150,
+	        duration: 0.25
+	      }
+	    },
 		{
 	      // screens greater than >= 1024px
 	      breakpoint: 1024,
