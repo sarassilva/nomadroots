@@ -2251,9 +2251,10 @@ footer {
 		    display: flex;
 		    justify-content: flex-start;
 		    align-items: end;
-		    transition: all .2s linear;
+		    transition: all 1s linear;
 		    flex-direction: column;
 		    overflow: hidden;
+		    transform: translateY(33px);
 
 		    h4 {
 					#lib.titleS2();
@@ -2264,27 +2265,18 @@ footer {
 		    }
 
 		    p {
-		    	height: 0px;
-		    	visibility: hidden;
-		    	transition: all 1s linear;
-		    	transform: translateY(20px);
-		    	margin: 0;
+		    	color: #lib.colors[green];
+		    	display: none;
 		    }
 
 		    &:hover {
 		    	overflow-y: scroll;
-		    	transition: all 3s linear;
-
-		    	h4 {
-		    		margin-bottom: 20px;
-		    		transition: all 1s linear;
-		    	}
+		    	transition: all 1s linear;
+		    	transform: translateY(0);
 
 		    	p {
-		    		height: auto;
-		    		visibility: visible;
-		    		transition: all 1s linear;
-		    		transform: translateY(0);
+		    		color: #lib.colors[beige];
+		    		display: block;
 		    	}
 		    }
 	    }
