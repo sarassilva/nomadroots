@@ -58,6 +58,15 @@ window.addEventListener('load',function(){
 	        itemWidth: 150,
 	        duration: 0.25
 	      }
+	    }, {
+	      // screens greater than >= 1024px
+	      breakpoint: 1700,
+	      settings: {
+	        slidesToShow: 4.5,
+	        slidesToScroll: 1.5,
+	        itemWidth: 150,
+	        duration: 0.25
+	      }
 	    }
 	  ]
 	});
