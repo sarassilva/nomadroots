@@ -30,14 +30,11 @@ window.addEventListener('load',function(){
 	new Glider(document.querySelector('.mCarousel'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
-	    draggable: false,
+	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
 	    rewind: true,
-	    arrows: {
-	        prev: '.glider-prev.mN',
-	        next: '.glider-next.mN'
-	    },
+	    arrows: false,
 	    responsive: [
 		{
 	      // screens greater than >= 1024px

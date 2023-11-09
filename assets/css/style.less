@@ -2409,8 +2409,26 @@ footer {
 		.glider-next {
 		    right: 20px;
 		    left: auto;
-		    background-color: #lib.colors[blue];
-		    height: 100%;
+
+		}
+
+		@media (min-width: 1100px) {
+			.container {
+				display: flex;
+		    align-items: center;
+		    gap: 60px;
+		    justify-content: space-between;
+
+		    h3 {
+		    	width: 275px;
+    			margin: 0;
+		    }
+
+		    .glider-contain {
+		    	width: calc(100% - 335px);
+    			margin: 0;
+		    }
+			}
 		}
 	}
 
