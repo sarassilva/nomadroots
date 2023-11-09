@@ -30,7 +30,7 @@ window.addEventListener('load',function(){
 	new Glider(document.querySelector('.mCarousel'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
-	    draggable: true,
+	    draggable: false,
 	    scrollLock: false,
 	    dots: false,
 	    rewind: true,

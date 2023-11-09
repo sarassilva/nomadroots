@@ -107,6 +107,7 @@
 			    		<?php endwhile; ?>
 			    	<?php endif; ?>				    	
 			    </div>
+			    <button class="glider-prev mN">&lsaquo;</button>
 			    <button class="glider-next mN">&rsaquo;</button>
 			</div>
 		</div>
