@@ -28,7 +28,7 @@ window.addEventListener('load',function(){
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.mCarousel'), {
-	    slidesToShow: 'auto',
+	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    draggable: false,
 	    scrollLock: false,
