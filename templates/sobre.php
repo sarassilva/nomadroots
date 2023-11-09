@@ -46,11 +46,71 @@
 			    <button class="glider-prev nc">&lsaquo;</button>
 			    <button class="glider-next nc">&rsaquo;</button>
 			</div>
-
 		</div>
 	</section>
 
+	<section class="nomadTeam">
+		<div class="container">
+			<h2><?php the_field('titulo_time') ?> </h2>
+			<h3><?php the_field('subtitulo_time') ?> </h3>
 
+			<div class="glider-contain">
+		    	<div class="tCarousel">
+			    	<?php if( have_rows('time_nomad') ): ?>
+			    		<?php while( have_rows('time_nomad') ): the_row(); ?>
+			    			<div class="content">
+			    				<div class="scroll">
+			    					<div class="image">
+			    						<img src="<?php the_sub_field('imagem') ?>" />
+			    					</div>
+									<div class="name"><?php the_sub_field('nome') ?></div>
+									<div class="cargo"><?php the_sub_field('cargo') ?></div>
+									<div class="bio"><?php the_sub_field('descricao') ?></div>
+								</div>
+			    			</div>
+			    		<?php endwhile; ?>
+			    	<?php endif; ?>				    	
+			    </div>
+			    <button class="glider-prev tN">&lsaquo;</button>
+			    <button class="glider-next tN">&rsaquo;</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="houseNomad" style="background-image('<?php the_field('imagem_casanomad') ?>')">
+		<div class="container">
+			<h3><?php the_field('titulo_casanomad') ?></h3>
+			<div class="texto">
+				<?php the_field('texto_casanomad') ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="midia">
+		<div class="container">
+		</div>
+	</section>
+
+	<section class="partners">
+		<div class="container">
+			<h3><?php the_field('titulo_partnes') ?></h3>
+			<p><?php the_field('texto_partnes') ?></p>
+			<?php if(is_active_sidebar('wdg2')){ dynamic_sidebar('wdg2'); } ?>
+		</div>
+	</section>
+
+	<section class="contact">
+		<div class="container">	
+	        <div class="content">
+	        	<h3><?php the_field('titulo_ct') ?></h3>
+		        <p><?php the_field('texto') ?></p>
+		        <a href="<?php the_field('link') ?>" title="" target="_blank" class="btn"><?php the_field('botao') ?></a>
+		    </div>
+		    <div class="image">
+        		<img src="<?php the_field('imagem_ct') ?>" alt="NomadRoots" />
+        	</div>
+		</div>
+	</section>
 </main>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />

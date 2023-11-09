@@ -2246,7 +2246,7 @@ footer {
 	    
 
 	    .scroll {
-	    	height: 400px !important;
+	    	height: 300px;
 		    display: flex;
 		    justify-content: flex-start;
 		    align-items: end;
@@ -2259,24 +2259,31 @@ footer {
 					color: #lib.colors[beige];
 			    margin: auto auto 0 0;
 			    font-size: 2.2rem;
-			    width: 250px;
+			    width: 200px;
+			    transform: translateY(10px);
+			    transition: all 3s linear;
 		    }
 
 		    p {
 		    	height: 0px;
 		    	visibility: hidden;
-		    	transition: all .2s linear;
+		    	transition: all 3s linear;
 		    	transform: translateY(20px);
 		    }
 
 		    &:hover {
 		    	overflow-y: scroll;
-		    	transition: all .2s linear;
+		    	transition: all 3s linear;
+
+		    	h4 {
+		    		transform: translateY(0px);
+		    		transition: all 3s linear;
+		    	}
 
 		    	p {
 		    		height: auto;
 		    		visibility: visible;
-		    		transition: all .2s linear;
+		    		transition: all 3s linear;
 		    		transform: translateY(0);
 		    	}
 		    }
@@ -2286,8 +2293,6 @@ footer {
 }
 
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
   * {
     scrollbar-width: thin;
     scrollbar-color: #0d2605 #d3c2a2;
