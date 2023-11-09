@@ -59,7 +59,7 @@
 			    	<?php if( have_rows('time_nomad') ): ?>
 			    		<?php while( have_rows('time_nomad') ): the_row(); ?>
 			    			<div class="content">
-			    				<div class="scroll">
+			    				<div class="content">
 			    					<div class="image">
 			    						<img src="<?php the_sub_field('imagem') ?>" />
 			    					</div>
