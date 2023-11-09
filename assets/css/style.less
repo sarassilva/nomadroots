@@ -2393,6 +2393,13 @@ footer {
 
 		.image {
 			margin-bottom: 20px;
+			height: 200px;
+			object-fit: cover;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 
 		h3 {
@@ -2411,8 +2418,14 @@ footer {
 		}
 
 		.glider-next {
-		    right: 20px;
-		    left: auto;
+		  right: 0;
+	    left: auto;
+	    top: 0;
+	    color: #fff;
+	    height: 200px;
+	    padding: 0 40px;
+	    background: rgb(255,255,255);
+	    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0000006b 47%);
 		}
 
 		@media (min-width: 1100px) {

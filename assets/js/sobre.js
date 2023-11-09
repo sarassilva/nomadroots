@@ -44,7 +44,6 @@ window.addEventListener('load',function(){
 	        slidesToScroll: 1.5,
 	        itemWidth: 150,
 	        duration: 0.25
-	      }
 	    },
 		{
 	      // screens greater than >= 1024px
