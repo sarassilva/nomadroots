@@ -2266,7 +2266,9 @@ footer {
 
 		    p {
 		    	color: #lib.colors[green];
-		    	display: none;
+		    	height: 0;
+		    	margin: 0;
+		    	transition: all .2s linear;
 		    }
 
 		    &:hover {
@@ -2276,7 +2278,8 @@ footer {
 
 		    	p {
 		    		color: #lib.colors[beige];
-		    		display: block;
+		    		height: auto;
+		    		transition: all .2s linear;
 		    	}
 		    }
 	    }
@@ -2345,7 +2348,7 @@ footer {
 	    left: auto;
 	    height: 100%;
 	    top: 0;
-	    width: 200px;
+	    width: 160px;
 	    font-size: 60px;
 		}
 	}
