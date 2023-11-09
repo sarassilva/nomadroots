@@ -60,10 +60,10 @@
 			    		<?php while( have_rows('time_nomad') ): the_row(); ?>
 			    			<div class="content">
 			    				<div class="content">
-			    					<div class="hold">
-			    						<div class="image">
-				    						<img src="<?php the_sub_field('imagem') ?>" />
-				    					</div>
+			    					<div class="image">
+			    						<img src="<?php the_sub_field('imagem') ?>" />
+			    					</div>
+			    					<div class="hold">			    						
 										<div class="name"><?php the_sub_field('nome') ?></div>
 										<div class="cargo"><?php the_sub_field('cargo') ?></div>
 										<div class="bio"><?php the_sub_field('descricao') ?></div>
