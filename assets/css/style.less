@@ -80,6 +80,7 @@ body {
 	outline: 0;	
 	background-color: #lib.colors[beige];
 	font-weight: 400;
+	color: #162416;
 }
 
 p {
@@ -2255,6 +2256,7 @@ footer {
 		    flex-direction: column;
 		    overflow: hidden;
 		    transform: translateY(30px);
+		    padding-right:20px;
 
 		    h4 {
 					#lib.titleS2();
@@ -2375,6 +2377,12 @@ footer {
 	.midia {
 		background-color: #lib.colors[blue];
 		padding: 60px 0;
+
+		.container {
+			width: 100%;
+			max-width: 100%;
+			padding-left: 10%;
+		}
 	}
 
 	.partners {
@@ -2397,6 +2405,20 @@ footer {
     		font-family: 'Clearface';
 		    font-weight: 400;
 		    font-size: 1.6rem;
+    	}
+		}
+
+		.wp-block-columns {
+			display: grid;
+    	grid-template-columns: 1fr 1fr 1fr;
+
+    	@media (min-width: 700px) {
+    		grid-template-columns: 1fr 1fr 1fr 1fr;
+    	}
+
+    	@media (min-width: 1000px) {
+    		display: flex;
+    		align-items: center !important;
     	}
 		}
 	}

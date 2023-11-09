@@ -90,6 +90,25 @@
 
 	<section class="midia">
 		<div class="container">
+			<h3><?php the_field('titulo_midia') ?></h3>
+
+			<div class="glider-contain">
+		    	<div class="mCarousel">
+			    	<?php if( have_rows('materias') ): ?>
+			    		<?php while( have_rows('materias') ): the_row(); ?>
+			    			<div class="content">
+			    				<div class="content">
+			    					<div class="image">
+			    						<img src="<?php the_sub_field('imagem') ?>" />
+			    					</div>
+										<a href="<?php the_sub_field('link') ?>" title='<?php the_sub_field('titulo_da_materia') ?>'><?php the_sub_field('titulo_da_materia') ?></a>
+								</div>
+			    			</div>
+			    		<?php endwhile; ?>
+			    	<?php endif; ?>				    	
+			    </div>
+			    <button class="glider-next mN">&rsaquo;</button>
+			</div>
 		</div>
 	</section>
 
