@@ -11,11 +11,12 @@ divs.forEach((div, index) => {
     // Inicializa o Glider.js para cada div
     new Glider(div, {
         slidesToShow: 'auto',
-        slidesToScroll: 1,
-        itemWidth: 'auto',
-        scrollLock: false,
-        draggable: true,
-        rewind: true,
+	    slidesToScroll: 1,
+	    itemWidth: 400,
+	    draggable: true,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
         arrows: false,
     });
 });
