@@ -72,6 +72,10 @@
 					        	<button onclick="popup()" class="btn outline popup">Ver roteiro completo</button>
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        </div>
+
+					        <div class="roteiroPopup">
+					        	<?php the_field('roteiro'); ?>
+					        </div>
 		            	</div>
 		            </li>
 		
