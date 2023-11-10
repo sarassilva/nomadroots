@@ -54,8 +54,6 @@
 							    		<?php endwhile; ?>
 							    	<?php endif; ?>				    	
 							    </div>
-							    <button class="glider-prev">&lsaquo;</button>
-						        <button class="glider-next">&rsaquo;</button>
 							</div>
 
 		            	</div>
