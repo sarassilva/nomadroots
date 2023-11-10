@@ -1,3 +1,8 @@
+const arrows = document.querySelectorAll('.glider-prev, .glider-next');
+arrows.forEach((arrow, index) => {
+    arrow.classList.add(`seta-${index + 1}`);
+});
+
 
 window.addEventListener('load',function(){
 
@@ -17,7 +22,10 @@ window.addEventListener('load',function(){
 		    scrollLock: false,
 		    dots: false,
 		    rewind: true,
-	        arrows: false,
+	        arrows: {
+	        prev: '.glider-prev.seta-${index + 1}',
+	        next: '.glider-next.seta-${index + 1}'
+	    }
 	    });
 	});
 
