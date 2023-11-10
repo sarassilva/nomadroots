@@ -123,7 +123,7 @@ $terms = get_the_terms( $post->ID , 'status-da-viagem' );
 foreach ( $terms as $term ) {
   echo $term->slug;
 }
-    }?>
+    ?>
 														</span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
