@@ -21,8 +21,8 @@
                     draggable: true,
                     dots: ele.querySelector('.dots'),
                     arrows: {
-                        prev: ele.querySelector('.glider-prev'),
-                        next: ele.querySelector('.glider-next')
+                        prev: ele.parentNode.querySelector('.glider-prev'),
+                        next: ele.parentNode.querySelector('.glider-next')
                     }
                 });
             });
