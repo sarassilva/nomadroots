@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
         const glider = new Glider(div, {
             slidesToShow: 'auto',
             slidesToScroll: 1,
-            itemWidth: 800,
+            itemWidth: 900,
             draggable: true,
             scrollLock: false,
             dots: false,
