@@ -19,8 +19,10 @@
 });
 
 
-//collapsed
-$(document).on("click", ".verRoteiro", function(event){
-    event.preventDefault();
-    $(this).closest('.flex').next('.roteiro').toggle();
-}); 
+//menu collapsed
+$('.roteiro').hide();
+$('.verRoteiro').show();
+
+$('.verRoteiro').click(function() {
+  $(this).closest('.flex').next('.roteiro').Toggle();
+});
