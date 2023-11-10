@@ -119,9 +119,10 @@
 			    		<div class="content">
 			    			<span class="status">
 <?php   // Get terms for post
-  $terms = get_the_terms( get_the_ID(), 'status-da-viagem' );
-    if ( is_array( $terms ) ) {
-        //Manipulate array of WP_Term objects
+$terms = get_the_terms( $post->ID , 'status-da-viagem' );
+foreach ( $terms as $term ) {
+  echo $term->slug;
+}
     }?>
 														</span>
 			    			<h5><?php the_title(); ?></h5>
