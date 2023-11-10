@@ -43,7 +43,7 @@
 		            <li>
 		            	<div class="flex">
 		            	<div class="carousel">
-		            		<span><?php the_field('tipo_de_viagem') ?></span>
+		            		<span class="status"><?php the_field('tipo_de_viagem') ?></span>
 
 		            		<div class="glider-contain">
 						    	<div class="glider">
@@ -117,6 +117,18 @@
 			    	<li>
 			    		<div class="img"></div>
 			    		<div class="content">
+			    			<span class="status">
+			    				<?php $terms = get_the_terms( $post->ID , 'tvshows_categories' );
+							if ( is_array( $terms ) && ! is_wp_error( $terms ) ) {
+							    foreach ($terms as $term) {
+							        $term_link = get_term_link($term, 'tvshows_categories');
+							        if (is_wp_error($term_link))
+							            continue;
+							        echo '<a href="' . $term_link . '">' . $term->name . '</a>, ';
+							    }
+							}
+							?>
+							</span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
 		            			<p><?php the_field('local') ?></p>
