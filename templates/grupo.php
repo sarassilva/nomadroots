@@ -42,6 +42,8 @@
 			    	<li>
 			    		<h4><?php the_title(); ?></h4>
 			    	</li>
+			    <?php endwhile; else: endif;?>
+				<?php wp_reset_query(); ?>
 			</ul>
 		</div>
 	</section>
