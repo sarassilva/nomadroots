@@ -20,9 +20,12 @@
 
 
 //menu collapsed
-$(".verRoteiro").click(function(){
-    $(this).find('.roteiro').toggle();
-});
-
-
+$(".verRoteiro").hover(
+    function () {
+        $(this).addClass("show").parent().next().addClass("show2"); 
+    },
+    function () {
+        $(this).addClass("show").parent().next().addClass("show2").removeClass("show2"); 
+    }
+)
 
