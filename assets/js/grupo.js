@@ -1,8 +1,7 @@
 
 window.addEventListener('load',function(){
 
-	// Obtém todas as divs com a classe '.glider' na página
-const divs = document.querySelectorAll('.glider');
+const divs = document.querySelectorAll('.glider, .glider-prev, .glider-next');
 
 // Itera sobre cada div
 divs.forEach((div, index) => {
@@ -17,8 +16,8 @@ divs.forEach((div, index) => {
         draggable: true,
         rewind: true,
         arrows: {
-            prev: `.glider-prev.whr-${index + 1}`,
-            next: `.glider-next.whr-${index + 1}`
+            prev: `.glider-prev-${index + 1}`,
+            next: `.glider-next-${index + 1}`
         },
     });
 });
