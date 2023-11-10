@@ -153,7 +153,7 @@ window.addEventListener('load',function(){
 });
 
 
-//menu collapsed
+//collapsed
 $(function () {
     $("button.verRoteiro").click(function () {
         var content = $(this).next();
