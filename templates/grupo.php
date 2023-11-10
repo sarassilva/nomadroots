@@ -26,13 +26,13 @@
 			<ul>
 				<?php
 			    $new_loop = new WP_Query( array(
-			    'post_type' => 'roteiro',
+			    'post_type' => 'grupo-nomad',
 			    'posts_per_page' => 2,
 			    'tax_query' => array(
 		            array(
-		                'taxonomy' => 'destino',
+		                'taxonomy' => 'status-da-viagem',
 		                'field' => 'slug',
-		                'terms' => array( 'roteiro-1' ),
+		                'terms' => array( 'proximas-viagens' ),
 		            ),
 		        ),
 			    ) ); ?>
