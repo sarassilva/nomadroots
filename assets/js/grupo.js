@@ -21,20 +21,14 @@
 
 //collapsed
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('button.verRoteiro');
+    var buttons = document.querySelectorAll('.verRoteiro');
     
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
-            var content = this.nextElementSibling;
+            var roteiro = this.nextElementSibling;
 
-            // Fecha todos os elementos visíveis
-            var visibleContents = document.querySelectorAll('.roteiro:visible');
-            visibleContents.forEach(function (visibleContent) {
-                visibleContent.style.display = 'none';
-            });
-
-            // Abre o próximo elemento
-            content.style.display = 'block';
+            // Alternar a classe 'open' em roteiro
+            roteiro.classList.toggle('open');
         });
     });
 });
