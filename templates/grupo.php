@@ -107,7 +107,7 @@
 		            array(
 		                'taxonomy' => 'status-da-viagem',
 		                'field' => 'slug',
-		                'terms' => array( 'proximas-viagens' ),
+		                'terms' => array( 'viagens-anteriores' ),
 		            ),
 		        ),
 			    ) ); ?>

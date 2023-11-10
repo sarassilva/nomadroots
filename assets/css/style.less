@@ -749,7 +749,6 @@ header {
 			 	font-weight: 600;
 		    letter-spacing: 3px;  			    
 		    font-size: 0.6rem;
-		    max-width: 500px;
 
 				&[type=submit] {
 					background-color: #lib.colors[orange];
@@ -777,6 +776,11 @@ header {
 		.image {
 			width: 560px;
 			height: 320px;
+			border-radius: 0;
+
+			img {
+				border-radius: 0;
+			}
 		}
 
 		p {
@@ -785,7 +789,7 @@ header {
 		}
 
 		.content {
-			width: calc(100% - 620px);
+			width: calc(100% - 645px);
 			padding: 0;
 			text-align: right;
 			font-size: 1.1rem;
@@ -1574,7 +1578,7 @@ footer {
 			.btns {
 				display: flex;
 				gap: 20px;
-				margin-top: 45px;
+				margin-top: 50px;
 			}
 		}
 
@@ -2800,7 +2804,7 @@ footer {
 				position: absolute;
 		    top: 0;
 		    width: 100%;
-		    background: rgb(0 0 0 / 67%);
+		    background: rgb(0 0 0 / 25%);
 		    height: 100%;
 		    padding: 30px 40px 50px;
 		    display: flex;
