@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
         const gliderClass = `glider-${index + 1}`;
         div.classList.add(gliderClass);
 
-        // Adiciona IDs às setas de navegação específicas para este carrossel
+        // Adiciona IDs às setas de navegação específicas para este carrossel, se existirem
         const prevArrow = div.querySelector('.glider-prev');
         const nextArrow = div.querySelector('.glider-next');
 
@@ -25,17 +25,17 @@ window.addEventListener('load', function () {
             slidesToShow: 'auto',
             slidesToScroll: 1,
             itemWidth: 800,
-            draggable: false,
+            draggable: true,
             scrollLock: false,
             dots: false,
             rewind: true,
             arrows: {
-                prev: `#${prevArrow.id}`,
-                next: `#${nextArrow.id}`
+                prev: prevArrow ? `#${prevArrow.id}` : null,
+                next: nextArrow ? `#${nextArrow.id}` : null
             }
         });
 
-        // Adiciona um ouvinte de evento para as setas de navegação
+        // Adiciona um ouvinte de evento para as setas de navegação, se existirem
         if (prevArrow) {
             prevArrow.addEventListener('click', function () {
                 glider.scrollItem('prev', { scrollBy: 1 });
@@ -49,6 +49,7 @@ window.addEventListener('load', function () {
         }
     });
 });
+
 
 
 
