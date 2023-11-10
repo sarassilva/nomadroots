@@ -21,5 +21,4 @@ divs.forEach((div, index) => {
     });
 });
 
-
 });
