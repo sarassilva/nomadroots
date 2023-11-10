@@ -12,6 +12,3 @@ window.addEventListener('load',function(){
 	    }
 	});
 });
-
-
-
