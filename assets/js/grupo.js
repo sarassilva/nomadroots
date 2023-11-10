@@ -1,33 +1,20 @@
-window.addEventListener('load',function(){
-	new Glider(document.querySelectorAll('.glider'), {
-	    slidesToShow: 1,
-	    slidesToScroll: 1,
-	    draggable: true,
-	    scrollLock: false,
-	    dots: false,
-	    rewind: true,
-	    arrows: {
-	        prev: '.glider-prev',
-	        next: '.glider-next'
-	    }
-	});
-});
+ document.addEventListener('DOMContentLoaded', function () {
+            // Selecione todas as divs com a classe "glider"
+            const gliders = document.querySelectorAll('.glider');
 
-window.addEventListener('load',function(){
-	const gliders = document.querySelectorAll('.glider');
-
-	 gliders.forEach(function () {
-        new Glider(document.querySelectorAll('.glider'), {
-            slidesToShow: 'auto',
-            slidesToScroll: 1,
-            draggable: false,
-            scrollLock: false,
-            dots: false,
-            rewind: true,
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            },
+            // Itere sobre cada div e inicialize o Glider para ela
+            gliders.forEach(function (glider) {
+                new Glider(glider, {
+                    slidesToShow: 'auto',
+                    slidesToScroll: 1,
+                    draggable: false,
+                    scrollLock: false,
+                    dots: false,
+                    rewind: true,
+                    arrows: {
+                        prev: '.glider-prev',
+                        next: '.glider-next'
+                    },
+                });
+            });
         });
-    });
-});
