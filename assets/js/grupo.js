@@ -24,5 +24,5 @@ $('.roteiro').hide();
 $('.verRoteiro').show();
 
 $('.verRoteiro').click(function() {
-  $(this).next('.roteiro').slideToggle();
+  $(this).closest(.flex).next('.roteiro').Toggle();
 });
