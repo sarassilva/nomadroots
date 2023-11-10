@@ -19,7 +19,7 @@
 });
 
 
-//menu collapsed
+//collapsed
 $(function () { 
 	$("button.verRoteiro ").click(function() {        
 	    $(this).next().toggle();
