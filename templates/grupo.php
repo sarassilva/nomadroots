@@ -45,7 +45,7 @@
 		            		<span><?php the_field('tipo_de_viagem') ?></span>
 
 		            		<div class="glider-contain">
-						    	<div class="images">
+						    	<div class="glider">
 							    	<?php if( have_rows('carousel') ): ?>
 							    		<?php while( have_rows('carousel') ): the_row(); ?>
 												<div class="img"><img src="<?php the_sub_field('imagem') ?>"/></div>
