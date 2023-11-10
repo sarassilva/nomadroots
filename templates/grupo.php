@@ -70,7 +70,7 @@
 		            			<p><?php the_field('mini_descricao') ?></p>
 		            		</div>
 		            		<div class="btns">
-					        	<button onclick="popup()" class="btn outline popup">Ver roteiro completo</button>
+					        	<button class="verRoteiro btn outline popup">Ver roteiro completo</button>
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        </div>					        
 		            	</div>		            	
@@ -90,7 +90,7 @@
 
 </main>
 
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/grupo.js"></script>
