@@ -118,13 +118,10 @@
 			    		<div class="img"></div>
 			    		<div class="content">
 			    			<span class="status">
-<?php   // Get terms for post
-$terms = get_the_terms( $post->ID , 'status-da-viagem' );
-foreach ( $terms as $term ) {
-  echo $term->slug;
-}
-    ?>
-														</span>
+<?php
+print_r(
+    get_the_terms( get_the_ID(), 'status-da-viagem-name' )
+);												</span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
 		            			<p><?php the_field('local') ?></p>
