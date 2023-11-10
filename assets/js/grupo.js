@@ -20,12 +20,21 @@
 
 
 //collapsed
-$(".verRoteiro").click(function () {
-    var div = $(this).parent().next();
-    if(div.is(":visible")) {
-        div.hide();
-    } else {
-        div.fadeIn(450);
-    };
-});
+document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('button.verRoteiro');
+    
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var content = this.nextElementSibling;
 
+            // Fecha todos os elementos visíveis
+            var visibleContents = document.querySelectorAll('.roteiro:visible');
+            visibleContents.forEach(function (visibleContent) {
+                visibleContent.style.display = 'none';
+            });
+
+            // Abre o próximo elemento
+            content.style.display = 'block';
+        });
+    });
+});

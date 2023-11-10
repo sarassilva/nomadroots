@@ -152,22 +152,15 @@ window.addEventListener('load',function(){
 	});
 });
 
-//
-document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('button.verRoteiro');
-    
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var content = this.nextElementSibling;
 
-            // Fecha todos os elementos visíveis
-            var visibleContents = document.querySelectorAll('.roteiro:visible');
-            visibleContents.forEach(function (visibleContent) {
-                visibleContent.style.display = 'none';
-            });
+//menu collapsed
+$(function () { 
+	$("button.number").click(function() {        
+	    $(this).next().toggle();
 
-            // Abre o próximo elemento
-            content.style.display = 'block';
-        });
-    });
+	    if($('.contnt:visible').length > 1) {
+	        $('.contnt:visible').hide();
+	        $(this).next().show();
+	    }
+	}); 
 });
