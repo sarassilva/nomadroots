@@ -74,8 +74,11 @@
 					        	<button class="verRoteiro btn outline">Ver roteiro completo</button>
 					        </div>
 					        <div class="roteiro">
+					        	<button class="verRoteiro close">Fechar</button>
 				            	<h4>Roteiro completo</h4>
 					        	<?php the_field('roteiro'); ?>
+					        	<br />
+					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        </div>					        
 		            	</div>		            	
 		            </div>		            
