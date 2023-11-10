@@ -2542,6 +2542,10 @@ footer {
 		}
 	}
 
+	.nomads {
+		background-color: #lib.colors[orange2];
+	}
+
 	.nextTrips {
 		padding: 60px 0;
 
@@ -2634,9 +2638,19 @@ footer {
 						.btn {
 							background-color: #lib.colors[greenDark];
 
+							&:hover {
+								background-color: #lib.colors[orange2];
+							}
+
 							&.outline {
 								color: #lib.colors[greenDark];
 								border: 1px solid #lib.colors[greenDark];
+								background: transparent;
+
+								&:hover {
+									color: #fff;
+									background-color: #lib.colors[greenDark];
+								}
 							}
 						}
 					}
