@@ -157,7 +157,7 @@
 					    <div class="grupoGliderMobile">
 					    	<?php
 						    $new_loop = new WP_Query( array(
-						    'post_type' => 'encontro-nomad',
+						    'post_type' => 'grupo-nomad',
 						    'posts_per_page' => 10,
 						    ) ); ?>
 
