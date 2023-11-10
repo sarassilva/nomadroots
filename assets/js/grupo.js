@@ -35,4 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 }
 
-$(".close").closest(".roteiro").removeClass("open");
+$(function () { 
+	$(".close").closest(".roteiro").removeClass("open");
+}
