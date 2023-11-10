@@ -3,7 +3,8 @@
     const gliders = document.querySelectorAll('.glider');
 
     // Itere sobre cada div e inicialize o Glider para ela
-    gliders.forEach(function (glider) {
+    for (let i = 0; i < gliders.length; i++) {
+    	const glider = gliders[i];
         new Glider(glider, {
             slidesToShow: 'auto',
             slidesToScroll: 1,
