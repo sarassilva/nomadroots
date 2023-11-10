@@ -85,6 +85,9 @@
 				<?php wp_reset_query(); ?>
 			</ul>
 
+			<div class="btn-trips">
+				<a class="btn" href="#">Ver todas as viagens</a>
+			</div>
 		</div>
 	</section>
 
