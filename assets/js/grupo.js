@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
             slidesToShow: 'auto',
             slidesToScroll: 1,
             itemWidth: 800,
-            draggable: true,
+            draggable: false,
             scrollLock: false,
             dots: false,
             rewind: true,
