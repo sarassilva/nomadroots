@@ -117,11 +117,7 @@
 			    	<li>
 			    		<div class="img"></div>
 			    		<div class="content">
-			    			<span class="status">
-<?php
-print_r(
-    get_the_terms( get_the_ID(), 'status-da-viagem-name' )
-);												</span>
+			    			<span class="status"></span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
 		            			<p><?php the_field('local') ?></p>
