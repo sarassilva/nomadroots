@@ -1,7 +1,7 @@
 
 window.addEventListener('load',function(){
 
-const divs = document.querySelectorAll('.glider, .glider-prev, .glider-next');
+const divs = document.querySelectorAll('.glider');
 
 // Itera sobre cada div
 divs.forEach((div, index) => {
