@@ -2678,6 +2678,22 @@ footer {
 							}
 						}						
 					}
+
+					@media (min-width: 1100px) {
+							.flex {
+								flex-direction: row;
+								gap: 30px;
+
+								.carousel {
+									width: calc(100% - 40% - 30px);
+								}
+
+								.content {
+									width: 40%;
+								}
+							}
+						
+					}
 				}
 
 				.roteiroPopup {
@@ -2690,24 +2706,7 @@ footer {
 					width: 90%;						
 				}
 			}
-		}
-
-		@media (min-width: 1100px) {
-			ul {
-				li {
-					flex-direction: row;
-					gap: 30px;
-
-					.carousel {
-						width: calc(100% - 40% - 30px);
-					}
-
-					.content {
-						width: 40%;
-					}
-				}
-			}
-		}
+		}		
 	}
 }
 
