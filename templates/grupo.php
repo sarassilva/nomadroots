@@ -23,23 +23,24 @@
 		<div class="container">
 			<h2>Próximas viagens</h2>
 
-			<?php
-				    $new_loop = new WP_Query( array(
-				    'post_type' => 'roteiro',
-				    'posts_per_page' => 2,
-				    'tax_query' => array(
-			            array(
-			                'taxonomy' => 'destino',
-			                'field' => 'slug',
-			                'terms' => array( 'roteiro-1' ),
-			            ),
-			        ),
-				    ) ); ?>
+			<ul>
+				<?php
+			    $new_loop = new WP_Query( array(
+			    'post_type' => 'roteiro',
+			    'posts_per_page' => 2,
+			    'tax_query' => array(
+		            array(
+		                'taxonomy' => 'destino',
+		                'field' => 'slug',
+		                'terms' => array( 'roteiro-1' ),
+		            ),
+		        ),
+			    ) ); ?>
 
-				    <?php if ( $new_loop->have_posts() ) : ?>
-				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+			    <?php if ( $new_loop->have_posts() ) : ?>
+			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
-		            <div>
+		            <li>
 		            	<a href="<?php the_permalink(); ?>">
 			            	<div class="image">
 			            		<?php  if ( has_post_thumbnail() ) {
@@ -51,12 +52,15 @@
 				            	</div>
 			            	</div>
 		            	</a>
-		            </div>
-	
-		            <?php endwhile; else: endif;?>
-					<?php wp_reset_query(); ?>
+		            </li>
+		
+	            <?php endwhile; else: endif;?>
+				<?php wp_reset_query(); ?>
+			</ul>
+			
 		</div>
 	</section>
+
 </main>
 
 <?php get_footer(); ?>
