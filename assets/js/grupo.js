@@ -12,7 +12,7 @@ divs.forEach((div, index) => {
     new Glider(div, {
         slidesToShow: 'auto',
 	    slidesToScroll: 1,
-	    itemWidth: 400,
+	    itemWidth: 800,
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
