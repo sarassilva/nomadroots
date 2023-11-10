@@ -1,14 +1,15 @@
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.glider'), {
-	    slidesToShow: 1,
+	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
-	    draggable: true,
+	    itemWidth: 400,
+	    draggable: false,
 	    scrollLock: false,
 	    dots: false,
 	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev',
 	        next: '.glider-next'
-	    }
+	    },
 	});
 });
