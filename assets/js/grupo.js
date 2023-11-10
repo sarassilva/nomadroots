@@ -12,13 +12,11 @@ divs.forEach((div, index) => {
     new Glider(div, {
         slidesToShow: 1,
         slidesToScroll: 1,
+        itemWidth: 'auto',
         scrollLock: false,
         draggable: true,
         rewind: true,
-        arrows: {
-            prev: '.glider-prev-${index + 1}',
-            next: '.glider-next-${index + 1}'
-        },
+        arrows: false,
     });
 });
 
