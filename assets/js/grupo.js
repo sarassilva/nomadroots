@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var roteiro = this.closest('.roteiro');
 
         // Remove a classe 'open' da div pai
-        roteiro.parentElement.classList.remove('open');
+        var parentWithOpen = roteiro.closest('.open');
+        if (parentWithOpen) {
+            parentWithOpen.classList.remove('open');
+        }
     });
 });
