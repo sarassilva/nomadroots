@@ -1,4 +1,4 @@
-window.addEventListener('load',function(){
+document.addEventListener('DOMContentLoaded', function () {
 	new Glider(document.querySelector('.glider'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
