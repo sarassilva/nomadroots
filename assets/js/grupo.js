@@ -1,5 +1,8 @@
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.glider'), {
+	var sliders = document.querySelectorAll('.glider');
+
+	for (var i = 0; i < sliders.length; i++) {
+	  var glide = new Glide(sliders[i], {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
 	    draggable: false,
@@ -9,8 +12,11 @@ window.addEventListener('load',function(){
 	    arrows: {
 	        prev: '.glider-prev',
 	        next: '.glider-next'
-	    },
-	});
+	    }
+	  });
+	  
+	  glide.mount();
+	}
 });
 
 $(function(){
