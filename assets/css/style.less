@@ -2499,7 +2499,8 @@ footer {
 .groupNomad {
 	.main-banner {
 		width: 100%;
-		object-fit: cover;
+		background-size: cover;
+    background-position: center;
 		height: 600px;
 		display: flex;
 
@@ -2510,17 +2511,22 @@ footer {
 		}
 
 		.content { 
-			max-width: 300px;
+			max-width: 775px;
+    	text-align: center;
 	    margin: auto;
 	    display: flex;
 	    flex-direction: column;
 	    gap: 30px;
 	    align-items: center;
 
+	    .groupName {
+	    	#lib.titleS2();
+	    }
+
 	    h1 {
 				#lib.titleS2();
 				margin-top: 30px;
-				font-size: 2.5rem;
+				font-size: 1.8rem;
 				color: #lib.colors[beige];
 			}
 
