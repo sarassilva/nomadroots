@@ -75,7 +75,7 @@
 					        </div>					        
 		            	</div>
 
-		            	<div class="roteiroPopup">
+		            	<div class="roteiro">
 				        	<?php the_field('roteiro'); ?>
 				        </div>
 		            </div>

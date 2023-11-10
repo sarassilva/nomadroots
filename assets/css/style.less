@@ -2679,6 +2679,19 @@ footer {
 						}						
 					}
 
+					@media (min-width: 1100px) {
+						flex-direction: row;
+						gap: 30px;
+
+						.carousel {
+							width: calc(100% - 40% - 30px);
+						}
+
+						.content {
+							width: 40%;
+						}
+					}
+
 					.roteiroPopup {
 						//position: absolute;
 						top: 0;
@@ -2687,25 +2700,10 @@ footer {
 						left: 0;
 						margin: auto;
 						width: 90%;						
-					}
-
-					@media (min-width: 1100px) {
-							.flex {
-								flex-direction: row;
-								gap: 30px;
-
-								.carousel {
-									width: calc(100% - 40% - 30px);
-								}
-
-								.content {
-									width: 40%;
-								}
-							}						
-					}
-				}				
+					}								
+				}
 			}
-		}		
+		}
 	}
 }
 
