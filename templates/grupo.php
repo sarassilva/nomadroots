@@ -41,6 +41,7 @@
 			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 		            <li>
+		            	<div class="flex">
 		            	<div class="carousel">
 		            		<span><?php the_field('tipo_de_viagem') ?></span>
 
@@ -71,13 +72,14 @@
 		            		<div class="btns">
 					        	<button onclick="popup()" class="btn outline popup">Ver roteiro completo</button>
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
-					        </div>
-
-					        <div class="roteiroPopup">
-					        	<?php the_field('roteiro'); ?>
-					        </div>
+					        </div>					        
 		            	</div>
-		            </li>
+
+		            	<div class="roteiroPopup">
+				        	<?php the_field('roteiro'); ?>
+				        </div>
+		            </div>
+		        </li>
 		
 	            <?php endwhile; else: endif;?>
 				<?php wp_reset_query(); ?>
