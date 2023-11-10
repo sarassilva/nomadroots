@@ -20,9 +20,9 @@
 
 
 //menu collapsed
-$(".verRoteiro").click(function(){
-    $(this).find('.roteiro').toggle();
+$('.roteiro').hide();
+$('.verRoteiro').show();
+
+$('.verRoteiro').click(function() {
+  $(this).next('.roteiro').slideToggle();
 });
-
-
-
