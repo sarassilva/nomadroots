@@ -24,26 +24,7 @@
 			<h2>Próximas viagens</h2>
 
 			<ul>
-				<?php
-			    $new_loop = new WP_Query( array(
-			    'post_type' => 'roteiro',
-			    'posts_per_page' => 2,
-			    'tax_query' => array(
-		            array(
-		                'taxonomy' => 'destino',
-		                'field' => 'slug',
-		                'terms' => array( 'roteiro-1' ),
-		            ),
-		        ),
-			    ) ); ?>
-
-			    <?php if ( $new_loop->have_posts() ) : ?>
-			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
-			    	<li>
-			    		<h4><?php the_title(); ?></h4>
-			    	</li>
-			    <?php endwhile; else: endif;?>
-				<?php wp_reset_query(); ?>
+				
 			</ul>
 		</div>
 	</section>
