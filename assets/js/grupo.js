@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-	new Glider(document.querySelectorAll('.images'), {
+	new Glider(document.querySelectorAll('.glider'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    draggable: true,
