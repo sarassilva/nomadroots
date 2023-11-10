@@ -6,7 +6,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    gap: 15,
 	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.roteiro-um',
