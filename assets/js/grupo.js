@@ -21,23 +21,24 @@
 
 //collapsed
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.verRoteiro');
-    
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var roteiro = this.closest('.btns').nextElementSibling;
+    document.addEventListener('DOMContentLoaded', function () {
+        var buttons = document.querySelectorAll('.verRoteiro');
+        
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var roteiro = this.closest('.btns').nextElementSibling;
 
-            // Alternar a classe 'open' em roteiro
-            roteiro.classList.toggle('open');
+                // Alternar a classe 'open' em roteiro
+                roteiro.classList.toggle('open');
+            });
+        });
+
+        // Adiciona evento ao botão de fechar
+        var closeButton = document.querySelector('.roteiro .close');
+        closeButton.addEventListener('click', function () {
+            var roteiro = this.closest('.roteiro');
+
+            // Remove a classe 'open' de roteiro
+            roteiro.classList.remove('open');
         });
     });
-
-    // Adiciona evento ao botão de fechar
-    var closeButton = document.querySelector('.close');
-    closeButton.addEventListener('click', function () {
-        var roteiro = this.closest('.roteiro');
-
-        // Remove a classe 'open' de roteiro
-        roteiro.classList.remove('open');
-    });
-});
