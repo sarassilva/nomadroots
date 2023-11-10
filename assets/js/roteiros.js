@@ -154,14 +154,25 @@ window.addEventListener('load',function(){
 
 
 //menu collapsed
-$(function () { 
-	$("button.number").click(function() {        
-	    $(this).next().toggle();
+$(function () {
+    $("button.verRoteiro").click(function () {
+        var content = $(this).next();
 
-	    if($('.contnt:visible').length > 1) {
-	        $('.contnt:visible').hide();
-	        $(this).next().show();
-	    }
-	}); 
+        // Verifica se o conteúdo está visível
+        if (content.is(":visible")) {
+            content.hide();
+        } else {
+            // Esconde todos os outros conteúdos visíveis
+            $(".roteiro:visible").hide();
+            
+            // Remove a classe de todos os botões
+            $("button.verRoteiro").removeClass("active");
 
+            // Adiciona a classe ao botão clicado
+            $(this).addClass("active");
+
+            // Exibe o conteúdo associado ao botão clicado
+            content.show();
+        }
+    });
 });
