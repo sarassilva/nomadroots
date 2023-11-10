@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load',function(){
 	new Glider(document.querySelector('.glider'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -12,10 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
 	        next: '.glider-next'
 	    },
 	});
-}
-
-$(function(){
-$('.popup').on('click', function(){
-    $(this).addClass('show').siblings().removeClass('show');
-  });
 });
+
