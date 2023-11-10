@@ -20,16 +20,8 @@
 
 
 //menu collapsed
-$(function () { 
-	$("button.verRoteiro").click(function() {        
-	    $(this).next().toggle();
-
-	    if($('.roteiro:visible').length > 1) {
-	        $('.roteiro:visible').hide();
-	        $(this).next().show();
-	    }
-	}); 
-
+$(".verRoteiro").click(function(){
+    $(this).find('.roteiro').toggle();
 });
 
 
