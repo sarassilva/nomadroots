@@ -69,9 +69,11 @@
 		            			<p><?php the_field('mini_descricao') ?></p>
 		            		</div>
 		            		<div class="btns">
-					        	<button onclick="popup()" class="btn outline">Ver roteiro completo</button>
+					        	<button onclick="popup()" class="btn outline popup">Ver roteiro completo</button>
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        </div>
+
+					        <span class="popuptext"><?php the_field('roteiro') ?></span>
 		            	</div>
 		            </li>
 		
@@ -84,13 +86,6 @@
 
 </main>
 
-<div class="popup">Popup 1!
-  <span class="popuptext">Popup 1 Content</span>
-</div>
-&nbsp; &nbsp; &nbsp;
-<div class="popup">Popup 2!
-  <span class="popuptext">Popup 2 Content!</span>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
