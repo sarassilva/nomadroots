@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Adiciona evento ao botão de fechar
-    var closeButton = document.querySelector('.roteiro .close');
-    closeButton.addEventListener('click', function () {
-        var roteiro = this.closest('.roteiro');
+    var closeButtons = document.querySelectorAll('.roteiro .close');
+            closeButtons.forEach(function (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    var roteiro = this.closest('.roteiro');
 
-        // Remove a classe 'open' da div pai
-        var parentWithOpen = roteiro.closest('.open');
-        if (parentWithOpen) {
-            parentWithOpen.classList.remove('open');
-        }
-    });
-});
+                    // Remove a classe 'open' da div pai
+                    var parentWithOpen = roteiro.closest('.open');
+                    if (parentWithOpen) {
+                        parentWithOpen.classList.remove('open');
+                    }
+                });
+            });
+        });
