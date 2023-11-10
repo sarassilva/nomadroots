@@ -1,10 +1,4 @@
 window.addEventListener('load', function () {
-    // Adiciona classes às setas de navegação
-    const arrows = document.querySelectorAll('.glider-prev, .glider-next');
-    arrows.forEach((arrow, index) => {
-        arrow.classList.add(`seta-${index + 1}`);
-    });
-
     // Obtém todas as divs com a classe '.glider' na página
     const divs = document.querySelectorAll('.glider');
 
@@ -14,8 +8,8 @@ window.addEventListener('load', function () {
         div.classList.add(`glider-${index + 1}`);
 
         // Obtém os seletores específicos para as setas de navegação desta div
-        const prevArrowSelector = `.glider-prev.seta-${index + 1}`;
-        const nextArrowSelector = `.glider-next.seta-${index + 1}`;
+        const prevArrowSelector = `.glider-${index + 1} .glider-prev.seta-${index + 1}`;
+        const nextArrowSelector = `.glider-${index + 1} .glider-next.seta-${index + 1}`;
 
         // Inicializa o Glider.js para cada div
         new Glider(div, {
