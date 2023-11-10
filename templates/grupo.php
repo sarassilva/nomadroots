@@ -118,15 +118,12 @@
 			    		<div class="img"></div>
 			    		<div class="content">
 			    			<span class="status">
-			    				<?php  $taxonomy_terms = get_the_terms( get_the_ID(), 'status-da-viagem');
-			    				if ( $taxonomy_terms && ! is_wp_error( $taxonomy_terms ) ) {
-						            // Exibe os termos
-						            echo '<ul>';
-						            foreach ( $taxonomy_terms as $term ) {
-						                echo '<li>' . esc_html( $term->name ) . '</li>';
-						            }
-						            echo '</ul>';
-						        }
+			    				<?php $terms = get_the_terms( $post->ID, 'grupo-nomad' );
+if ($terms) {
+    foreach($terms as $term) {
+      echo $term->name;
+    } 
+} ?>
 							?>
 							</span>
 			    			<h5><?php the_title(); ?></h5>
