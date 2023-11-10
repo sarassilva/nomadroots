@@ -74,7 +74,7 @@
 					        	<button class="verRoteiro btn outline">Ver roteiro completo</button>
 					        </div>
 					        <div class="roteiro">
-					        	<button class="verRoteiro close">Fechar</button>
+					        	<button class="close">Fechar</button>
 				            	<h4>Roteiro completo</h4>
 					        	<?php the_field('roteiro'); ?>
 					        	<br />
