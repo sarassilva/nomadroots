@@ -24,7 +24,7 @@ $(".verRoteiro").click(
 	function () {
 	    $(this).addClass('open').parent().next().addClass("show2"); 
 	},
-	function () {
+	function () { 
 	    $(this).addClass('open').parent().next().addClass("show2").removeClass("show2"); 
 	}
 )
