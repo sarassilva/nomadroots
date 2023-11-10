@@ -1,15 +1,14 @@
-window.addEventListener('load',function(){
-	var sliders = document.querySelectorAll('.glider');
+const options = { 
+      type: "carousel",
+      animationDuration: 600,
+      gap: 0
+};
 
-	for (var i = 0; i < sliders.length; i++) {
-	  var glide = new Glide(sliders[i], {
-	    gap: 15,
-	    slidesToShow: 'auto',
-	  });
-	  
-	  glide.mount();
-	}
-}
+const carousels = document.querySelectorAll(".glider");
+
+Object.values(carousels).map(carousel => {
+      new Glide(carousel, options).mount();
+});
 
 $(function(){
 $('.popup').on('click', function(){
