@@ -101,6 +101,55 @@
 		</div>
 	</section>
 
+	<section class="testimonials">
+		<div class="container">
+			<h3>Quem leu o mundo com a gente</h3>
+
+			<div class="glider-contain">
+		        <div class="testimonial">
+		        	<?php
+				    $new_loop = new WP_Query( array(
+				    'post_type' => 'depoimento',
+				    'posts_per_page' => 10,
+				    'tax_query' => array(
+			            array(
+			                'taxonomy' => 'area-do-depoimento',
+			                'field' => 'slug',
+			                'terms' => array( 'home' ),
+			            ),
+			        ),
+				    ) ); ?>
+
+				    <?php if ( $new_loop->have_posts() ) : ?>
+				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+
+		            <div>
+		            	<div class="aspas"></div>
+		            	<?php the_content(); ?>
+	            		<div class="name"><?php the_title(); ?></div> 
+		            </div>
+	
+		            <?php endwhile; else: endif;?>
+					<?php wp_reset_query(); ?>
+		        </div>
+		        <button class="glider-prev ttm">&lsaquo;</button>
+		        <button class="glider-next ttm">&rsaquo;</button>
+		    </div>
+		</div>
+	</section>
+
+	<section class="contact">
+		<div class="container">
+	        <div class="content">
+	        	<h3><?php the_field('titulo_ct') ?></h3>
+		        <a href="<?php the_field('botao') ?>" title="" target="_blank" class="btn">Fale com a gente</a>
+		    </div>
+		    <div class="image">
+        		<img src="<?php the_field('imagem') ?>" alt="NomadRoots" />
+        	</div>
+		</div>
+	</section>
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
