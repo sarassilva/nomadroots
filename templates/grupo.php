@@ -118,13 +118,13 @@
 			    		<div class="img"></div>
 			    		<div class="content">
 			    			<span class="status">
-			    				<?php $terms = get_the_terms( $post->ID , 'tvshows_categories' );
+			    				<?php $terms = get_the_terms( $post->ID , 'grupo-nomad' );
 							if ( is_array( $terms ) && ! is_wp_error( $terms ) ) {
 							    foreach ($terms as $term) {
-							        $term_link = get_term_link($term, 'tvshows_categories');
+							        $term_link = get_term_link($term, 'grupo-nomad');
 							        if (is_wp_error($term_link))
 							            continue;
-							        echo '<a href="' . $term_link . '">' . $term->name . '</a>, ';
+							        echo '. $term->name . ';
 							    }
 							}
 							?>
