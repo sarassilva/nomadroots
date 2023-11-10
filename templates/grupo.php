@@ -69,9 +69,9 @@
 		            		<div class="description">
 		            			<p><?php the_field('mini_descricao') ?></p>
 		            		</div>
-		            		<div class="btns">
-					        	<button class="verRoteiro btn outline popup">Ver roteiro completo</button>
+		            		<div class="btns">					        	
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
+					        	<button class="verRoteiro btn outline popup">Ver roteiro completo</button>
 					        </div>					        
 		            	</div>		            	
 		            </div>
