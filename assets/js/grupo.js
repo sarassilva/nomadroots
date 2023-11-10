@@ -7,6 +7,8 @@ arrows.forEach((arrow, index) => {
 window.addEventListener('load',function(){
 
 	const divs = document.querySelectorAll('.glider');
+	const prevArrowSelector = `.glider-prev.seta-${index + 1}`;
+    const nextArrowSelector = `.glider-next.seta-${index + 1}'`;
 
 	// Itera sobre cada div
 	divs.forEach((div, index) => {
@@ -23,8 +25,8 @@ window.addEventListener('load',function(){
 		    dots: false,
 		    rewind: true,
 	        arrows: {
-	        prev: '.glider-prev.seta-${index + 1}',
-	        next: '.glider-next.seta-${index + 1}'
+		        prev: prevArrowSelector,
+	            next: nextArrowSelector
 	    }
 	    });
 	});
