@@ -117,7 +117,7 @@
 			    	<li>
 			    		<div class="img"></div>
 			    		<div class="content">
-			    			<span class="status"></span>
+			    			<span class="status"><?php the_field('tipo_de_viagem') ?></span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
 		            			<p><?php the_field('local') ?></p>
