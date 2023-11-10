@@ -115,7 +115,7 @@
 			    <?php if ( $new_loop->have_posts() ) : ?>
 			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 			    	<li>
-			    		<div class="img"><img src="<?php the_field('imagem_destacada') ?>" /></div>
+			    		<div class="img"><img src="<?php the_field('imagem_destaque') ?>" /></div>
 			    		<div class="content">
 			    			<span class="status"><?php the_field('tipo_de_viagem') ?></span>
 							</span>
