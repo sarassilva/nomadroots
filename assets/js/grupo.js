@@ -12,8 +12,8 @@
                     dots: false,
                     rewind: true,
                     arrows: {
-                        prev: `.glider-prev${index + 1}`,
-                        next: `.glider-next${index + 1}`
+                        prev: '.glider-prev${index + 1}',
+                        next: '.glider-next${index + 1}'
                     },
                 });
             });
