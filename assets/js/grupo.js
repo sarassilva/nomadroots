@@ -3,10 +3,12 @@
 
                 new Glider(ele, {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    scrollLock: true,
-                    draggable: true,
-                    rewind: true,
+				    slidesToScroll: 1,
+				    itemWidth: 400,
+				    draggable: true,
+				    scrollLock: false,
+				    dots: false,
+				    rewind: true,
                     dots: ele.querySelector('.dots'),
                     arrows: {
                         prev: ele.parentNode.querySelector('.glider-prev'),
