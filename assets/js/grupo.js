@@ -21,14 +21,14 @@
 
 //collapsed
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.verRoteiro');
-    
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var roteiro = this.nextElementSibling;
+            var buttons = document.querySelectorAll('.verRoteiro');
+            
+            buttons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var roteiro = this.closest('.btns').nextElementSibling;
 
-            // Alternar a classe 'open' em roteiro
-            roteiro.classList.toggle('open');
+                    // Alternar a classe 'open' em roteiro
+                    roteiro.classList.toggle('open');
+                });
+            });
         });
-    });
-});
