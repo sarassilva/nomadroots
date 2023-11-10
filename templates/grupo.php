@@ -41,23 +41,25 @@
 			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 		            <li>
-		            	<a href="<?php the_permalink(); ?>">
-			            	<div class="image">
-			            		<?php  if ( has_post_thumbnail() ) {
-								    the_post_thumbnail();
-								} ?>
-				            	<div class="title">
-				            		<h4><?php the_title(); ?></h4>
-				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-				            	</div>
-			            	</div>
-		            	</a>
+		            	<div class="carousel">
+		            		<?php the_field('tipo_de_viagem') ?>
+		            	</div>
+		            	<div class="content">
+		            		<h3><?php the_title(); ?></h3>
+		            		<div class="information">
+		            			<p><?php the_field('local') ?></p>
+		            			<span><?php the_field('data') ?></span>
+		            		</div>
+		            		<div class="description">
+		            			<p><?php the_field('mini_descricao') ?></p>
+		            		</div>
+		            	</div>
 		            </li>
 		
 	            <?php endwhile; else: endif;?>
 				<?php wp_reset_query(); ?>
 			</ul>
-			
+
 		</div>
 	</section>
 
