@@ -10,7 +10,7 @@ divs.forEach((div, index) => {
 
     // Inicializa o Glider.js para cada div
     new Glider(div, {
-        slidesToShow: 1,
+        slidesToShow: 'auto',
         slidesToScroll: 1,
         itemWidth: 'auto',
         scrollLock: false,
