@@ -2708,7 +2708,14 @@ footer {
 			    height: 100%;
 			    transition: all .2s linear;
 			    transform: translateY(50px);
-			    display: none;
+			    visibility: hidden;
+			    opacity: 1;
+
+			    &.open {
+			    	opacity: 1;
+			    	transform: translateY(0);
+			    	visibility: visible;
+			    }
 
 			    h4 {
 						#lib.titleS2;
