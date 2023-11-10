@@ -152,25 +152,21 @@ window.addEventListener('load',function(){
 	});
 });
 
-$(function () {
-    $("button.verRoteiro").click(function () {
-        var content = $(this).next();
+document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('button.verRoteiro');
+    
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var content = this.nextElementSibling;
 
-        // Verifica se o conteúdo está visível
-        if (content.is(":visible")) {
-            content.hide();
-        } else {
-            // Esconde todos os outros conteúdos visíveis
-            $(".roteiro:visible").hide();
-            
-            // Remove a classe de todos os botões
-            $("button.verRoteiro").removeClass("active");
+            // Fecha todos os elementos visíveis
+            var visibleContents = document.querySelectorAll('.roteiro:visible');
+            visibleContents.forEach(function (visibleContent) {
+                visibleContent.style.display = 'none';
+            });
 
-            // Adiciona a classe ao botão clicado
-            $(this).addClass("active");
-
-            // Exibe o conteúdo associado ao botão clicado
-            content.show();
-        }
+            // Abre o próximo elemento
+            content.style.display = 'block';
+        });
     });
 });
