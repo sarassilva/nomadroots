@@ -2,7 +2,6 @@
     // Selecione todas as divs com a classe "glider"
     const gliders = document.querySelectorAll('.glider');
 
-    // Itere sobre cada div e inicialize o Glider para ela
     for (let i = 0; i < gliders.length; i++) {
     	const glider = gliders[i];
         new Glider(glider, {
