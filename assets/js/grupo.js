@@ -23,8 +23,9 @@ window.addEventListener('load', function () {
 
         // Inicializa o Glider.js para cada div
         const glider = new Glider(div, {
-            slidesToShow: 1,
+            slidesToShow: 'auto',
             slidesToScroll: 1,
+            itemWidth: 800,
             draggable: true,
             scrollLock: false,
             dots: false,
