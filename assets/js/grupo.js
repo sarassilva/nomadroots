@@ -22,10 +22,10 @@
 //menu collapsed
 $(".verRoteiro").click(
 	function () {
-	    $(this).addClass().parent().next().addClass("show2"); 
+	    $(this).addClass('open').parent().next().addClass("show2"); 
 	},
 	function () {
-	    $(this).addClass().parent().next().addClass("show2").removeClass("show2"); 
+	    $(this).addClass('open').parent().next().addClass("show2").removeClass("show2"); 
 	}
 )
 
