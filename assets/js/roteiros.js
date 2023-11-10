@@ -152,8 +152,6 @@ window.addEventListener('load',function(){
 	});
 });
 
-
-//collapsed
 $(function () {
     $("button.verRoteiro").click(function () {
         var content = $(this).next();
@@ -176,5 +174,3 @@ $(function () {
         }
     });
 });
-
-
