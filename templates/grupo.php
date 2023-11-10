@@ -98,6 +98,38 @@
 
 	<section class="previousTrips">
 		<div class="container">
+			<ul>
+				<?php
+			    $new_loop = new WP_Query( array(
+			    'post_type' => 'grupo-nomad',
+			    'posts_per_page' => 2,
+			    'tax_query' => array(
+		            array(
+		                'taxonomy' => 'status-da-viagem',
+		                'field' => 'slug',
+		                'terms' => array( 'proximas-viagens' ),
+		            ),
+		        ),
+			    ) ); ?>
+
+			    <?php if ( $new_loop->have_posts() ) : ?>
+			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+			    	<li>
+			    		<div class="img"><img alt="<?php the_title(); ?>" src="<?php the_field('imagem') ?>" /></div>
+			    		<div class="content">
+			    			<h5><?php the_title(); ?></h5>
+			    			<div class="information">
+		            			<p><?php the_field('local') ?></p>
+		            			<span><?php the_field('data') ?></span>
+		            		</div>
+		            		<div class="description">
+		            			<p><?php the_field('mini_descricao') ?></p>
+		            		</div>
+			    		</div>
+			    	</li>
+			    <?php endwhile; else: endif;?>
+				<?php wp_reset_query(); ?>
+			</ul>
 		</div>
 	</section>
 
