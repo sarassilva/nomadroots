@@ -36,13 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var closeButtons = document.querySelectorAll('.roteiro .close');
             closeButtons.forEach(function (closeButton) {
                 closeButton.addEventListener('click', function () {
-                    var roteiro = this.closest('.roteiro');
+                    var roteiro = this.parentElement;
 
                     // Remove a classe 'open' da div pai
-                    var parentWithOpen = roteiro.closest('.open');
-                    if (parentWithOpen) {
-                        parentWithOpen.classList.remove('open');
-                    }
+                    roteiro.classList.remove('open');
                 });
             });
         });
