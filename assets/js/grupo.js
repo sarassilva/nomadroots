@@ -8,31 +8,30 @@ window.addEventListener('load', function () {
         const gliderClass = `glider-${index + 1}`;
         div.classList.add(gliderClass);
 
-        // Obtém as setas de navegação específicas para este carrossel
+        // Adiciona IDs às setas de navegação específicas para este carrossel
         const prevArrow = div.querySelector('.glider-prev');
         const nextArrow = div.querySelector('.glider-next');
 
-        // Adiciona um número à classe das setas, se existirem
         if (prevArrow) {
-            prevArrow.classList.add(`seta-${index + 1}`);
+            prevArrow.id = `seta-prev-${index + 1}`;
         }
 
         if (nextArrow) {
-            nextArrow.classList.add(`seta-${index + 1}`);
+            nextArrow.id = `seta-next-${index + 1}`;
         }
 
         // Inicializa o Glider.js para cada div
         const glider = new Glider(div, {
             slidesToShow: 'auto',
             slidesToScroll: 1,
-            itemWidth: 900,
+            itemWidth: 800,
             draggable: true,
             scrollLock: false,
             dots: false,
             rewind: true,
             arrows: {
-                prev: `.${gliderClass} .glider-prev`,
-                next: `.${gliderClass} .glider-next`
+                prev: `#${prevArrow.id}`,
+                next: `#${nextArrow.id}`
             }
         });
 
@@ -50,6 +49,7 @@ window.addEventListener('load', function () {
         }
     });
 });
+
 
 
 
