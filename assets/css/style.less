@@ -2554,6 +2554,7 @@ footer {
 
 			li {
 				list-style: none;
+				display: flex;
 
 				.carousel {
 					width: 50%;
@@ -2598,18 +2599,27 @@ footer {
 					display: flex;
 					justify-content: space-between;
 					flex-direction: column;
+					font-size: 1.1rem;
 
 					h3 {
 						#lib.titleS2();
-						font-size: 2.2rem;
+						font-size: 2.4rem;
     				margin: 0;
 					}
 
 					.information {
-						display: block;
+				    display: flex;
+				    flex-direction: column;
+				    gap: 5px;
+				    margin-top: 20px;
+
+						p {
+							margin: 0;
+						}
 
 						span {
 							display: block;
+							font-family: 'Clearface';
 						}
 					}
 
@@ -2618,7 +2628,8 @@ footer {
 					}
 
 					.btns {
-
+						display: flex;
+						gap: 15px;
 					}
 				}
 			}
