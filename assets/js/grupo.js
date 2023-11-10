@@ -19,7 +19,7 @@
 });
 
 
-//menu collapsed
+//collapsed
 $(document).on("click", ".verRoteiro", function(event){
     event.preventDefault();
     $(this).closest('.flex').next('.roteiro').toggle();
