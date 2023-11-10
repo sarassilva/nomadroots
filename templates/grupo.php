@@ -43,6 +43,19 @@
 		            <li>
 		            	<div class="carousel">
 		            		<span><?php the_field('tipo_de_viagem') ?></span>
+
+		            		<div class="glider-contain">
+						    	<div class="images">
+							    	<?php if( have_rows('carousel') ): ?>
+							    		<?php while( have_rows('carousel') ): the_row(); ?>
+												<div class="img"><img src="<?php the_sub_field('imagem') ?>"/></div>
+							    		<?php endwhile; ?>
+							    	<?php endif; ?>				    	
+							    </div>
+							    <button class="glider-prev">&lsaquo;</button>
+						        <button class="glider-next">&rsaquo;</button>
+							</div>
+
 		            	</div>
 		            	<div class="content">
 		            		<h3><?php the_title(); ?></h3>
@@ -64,5 +77,9 @@
 	</section>
 
 </main>
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/grupo.js"></script>
 
 <?php get_footer(); ?>
