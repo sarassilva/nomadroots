@@ -20,7 +20,7 @@
 
 
 //menu collapsed
-$(".verRoteiro").hover(
+$(".verRoteiro").click(
     function () {
         $(this).addClass("show").parent().next().addClass("show2"); 
     },
