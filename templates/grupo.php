@@ -23,9 +23,38 @@
 		<div class="container">
 			<h2>Próximas viagens</h2>
 
-			<ul>
-				
-			</ul>
+			<?php
+				    $new_loop = new WP_Query( array(
+				    'post_type' => 'roteiro',
+				    'posts_per_page' => 2,
+				    'tax_query' => array(
+			            array(
+			                'taxonomy' => 'destino',
+			                'field' => 'slug',
+			                'terms' => array( 'roteiro-1' ),
+			            ),
+			        ),
+				    ) ); ?>
+
+				    <?php if ( $new_loop->have_posts() ) : ?>
+				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+
+		            <div>
+		            	<a href="<?php the_permalink(); ?>">
+			            	<div class="image">
+			            		<?php  if ( has_post_thumbnail() ) {
+								    the_post_thumbnail();
+								} ?>
+				            	<div class="title">
+				            		<h4><?php the_title(); ?></h4>
+				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
+				            	</div>
+			            	</div>
+		            	</a>
+		            </div>
+	
+		            <?php endwhile; else: endif;?>
+					<?php wp_reset_query(); ?>
 		</div>
 	</section>
 </main>
