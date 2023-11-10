@@ -42,7 +42,7 @@
 
 		            <li>
 		            	<div class="carousel">
-		            		<?php the_field('tipo_de_viagem') ?>
+		            		<span><?php the_field('tipo_de_viagem') ?></span>
 		            	</div>
 		            	<div class="content">
 		            		<h3><?php the_title(); ?></h3>
