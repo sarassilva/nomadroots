@@ -118,14 +118,17 @@
 			    		<div class="img"></div>
 			    		<div class="content">
 			    			<span class="status">
-			    				<?php $terms = get_the_terms( $post->ID, 'grupo-nomad' );
-if ($terms) {
-    foreach($terms as $term) {
-      echo $term->name;
-    } 
-} ?>
-							?>
-							</span>
+<?php   // Get terms for post
+ $terms = get_the_terms( $post->ID , 'status-da-viagem' );
+ // Loop over each item since it's an array
+ if ( $terms != null ){
+ foreach( $terms as $term ) {
+ // Print the name method from $term which is an OBJECT
+ print $term->slug ;
+ // Get rid of the other data stored in the object, since it's not needed
+ unset($term);
+} } ?>
+														</span>
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
 		            			<p><?php the_field('local') ?></p>
