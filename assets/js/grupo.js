@@ -20,12 +20,14 @@
 
 
 //menu collapsed
-$(".verRoteiro").click(
-	function () {
-	    $(this).addClass('open').parent().next().addClass("open2"); 
-	},
-	function () { 
-	    $(this).addClass('open').parent().next().addClass("open2").removeClass("open2"); 
-	}
-)
+$(function () { 
+	$("button.verRoteiro ").click(function() {        
+	    $(this).next().toggle();
+
+	    if($('.roteiro:visible').length > 1) {
+	        $('.roteiro:visible').hide();
+	        $(this).next().show();
+	    }
+	}); 
+});
 
