@@ -1,4 +1,4 @@
- window.addEventListener('DOMContentLoaded', function () {
+ window.addEventListener('load', function () {
             // Selecione todas as divs com a classe "glider"
             const gliders = document.querySelectorAll('.glider');
 
