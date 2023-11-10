@@ -1,14 +1,18 @@
-const options = { 
-      type: "carousel",
-      animationDuration: 600,
-      gap: 0
-};
-
-const carousels = document.querySelectorAll(".glider");
-
-Object.values(carousels).map(carousel => {
-      new Glide(carousel, options).mount();
-});
+document.addEventListener('DOMContentLoaded', function () {
+	new Glider(document.querySelector('.glider'), {
+	    slidesToShow: 'auto',
+	    slidesToScroll: 1,
+	    itemWidth: 400,
+	    draggable: false,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
+	    arrows: {
+	        prev: '.glider-prev',
+	        next: '.glider-next'
+	    },
+	});
+}
 
 $(function(){
 $('.popup').on('click', function(){
