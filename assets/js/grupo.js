@@ -1,4 +1,10 @@
 window.addEventListener('load', function () {
+    // Adiciona classes às setas de navegação
+    const arrows = document.querySelectorAll('.glider-prev, .glider-next');
+    arrows.forEach((arrow, index) => {
+        arrow.classList.add(`seta-${index + 1}`);
+    });
+
     // Obtém todas as divs com a classe '.glider' na página
     const divs = document.querySelectorAll('.glider');
 
