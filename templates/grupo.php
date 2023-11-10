@@ -72,12 +72,11 @@
 		            		<div class="btns">					        	
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        	<button class="verRoteiro btn outline">Ver roteiro completo</button>
-					        	<div class="roteiro">
-					            	<h4>Roteiro completo</h4>
-						        	<?php the_field('roteiro'); ?>
-						        </div>	
 					        </div>
-					        				        
+					        <div class="roteiro">
+				            	<h4>Roteiro completo</h4>
+					        	<?php the_field('roteiro'); ?>
+					        </div>					        
 		            	</div>		            	
 		            </div>		            
 		        </li>
