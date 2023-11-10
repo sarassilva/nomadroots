@@ -84,6 +84,15 @@
 
 </main>
 
+<div class="popup">Popup 1!
+  <span class="popuptext">Popup 1 Content</span>
+</div>
+&nbsp; &nbsp; &nbsp;
+<div class="popup">Popup 2!
+  <span class="popuptext">Popup 2 Content!</span>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/grupo.js"></script>
