@@ -115,7 +115,7 @@
 			    <?php if ( $new_loop->have_posts() ) : ?>
 			    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 			    	<li>
-			    		<div class="img"><img src="<?php the_field('imagem_destaque') ?>" alt="<?php the_title(); ?>" /></div>
+			    		<div class="img"><img src="<?php the_field('imagem_destaque') ?>" /></div>
 			    		<div class="content">
 			    			<h5><?php the_title(); ?></h5>
 			    			<div class="information">
