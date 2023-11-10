@@ -2796,9 +2796,30 @@ footer {
 
 			.content {
 				position: absolute;
-				top: 0;
-				width: 100%;
-				
+		    top: 0;
+		    width: 100%;
+		    background: rgb(0 0 0 / 67%);
+		    height: 100%;
+		    padding: 30px 40px;
+		    display: flex;
+		    flex-direction: column;
+		    font-size: .9rem;
+
+		    .status {
+		    	background: #lib.colors[greenDark];
+			    color: #fff;
+			    font-family: 'Futura';
+			    text-transform: uppercase;
+			    padding: 10px 20px;
+			    font-size: 0.7rem;
+			    letter-spacing: 2px;
+			    border-radius: 10px;
+			    position: absolute;
+			    z-index: 999;
+			    top: 15px;
+			    left: 15px;
+		    }
+
 
 				h5 {
 					#lib.titleS2();
