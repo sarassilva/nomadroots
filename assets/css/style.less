@@ -221,7 +221,7 @@ header {
 			}
 		}		
 	}
-	
+
 	.logo { 
 		background-image: url(../images/logo2.webp); 
 		background-repeat: no-repeat; 
@@ -2189,16 +2189,18 @@ footer {
 			.contnt {
 		    flex-direction: column;
 		    gap: 20px;
-		    margin-top: 20px;
 		    height: 0;
     		opacity: 0;
     		visibility: hidden;
+    		transition: all .1s linear;
 
 		    &.show {
 		    	display: flex;
 		    	height: auto;
 	    		opacity: 1;
 	    		visibility: visible;
+	    		transition: all .1s linear;
+	    		margin: 20px 0;
 		    }
 
 		    p {
