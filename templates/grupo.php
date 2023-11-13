@@ -9,11 +9,11 @@
 		<div class="content">
 			<div class="groupName"><span>Grupo</span>Nomad</div>
 			<h1><?php the_field('titulo_h1') ?></h1>
-			<a href="<?php the_field('link') ?>" class="btn" target="_blank" title="<?php the_field('texto_do_botao') ?>"><?php the_field('texto_do_botao') ?></a>
+			<a href="<?php echo get_home_url(); ?>/grupos-nomad/#nomads" class="btn" title="<?php the_field('texto_do_botao') ?>"><?php the_field('texto_do_botao') ?></a>
 		</div>
 	</section>
 
-	<section class="nomads">
+	<section class="nomads" id="nomads">
 		<div class="container">
 			<?php the_field('descricao') ?>      		
 		</div>
@@ -57,9 +57,14 @@
 		            		<div class="description">
 		            			<p><?php the_field('mini_descricao') ?></p>
 		            		</div>
-		            		<div class="btns">					        	
+		            		<div class="btns">
+		            		<?php 
+							if( get_sub_field('ativar_botoes') == 'true' ) { ?>				        	
 					        	<a href="<?php the_sub_field('comprar_viagem-se') ?>" title="" class="btn">Comprar viagem</a>
 					        	<button class="verRoteiro btn outline">Ver roteiro completo</button>
+					        <?php } else {?>
+					        	<button class="btn outline">Em breve</button>
+					        <?php }?>	
 					        </div>
 					        <div class="roteiro">
 					        	<button class="close">Fechar</button>
