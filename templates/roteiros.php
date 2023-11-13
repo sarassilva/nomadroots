@@ -9,11 +9,11 @@
 		<div class="content">
 			<h1><?php the_field('titulo') ?></h1>
 			<h2><?php the_field('subtitulo') ?></h2>
-			<a class="btn" href="<?php the_sub_field('botao') ?>" title="COMECE SUA EXPERIÊNCIA">COMECE SUA EXPERIÊNCIA</a>
+			<a class="btn" href="<?php echo get_home_url(); ?>/roteiros/#nomads" title="COMECE SUA EXPERIÊNCIA">COMECE SUA EXPERIÊNCIA</a>
 		</div>
 	</section>
 
-	<section class="nomads">
+	<section class="nomads" id="nomads">
 		<div class="container">
 			<?php the_field('descricao') ?>      		
 		</div>
@@ -203,25 +203,12 @@
 			<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
 
 			<div class="hold">
-				<div class="gallery">
-					<div class="glider-contain">
-						<div class="galeria">
-					    	<?php if( have_rows('imagens') ): ?>
-					    		<?php while( have_rows('imagens') ): the_row(); ?>
-					    			<div>
-					    				<img src="<?php the_sub_field('imagem') ?>" />
-					    			</div>
-					    		<?php endwhile; ?>
-					    	<?php endif; ?>				    	
-					    </div>
-					    <button class="glider-prev gllr">&lsaquo;</button>
-		        		<button class="glider-next gllr">&rsaquo;</button>
-					</div>
-				</div>
-
 				<div class="stps">
 			    	<?php if( have_rows('passo_a_passo') ): ?>
 			    		<?php while( have_rows('passo_a_passo') ): the_row(); ?>
+			    			<div class="image">
+			    				<img src="<?php the_sub_field('imagem'); ?>" />
+			    			</div>
 			    			<div class="flex">
 			    				<button class="number">
 		    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
