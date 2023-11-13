@@ -27,7 +27,7 @@
 				<?php
 			    $new_loop = new WP_Query( array(
 			    'post_type' => 'grupo-nomad',
-			    'posts_per_page' => 2,
+			    'posts_per_page' => 6,
 			    'tax_query' => array(
 		            array(
 		                'taxonomy' => 'status-da-viagem',

@@ -8,7 +8,8 @@
 	<?php if( have_rows('banner') ):
         while( have_rows('banner') ) : the_row();
     ?>
-		<section class="main-banner" style="background-image: url('<?php the_sub_field('imagem_principal') ?>')">
+		<section class="main-banner">
+			<video autoplay loop muted src="<?php the_sub_field('video_mp4') ?>"></video>
 			<div class="content">
 				<img src="<?php the_sub_field('logo') ?>" alt="Clube Nomad" />
 				<a class="btn blue" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
