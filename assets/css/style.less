@@ -1016,6 +1016,12 @@ footer {
 		height: 600px;
 		display: flex;
 
+		video {
+	    width: 100% !important;
+	    height: 100% !important;
+	    object-fit: cover;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -1023,12 +1029,24 @@ footer {
 		}
 
 		.content { 
-			max-width: 380px;
+			text-align: center;
 	    margin: auto;
 	    display: flex;
 	    flex-direction: column;
-	    gap: 30px;
 	    align-items: center;
+	    background: rgba(0, 0, 0, 0.43);
+	    width: 100%;
+	    height: 100%;
+	    justify-content: center;
+
+	    h1 {
+				#lib.titleS2();
+				margin: 0;
+				margin-bottom: 50px;
+				font-size: 1.8rem;
+				color: #lib.colors[beige];
+				max-width: 560px;
+			}
 
 	    .btn {
 	    	font-size: .6rem;
