@@ -212,11 +212,10 @@
 	    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
 	    					</button>
 
-	    					<div class="contnt image">
-	    						<img src="<?php the_sub_field('imagem'); ?>" />
-			    			</div>
-	    						
-			    			<div class="contnt texto">
+	    					<div class="contnt">
+	    						<div class="image">
+		    						<img src="<?php the_sub_field('imagem'); ?>" />
+		    					</div>
 		    					<?php the_sub_field('texto'); ?>
 		    				</div>
 		    			</div>
