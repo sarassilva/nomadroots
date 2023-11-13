@@ -253,7 +253,7 @@
 
 			            <div>
 			            	<div class="image">
-			            		<a href="<?php echo get_permalink(); ?>"><?php  if ( has_post_thumbnail() ) {
+			            		<a href="<?php the_field('link') ?>"><?php  if ( has_post_thumbnail() ) {
 									    the_post_thumbnail();
 									} ?></a>
 								</div>
