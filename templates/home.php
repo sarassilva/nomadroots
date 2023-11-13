@@ -257,7 +257,7 @@
 									    the_post_thumbnail();
 									} ?></a>
 								</div>
-			            	<a class="content" href="<?php echo get_permalink(); ?>">
+			            	<a class="content" href="<?php the_field('link') ?>">
 			            		<h4><span><?php the_title(); ?></span></h4> 
 			            		<div class="date">- <?php the_field('data') ?></div>
 			            	</a>

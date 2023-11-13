@@ -770,11 +770,11 @@ header {
 	@media (min-width: 1024px) {
 		.container {
 			display: flex;
-			gap: 60px;
+			max-width: 100%;
 		}
 
 		.image {
-			width: 560px;
+			width: 40%;
 			height: 320px;
 			border-radius: 0;
 
@@ -789,13 +789,18 @@ header {
 		}
 
 		.content {
-			width: calc(100% - 645px);
-			padding: 0;
+			width: calc(100% - 40%);
+			padding: 0 10% 0 0;
 			text-align: right;
 			font-size: 1.1rem;
+			max-width: 765px;
 
 			.mc4wp-form-fields {
 				align-items: end;
+
+				input {
+					max-width: 70%;
+				}
 			}
 		}
 	}
