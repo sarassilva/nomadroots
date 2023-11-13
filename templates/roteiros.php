@@ -202,27 +202,27 @@
 			<h2><?php the_field('titulo_passo') ?></h2>
 			<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
 
-			<div class="hold">
-				<div class="stps">
-			    	<?php if( have_rows('passo_a_passo') ): ?>
-			    		<?php while( have_rows('passo_a_passo') ): the_row(); ?>
-			    			<div class="hold">
-				    			<div class="image">
-				    				<img src="<?php the_sub_field('imagem'); ?>" />
-				    			</div>
-				    			<div class="flex">
-				    				<button class="number">
-			    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
-			    					</button>
-			    					<div class="contnt">
+			<div class="stps">
+		    	<?php if( have_rows('passo_a_passo') ): ?>
+		    		<?php while( have_rows('passo_a_passo') ): the_row(); ?>
+		    			<div class="hold">			    			
+			    			<div class="flex">
+			    				<button class="number">
+		    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
+		    					</button>
+		    					<div class="contnt">
+		    						<div class="image">
+			    						<img src="<?php the_sub_field('imagem'); ?>" />
+					    			</div>
+					    			<div class="texto">
 				    					<?php the_sub_field('texto'); ?>
 				    				</div>
-				    			</div>
-				    		</div>
-			    		<?php endwhile; ?>
-			    	<?php endif; ?>				    	
-			    </div>
-			</div>
+			    				</div>
+			    			</div>
+			    		</div>
+		    		<?php endwhile; ?>
+		    	<?php endif; ?>				    	
+		    </div>
 		</div>
 	</section>
 
