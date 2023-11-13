@@ -272,7 +272,7 @@
 		<section class="meetNomad">
 			<div class="container">
 				<div class="title">
-					<h2>Próximas <span>viagens literarias</span></h2>
+					<h2>Próximas <span>viagens literárias</span></h2>
 					<p><?php the_sub_field('descricao') ?></p>
 				</div>
 
