@@ -35,6 +35,10 @@ window.addEventListener('load',function(){
 	    dots: false,
 	    rewind: true,
 	    arrows: false,
+	    arrows: {
+	        prev: '.glider-prev.mN',
+	        next: '.glider-next.mN'
+	    },
 	    responsive: [
 	   	{
 	      breakpoint: 700,
