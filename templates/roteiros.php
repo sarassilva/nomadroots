@@ -206,19 +206,21 @@
 		    	<?php if( have_rows('passo_a_passo') ): ?>
 		    		<?php while( have_rows('passo_a_passo') ): the_row(); ?>
 
-		    			<div class="hold">   			
-							<div class="contnt image">
-	    						<img src="<?php the_sub_field('imagem'); ?>" />
-			    			</div>
+		    			<div class="hold">  			
+							
 		    				<button class="number">
 	    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
 	    					</button>
+
+	    					<div class="contnt image">
+	    						<img src="<?php the_sub_field('imagem'); ?>" />
+			    			</div>
 	    						
 			    			<div class="contnt texto">
 		    					<?php the_sub_field('texto'); ?>
 		    				</div>
 		    			</div>
-		    			
+
 		    		<?php endwhile; ?>
 		    	<?php endif; ?>				    	
 		    </div>
