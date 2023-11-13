@@ -137,3 +137,16 @@ window.addEventListener('load',function(){
 	});
 });
 
+
+$(document).ready(function() {
+  $('.number').click(function() {
+    // Encontrar a div .content mais próxima ao botão clicado
+    var content = $(this).next('.contnt');
+
+    // Remover a classe .show de todas as outras divs
+    $('.contnt').not(content).removeClass('show');
+
+    // Adicionar ou remover a classe .show
+    content.toggleClass('show');
+  });
+});
