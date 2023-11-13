@@ -318,6 +318,94 @@ header {
 	margin: auto;
 }
 
+.video {
+	width: 100%;
+	background-size: cover;
+  background-position: center;
+	height: 600px;
+	display: flex;
+
+	video {
+		width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+	}
+
+	img {
+			width: 380px;
+			height: auto;
+		}
+
+	.content {
+		margin: auto;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    background: #00000029;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+	}
+
+	h1 {
+		#lib.titleS2();
+		margin: 0;
+		margin-bottom: 50px;
+		font-size: 1.8rem;
+		color: #lib.colors[beige];
+		max-width: 560px;
+	}
+
+	.main-banner {
+		
+
+		
+
+		
+
+		.content { 
+			margin: auto;
+	    flex-direction: column;
+	    gap: 30px;
+	    align-items: center;
+	    position: absolute;
+	    top: 0;
+	    background: #00000029;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    justify-content: center;
+
+	    .groupName {
+	    	#lib.titleS2();
+	    	color: #lib.colors[beige];
+	    	margin: 0;
+	    }
+
+	    h1 {
+				#lib.titleS2();
+				margin: 0;
+				margin-bottom: 50px;
+				font-size: 1.8rem;
+				color: #lib.colors[beige];
+				max-width: 560px;
+			}
+
+	    .btn {
+	    	font-size: .6rem;
+	    	background-color: #lib.colors[orange2];
+
+	    	&:hover {
+	    		background-color: #lib.colors[greenDark];
+	    	}
+	    }
+		}
+	}
+}
+
 .nomads {
 	#lib.bgOrange();
 	#lib.borderRound();
@@ -2412,6 +2500,7 @@ footer {
 			img {
 				height: 100%;
 				object-fit: cover;
+				width: 100%;
 			}
 		}
 
