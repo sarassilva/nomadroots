@@ -208,7 +208,9 @@
 	    						<div class="image">
 		    						<img src="<?php the_sub_field('imagem'); ?>" />
 		    					</div>
-		    					<?php the_sub_field('texto'); ?>
+		    					<div class="texto">
+			    					<?php the_sub_field('texto'); ?>
+			    				</div>
 		    				</div>
 		    			</div>
 
