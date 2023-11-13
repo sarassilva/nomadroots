@@ -45,19 +45,7 @@
 		            	<div class="carousel">
 		            		<span class="status"><?php the_field('tipo_de_viagem') ?></span>
 
-		            		<div class="glider-contain">
-						    	<div class="glider">
-							    	<?php if( have_rows('carousel') ): ?>
-							    		<?php while( have_rows('carousel') ): the_row(); ?>
-												<div>
-													<div class="img"><img src="<?php the_sub_field('imagem') ?>"/></div>
-												</div>
-							    		<?php endwhile; ?>
-							    	<?php endif; ?>				    	
-							    </div>
-							    <button class="glider-prev">&lsaquo;</button>
-						        <button class="glider-next">&rsaquo;</button>
-							</div>
+		            		<div class="img"><img src="<?php the_field('imagem') ?>"/></div>
 
 		            	</div>
 		            	<div class="content">
