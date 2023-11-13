@@ -12,7 +12,7 @@
 			<video autoplay loop muted src="<?php the_sub_field('video_mp4') ?>"></video>
 			<div class="content">
 				<img src="<?php the_sub_field('logo') ?>" alt="Clube Nomad" />
-				<a class="btn blue" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
+				<a class="btn blue" target="_blank" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
 			</div>
 		</section>
 	<?php endwhile; else : endif; ?>
