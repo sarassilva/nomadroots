@@ -45,7 +45,7 @@
 		            	<div class="carousel">
 		            		<span class="status"><?php the_field('tipo_de_viagem') ?></span>
 
-		            		<div class="img"><img src="<?php the_field('imagem') ?>"/></div>
+		            		<div class="img"><img src="<?php the_field('imagem_destaque') ?>"/></div>
 
 		            	</div>
 		            	<div class="content">
