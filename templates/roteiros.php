@@ -45,17 +45,15 @@
 				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 		            <div>
-		            	<a href="<?php the_permalink(); ?>">
-			            	<div class="image">
-			            		<?php  if ( has_post_thumbnail() ) {
-								    the_post_thumbnail();
-								} ?>
-				            	<div class="title">
-				            		<h4><?php the_title(); ?></h4>
-				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-				            	</div>
+		            	<div class="image">
+		            		<?php  if ( has_post_thumbnail() ) {
+							    the_post_thumbnail();
+							} ?>
+			            	<div class="title">
+			            		<h4><?php the_title(); ?></h4>
+			            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
 			            	</div>
-		            	</a>
+		            	</div>
 		            </div>
 	
 		            <?php endwhile; else: endif;?>
@@ -88,17 +86,15 @@
 				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 		            <div>
-		            	<a href="<?php the_permalink(); ?>">
-			            	<div class="image">
-			            		<?php  if ( has_post_thumbnail() ) {
-								    the_post_thumbnail();
-								} ?>
-				            	<div class="title">
-				            		<h4><?php the_title(); ?></h4>
-				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-				            	</div>
+		            	<div class="image">
+		            		<?php  if ( has_post_thumbnail() ) {
+							    the_post_thumbnail();
+							} ?>
+			            	<div class="title">
+			            		<h4><?php the_title(); ?></h4>
+			            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
 			            	</div>
-		            	</a>
+		            	</div>
 		            </div>
 	
 		            <?php endwhile; else: endif;?>
@@ -130,18 +126,16 @@
 				    <?php if ( $new_loop->have_posts() ) : ?>
 				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
-		            <div>
-		            	<a href="<?php the_permalink(); ?>">
-			            	<div class="image">
-			            		<?php  if ( has_post_thumbnail() ) {
-								    the_post_thumbnail();
-								} ?>
-				            	<div class="title">
-				            		<h4><?php the_title(); ?></h4>
-				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-				            	</div>
+		             <div>
+		            	<div class="image">
+		            		<?php  if ( has_post_thumbnail() ) {
+							    the_post_thumbnail();
+							} ?>
+			            	<div class="title">
+			            		<h4><?php the_title(); ?></h4>
+			            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
 			            	</div>
-		            	</a>
+		            	</div>
 		            </div>
 	
 		            <?php endwhile; else: endif;?>
@@ -174,17 +168,15 @@
 				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
 		            <div>
-		            	<a href="<?php the_permalink(); ?>">
-			            	<div class="image">
-			            		<?php  if ( has_post_thumbnail() ) {
-								    the_post_thumbnail();
-								} ?>
-				            	<div class="title">
-				            		<h4><?php the_title(); ?></h4>
-				            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-				            	</div>
+		            	<div class="image">
+		            		<?php  if ( has_post_thumbnail() ) {
+							    the_post_thumbnail();
+							} ?>
+			            	<div class="title">
+			            		<h4><?php the_title(); ?></h4>
+			            		<p class="subtitle"><?php the_field('subtitulo') ?>  </p>
 			            	</div>
-		            	</a>
+		            	</div>
 		            </div>
 	
 		            <?php endwhile; else: endif;?>

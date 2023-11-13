@@ -38,7 +38,7 @@
 				    <button class="glider-prev">&lsaquo;</button>
 			        <button class="glider-next">&rsaquo;</button>
 
-			        <a class="btn" href="<?php the_sub_field('botao') ?>" title="Comece seu percurso aqui">Comece seu percurso aqui</a>
+			        <a class="btn" target="_blank" href="<?php the_sub_field('botao') ?>" title="Comece seu percurso aqui">Comece seu percurso aqui</a>
 				</div>
 			<?php endwhile; else : endif; ?>
 
@@ -83,7 +83,7 @@
 				<div class="content">
 					<h2><span><?php the_sub_field('titulo'); ?></span></h2>
 					<?php the_sub_field('texto'); ?>
-					<a class="btn" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
+					<a class="btn" target="_blank" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
 				</div>
 				<div class="image">
 					<div class="glider-contain">
@@ -174,7 +174,7 @@
 					<div class="value">
 						<span>R$<?php the_sub_field('valor'); ?></span> /por mês
 					</div>
-					<a class="btn" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>	
+					<a class="btn" target="_blank" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>	
 				</div>
 			<?php endwhile; else : endif; ?>
 		</div>

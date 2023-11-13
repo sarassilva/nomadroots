@@ -69,7 +69,7 @@
 .glider-next:hover,
 .glider-prev:focus,
 .glider-next:focus {
-  color: #a89cc8;
+  color: #fff;
 }
 .glider-next {
   right: -23px;

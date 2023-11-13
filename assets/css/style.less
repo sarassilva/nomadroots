@@ -66,6 +66,7 @@
 
 html {
   font-size: 15px;
+  scroll-behavior: smooth;
 
   @media (min-width: 1024px) {
   	font-size: 16px;
@@ -267,9 +268,10 @@ header {
     width: 80%;
     margin: auto;
     right: 0;
+    justify-content: center;
 
     .logo-nomad {
-    	margin: 0;
+    	margin: initial;
     }
 
 		#mobile-menu {
@@ -2415,7 +2417,6 @@ footer {
 		h3 {
 			#lib.titleS2();
 			margin: 0 auto 45px;
-			font-family: 'Planc';
 		}
 
 		@media (min-width: 1200px) {
@@ -2437,14 +2438,9 @@ footer {
 		}
 
 		.image {
-			margin-bottom: 20px;
-			height: 200px;
-			object-fit: cover;
 
 			img {
-				height: 100%;
-				object-fit: cover;
-				width: 100%;
+
 			}
 		}
 
