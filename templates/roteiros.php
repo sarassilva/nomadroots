@@ -261,7 +261,7 @@
 		<div class="container">
 	        <div class="content">
 	        	<h3><?php the_field('titulo_ct') ?></h3>
-		        <a target="_blank"> href="<?php the_field('botao_ct') ?>" title="" class="btn">Fale com a gente</a>
+		        <a target="_blank" href="<?php the_field('botao_ct') ?>" title="" class="btn">Fale com a gente</a>
 		    </div>
 		    <div class="image">
         		<img src="<?php the_field('imagem_ct') ?>" alt="NomadRoots" />
