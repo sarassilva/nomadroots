@@ -2215,8 +2215,10 @@ footer {
 				display: flex;
 				justify-content: center;
 
-				.image {
-					width: 30%;
+				.stps {
+					.image {
+						width: 30%;
+					}
 				}
 			}
 
@@ -2254,6 +2256,15 @@ footer {
 		    	.texto {
 		    		opacity: 1;
 		    	}
+		    }
+
+		    &.first {
+		    	display: flex;
+			    height: auto;
+			    opacity: 1;
+			    visibility: visible;
+			    transition: all 0.1s linear;
+			    margin: 20px 0;
 		    }
 		  }
 		}

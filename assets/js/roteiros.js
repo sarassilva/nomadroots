@@ -141,7 +141,7 @@ window.addEventListener('load',function(){
 $(document).ready(function() {
   // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
   if ($(window).width() > 1200) {
-    $('.contnt:first').addClass('show');
+    $('.contnt:first').addClass('first');
   }
 
   $('.number').click(function() {
