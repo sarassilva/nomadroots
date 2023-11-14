@@ -7,7 +7,7 @@
 <main class="groupNomad">
 	<section class="main-banner" style="background-image: url('<?php the_field('imagem_destacada') ?>')">
 		<div class="content">
-			<div class="groupName"><span>Grupo</span>Nomad</div>
+			<div class="groupName"><span>Grupos</span>Nomad</div>
 			<h1><?php the_field('titulo_h1') ?></h1>
 			<a href="<?php echo get_home_url(); ?>/grupos-nomad/#nomads" class="btn" title="<?php the_field('texto_do_botao') ?>"><?php the_field('texto_do_botao') ?></a>
 		</div>
