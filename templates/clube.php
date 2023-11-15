@@ -285,6 +285,13 @@
 					    $new_loop = new WP_Query( array(
 					    'post_type' => 'encontro-nomad',
 					    'posts_per_page' => 6,
+					    'tax_query' => array(
+				            array(
+				                'taxonomy' => 'sessao-do-encontro',
+				                'field' => 'slug',
+				                'terms' => array( 'clube' ),
+				            ),
+				        ),
 					    ) ); ?>
 
 					    <?php if ( $new_loop->have_posts() ) : ?>
