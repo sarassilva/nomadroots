@@ -138,25 +138,27 @@ window.addEventListener('load',function(){
 });
 
 
-$(document).ready(function() {
-      // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
-      if ($(window).width() > 1200) {
-        $('.contnt:first').addClass('first');
-      }
+ $(document).ready(function() {
+  // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
+  if ($(window).width() > 1200) {
+    $('.contnt:first').addClass('first');
+  }
 
-      $('.number').click(function() {
-        // Encontrar a div .content mais próxima ao botão clicado
-        var content = $(this).next('.contnt');
+  $('.number').click(function() {
+    // Encontrar a div .content mais próxima ao botão clicado
+    var content = $(this).next('.contnt');        
 
-        // Verificar se a classe 'show' já está presente
-        var isAlreadyVisible = content.hasClass('show');
+    // Verificar se a div clicada já possui a classe 'show'
+    var isAlreadyVisible = content.hasClass('show');
 
-        // Remover a classe .show de todas as outras divs
-        $('.contnt').removeClass('show');
+    // Remover a classe .show de todas as outras divs
+    $('.contnt').removeClass('show');
 
-        // Adicionar a classe .show se não estiver presente e o botão não for o mesmo
-        if (!isAlreadyVisible && !content.is(':animated')) {
-          content.addClass('show');
-        }
-      });
-    });
+    // Adicionar a classe .show se a div clicada não a possuir
+    if (isAlreadyVisible) {
+      content.addClass('show');
+    } else {
+    	content.addClass('show');
+    }
+  });
+});
