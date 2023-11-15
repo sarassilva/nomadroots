@@ -8,7 +8,7 @@
 <main>
 
 	<section class="video">
-		<video autoplay loop muted src="<?php the_field('video_mp4') ?>"></video>
+		<video autoplay loop muted playsinline src="<?php the_field('video_mp4') ?>"></video>
 		<div class="content">
 			<img src="<?php the_field('logo') ?>" alt="NomadRoots" />
 			<a class="btn" href="<?php echo get_home_url(); ?>/#nomads" title="Descubra as experiências nomad">Descubra as experiências nomad</a>

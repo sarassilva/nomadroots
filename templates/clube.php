@@ -9,7 +9,7 @@
         while( have_rows('banner') ) : the_row();
     ?>
 		<section class="main-banner">
-			<video autoplay loop muted src="<?php the_sub_field('video_mp4') ?>"></video>
+			<video autoplay loop playsinline muted src="<?php the_sub_field('video_mp4') ?>"></video>
 			<div class="content">
 				<img src="<?php the_sub_field('logo') ?>" alt="Clube Nomad" />
 				<a class="btn blue" target="_blank" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
