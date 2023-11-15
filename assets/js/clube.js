@@ -64,6 +64,10 @@ window.addEventListener('load',function(){
 	    dots: false,
 	    rewind: true,
 	    arrows: false,
+	    arrows: {
+	    	prev: '.glider-prev.nB',
+	        next: '.glider-next.nB'
+	    },
 	    responsive: [
 		{
 	      // screens greater than >= 1024px

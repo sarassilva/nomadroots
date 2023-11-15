@@ -2161,6 +2161,10 @@ footer {
 		.stps {
 			position: relative;
 
+			strong {
+				font-size: .9em;
+			}
+
 			.hold {
 				.image {
 					width: 300px;
@@ -2220,6 +2224,36 @@ footer {
 						width: 30%;
 					}
 				}
+
+				.contnt {
+					height: 0;
+			    opacity: 0;
+			    visibility: hidden;
+			    transition: all 0.1s linear;
+			    flex-direction: row;
+			    justify-content: space-between;
+			    position: absolute;
+			    width: 100%;
+			    top: 0;
+
+			    &.show {
+			    	flex-direction: row;
+			    	margin: 0;
+
+			    	.texto {
+			    		opacity: 1;
+			    	}
+			    }
+
+			    &.first {
+			    	display: flex;
+				    height: auto;
+				    opacity: 1;
+				    visibility: visible;
+				    transition: all 0.1s linear;
+				    margin: 20px 0;
+			    }
+			  }
 			}
 
 			.texto {
@@ -2237,36 +2271,7 @@ footer {
 		    width: 30%;
 		    text-align: left;
 		    z-index: 999;
-			}			
-
-			.contnt {
-				height: 0;
-		    opacity: 0;
-		    visibility: hidden;
-		    transition: all 0.1s linear;
-		    flex-direction: row;
-		    justify-content: space-between;
-		    position: absolute;
-		    width: 100%;
-		    top: 0;
-
-		    &.show {
-		    	flex-direction: row;
-
-		    	.texto {
-		    		opacity: 1;
-		    	}
-		    }
-
-		    &.first {
-		    	display: flex;
-			    height: auto;
-			    opacity: 1;
-			    visibility: visible;
-			    transition: all 0.1s linear;
-			    margin: 20px 0;
-		    }
-		  }
+			}	
 		}
 	}
 

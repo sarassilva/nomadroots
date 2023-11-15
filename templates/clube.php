@@ -149,6 +149,8 @@
 					    		<?php endwhile; ?>
 					    	<?php endif; ?>				    	
 					    </div>
+					    <button class="glider-prev nB">&lsaquo;</button>
+			        	<button class="glider-next nB">&rsaquo;</button>
 					</div>
 
 					<div class="newsletter">

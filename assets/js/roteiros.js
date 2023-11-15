@@ -139,19 +139,24 @@ window.addEventListener('load',function(){
 
 
 $(document).ready(function() {
-  // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
-  if ($(window).width() > 1200) {
-    $('.contnt:first').addClass('first');
-  }
+      // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
+      if ($(window).width() > 1200) {
+        $('.contnt:first').addClass('first');
+      }
 
-  $('.number').click(function() {
-    // Encontrar a div .content mais próxima ao botão clicado
-    var content = $(this).next('.contnt');
+      $('.number').click(function() {
+        // Encontrar a div .content mais próxima ao botão clicado
+        var content = $(this).next('.contnt');
 
-    // Remover a classe .show de todas as outras divs
-    $('.contnt').not(content).removeClass('show');
+        // Verificar se a classe 'show' já está presente
+        var isAlreadyVisible = content.hasClass('show');
 
-    // Adicionar ou remover a classe .show
-    content.toggleClass('show');
-  });
-});
+        // Remover a classe .show de todas as outras divs
+        $('.contnt').removeClass('show');
+
+        // Adicionar a classe .show se não estiver presente e o botão não for o mesmo
+        if (!isAlreadyVisible && !content.is(':animated')) {
+          content.addClass('show');
+        }
+      });
+    });
