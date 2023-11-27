@@ -332,7 +332,7 @@
 			        <h3><?php the_sub_field('titulo') ?></h3>
 			        <p><?php the_sub_field('texto') ?></p>
 
-			        <a href="<?php the_sub_field('botao-se') ?>" target="_blank" class="btn">Fale com a gente</a>
+			        <a href="<?php the_sub_field('botao') ?>" target="_blank" class="btn">Fale com a gente</a>
 			    </div>
 		    <?php endwhile; else : endif; ?>
 		</div>
