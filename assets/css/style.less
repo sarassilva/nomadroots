@@ -960,7 +960,7 @@ footer {
 
 		.spotify {
 			position: relative;
-	    margin:0;			
+	    	margin:0;			
 
 			a {
 				display: flex;
@@ -1014,11 +1014,17 @@ footer {
 				background-size: 90%;
 			}
 
-	    a {
-	    	padding: 0;
-		    display: block;
-		    height: 100%;
-	    }
+			a {
+				padding: 0;
+				display: block;
+				height: 100%;
+			}
+		}
+
+		@media (min-width: 1000px) {
+			.wp-block-columns {
+				justify-content: space-between;
+			}
 		}
 	}
 
