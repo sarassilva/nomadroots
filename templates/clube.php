@@ -219,7 +219,7 @@
 		</div>
 	</section>
 
-	<section class="turmas">
+	<section class="turmas" id="turmas">
 		<div class="container">
 			<?php if( have_rows('turma_presencial') ):
 		        while( have_rows('turma_presencial') ) : the_row();
