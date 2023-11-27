@@ -990,16 +990,29 @@ footer {
 			background-color: transparent !important;
 			background-image: url('../images/instagram.svg');
 			background-repeat: no-repeat;
-	    background-size: 100%;
-	    text-indent: -9999px;
-	    display: block;
-	    width: 50px;
-	    height: 50px;
+			background-size: 100%;
+			text-indent: -9999px;
+			display: block;
+			width: 50px;
+			height: 50px;
 
-	    &.wp-social-link-whatsapp {
-	    	background-image: url('../images/whatsapp.svg');
-	    	background-size: 88%;
-	    }
+			&.wp-social-link-spotify {
+				background-image: none;
+    			text-indent: inherit;
+
+				svg {
+					fill: #c15c17;
+					color: #c15c17;
+					height: 45px;
+					width: 45px;
+				}
+			}
+			
+
+			&.wp-social-link-whatsapp {
+				background-image: url('../images/whatsapp.svg');
+				background-size: 90%;
+			}
 
 	    a {
 	    	padding: 0;
@@ -2389,7 +2402,7 @@ footer {
 		    transition: all .2s linear;
 		    flex-direction: column;
 		    overflow: hidden;
-		    transform: translateY(30px);
+		    transform: translateY(134px);
 		    padding-right:20px;
 
 		    h4 {
@@ -2400,8 +2413,8 @@ footer {
 		    }
 
 		    p {
-		    	color: transparent;
-		    	height: 0;
+		    	//color: transparent;
+		    	//height: 0;
 		    	transition: all .2s linear;
 		    }
 
@@ -2527,7 +2540,7 @@ footer {
 		}
 
 		.image {
-			max-width: 200px;
+			max-width: 150px;
 
 			img {
 
