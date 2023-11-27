@@ -207,7 +207,34 @@ header {
 
 					&:hover {
 						text-decoration: none;
-						background-color: #lib.colors[orange];
+						background-color: #lib.colors[greenDark];
+					}
+				}
+
+				&.rot {
+					a {
+						&:hover {
+							color: #fff;
+							background-color: #lib.colors[orangeLight];
+						}
+					}
+				}
+
+				&.grup {
+					a {
+						&:hover {
+							color: #fff;
+							background-color: #lib.colors[orange];
+						}
+					}
+				}
+
+				&.sobns {
+					a {
+						&:hover {
+							color: #fff;
+							background-color: #lib.colors[green];
+						}
 					}
 				}
 
@@ -1729,7 +1756,7 @@ footer {
 
 	    .content {
 	    	width: 50%;
-	    	padding: 0 10%;
+	    	padding: 0 0 10% 0 0;
 	    }
 
 	    .image {
@@ -1875,14 +1902,14 @@ footer {
 	@media (min-width: 1024px) {
 		.container {
 			display: flex;
-    	flex-direction: row-reverse;
-    	align-items: center;
-    	max-width: 1920px;
+			flex-direction: row-reverse;
+			align-items: center;
+			max-width: 1920px;
 
-    	.content {
-    		width: 55%;
-    		padding: 0 5% 0 15%;
-    	}
+			.content {
+				width: 55%;
+				padding: 0 10% 0 0;
+			}
 		}
 
 		.image {
