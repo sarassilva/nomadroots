@@ -1,12 +1,11 @@
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.guiaCarousel'), {
-	    slidesToShow: 1.5,
-	    slidesToScroll: 1.5,
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
 	    rewind: true,
-	    arrows: false,
 	    arrows: {
 	        prev: '.glider-prev.gC',
 	        next: '.glider-next.gC'

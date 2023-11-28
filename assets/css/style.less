@@ -3156,17 +3156,11 @@ footer {
 			text-align: center;
 		}
 
-		.guiaCarousel {
-			.container {
-				max-width: 1920px;
-				width: 100%;
-				padding-left: 10%;
-			}
-
+		.guiaCarousel {			
 			.guia {
 				display: flex;
 				gap: 30px;
-				align-items: center;
+				text-align: center;
 
 				.image {
 					width: 300px;
@@ -3194,6 +3188,14 @@ footer {
 			.bio {
 				padding: 15px 0 0;
 				line-height: 24px;
+			}
+
+			@media (min-width: 1100px) {
+				.container {
+					max-width: 1920px;
+					width: 100%;
+					padding-left: 10%;
+				}
 			}
 		}
 	}
