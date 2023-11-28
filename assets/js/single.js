@@ -12,14 +12,22 @@ window.addEventListener('load',function(){
 	    },
 	    responsive: [
 	   	{
-	      breakpoint: 800,
+	      breakpoint: 1030,
 	      settings: {
 	        slidesToShow: 1.5,
 	        slidesToScroll: 1.5,
 	        duration: 0.25,
             itemWidth: 650,
 	    	}
-		}
+		}, {
+            breakpoint: 1500,
+            settings: {
+              slidesToShow: 1,9,
+              slidesToScroll: 1.9,
+              duration: 0.25,
+              itemWidth: 650,
+              }
+          }
 	  ]
 	});
 });
