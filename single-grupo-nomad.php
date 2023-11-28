@@ -19,6 +19,7 @@
                 </div>
                 <div class="direita">
                     <?php the_sub_field('direita') ?>
+                    <a href="<?php the_field('comprar_viagem') ?>" title="" class="btn">Compre agora</a>
                 </div>
             <?php endwhile; else : endif; ?>
             </div>
