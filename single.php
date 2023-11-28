@@ -113,7 +113,6 @@
                                     <?php endwhile; ?>
                                 <?php endif; ?>				    	
                             </div>
-                            <button class="glider-prev lC">&lsaquo;</button>
                             <button class="glider-next lC">&rsaquo;</button>
                         </div>
                     </div>
@@ -129,14 +128,13 @@
                                                 <img src="<?php the_sub_field('imagem') ?>" />
                                             </div>
                                             <div class="content">			    						
-                                                <div class="name"><?php the_sub_field('nome_do_livro') ?></div>
+                                                <div class="name"><?php the_sub_field('nome') ?></div>
                                                 <div class="bio"><?php the_sub_field('descricao') ?></div>
                                             </div>
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>				    	
                             </div>
-                            <button class="glider-prev aC">&lsaquo;</button>
                             <button class="glider-next aC">&rsaquo;</button>
                         </div>
                     </div>
