@@ -60,7 +60,29 @@
                     </div>
                 </div>
             </section>
-        <?php }?>	
+        <?php }?>
+
+        <?php 
+		if( get_field('ativar_sessao_2') == 'true' ) { ?>	
+            <section class="viagemLeitura">
+                <div class="container">
+                    <h3><?php the_field('titulo_da_sessao_2') ?></h3>
+
+                    <?php if( have_rows('itens') ): ?>
+                        <?php while( have_rows('itens') ): the_row(); ?>
+                        <div class="item">
+                            <div class="image">
+                                <img src="<?php the_sub_field('imagem') ?>" />
+                            </div>
+                            <div class="content">			    						
+                                <?php the_sub_field('mini_texto') ?>
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>	
+                </div>
+            </section>
+        <?php }?>
     </main>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
