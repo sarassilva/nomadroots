@@ -3027,12 +3027,13 @@ footer {
 		height: 600px;
 		display: flex;
 		text-align: center;
+		background-position: center;
 
 		.content {
 			margin: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 40px;
+			gap: 20px;
 			align-items: center;
 			color: #fff;
 			background: #00000087;
@@ -3044,6 +3045,35 @@ footer {
 				#lib.titleS2();
 				margin: 0;
 			}
+
+			.data {
+				font-size: 1.6rem;
+				margin-bottom: 20px;
+			}
+
+			.btn {
+				padding: 15px 40px;
+			}
 		}
+	}
+
+	.hold {
+		.container {
+			background-color: #lib.colors[green];
+			color: #lib.colors[beige];
+			padding: 20px 40px;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 2%;
+		}
+
+		.direita, .esquerda {
+			width: 49%;
+		}
+	}
+
+	.description {
+
 	}
   }
