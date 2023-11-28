@@ -3068,11 +3068,12 @@ footer {
 			padding: 50px;
 			border-radius: 20px;
 			display: flex;
-			gap: 4%;
+			gap: 15px;
+    		flex-direction: column;
 		}
 
 		.direita, .esquerda {
-			width: 48%;
+			width: 100%;
 
 			h2 {
 				font-weight: normal;
@@ -3121,6 +3122,17 @@ footer {
 				font-size: .6rem;
 				display: inline-block;
 				margin-top: 20px;
+			}
+		}
+
+		@media (min-width: 860px) {
+			.container {
+				gap: 4%;
+				flex-direction: row;
+			}
+
+			.direita, .esquerda {
+				width: 48%;
 			}
 		}
 	}
@@ -3260,7 +3272,7 @@ footer {
 					flex-direction: row;
 					gap: 0;
 
-					&:nth-child(odd) {
+					&:nth-child(even) {
 						flex-direction: row-reverse;
 					}
 
