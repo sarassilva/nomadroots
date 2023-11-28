@@ -12,11 +12,12 @@ window.addEventListener('load',function(){
 	    },
 	    responsive: [
 	   	{
-	      breakpoint: 700,
+	      breakpoint: 800,
 	      settings: {
 	        slidesToShow: 2.5,
 	        slidesToScroll: 1.5,
 	        duration: 0.25,
+            itemWidth: 650,
 	    	}
 		}
 	  ]
