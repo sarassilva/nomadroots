@@ -3294,6 +3294,10 @@ footer {
 	.livroEAutor {
 		padding: 80px 0;
 
+		.glider-prev:hover, .glider-next:hover, .glider-prev:focus, .glider-next:focus {
+			color: #lib.colors[greenDark];
+		}
+
 		h3 {
 			font-weight: normal;
 			font-family: 'Clearface';
@@ -3303,8 +3307,53 @@ footer {
 		}
 
 		h4 {
-			text-decoration: underline;
 			font-weight: normal;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			border-bottom: 1px solid;
+			display: inline-block;
+			position: relative;
+		}
+
+		.livroItem {
+			.livro {
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+
+				.image {
+					width: 280px;
+					height: 390px;
+					object-fit: cover;
+					margin: auto;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: 15px;
+					}
+				}
+
+				.content {
+					.name {
+						font-weight: 600;
+    					font-size: 1.5rem;
+					}
+
+					.bio {
+						font-size: 1.1rem;
+						line-height: 1.6rem;
+						margin: 15px 0;
+					}
+
+					a {
+						color: #lib.colors[orange];
+						text-decoration: underline;
+					}
+				}
+			}
 		}
 	}
 
