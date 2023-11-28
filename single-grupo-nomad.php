@@ -29,7 +29,10 @@
             <div class="container">
                 <div class="metade">
                     <?php the_field('descricao') ?>
-            </div>
+                </div>
+                <div class="mapa">
+                    <img src="<?php the_field('mapa') ?>" alt="mapa" />
+                </div>
             </div>
         </section>
 

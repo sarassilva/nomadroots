@@ -3239,12 +3239,14 @@ footer {
 		.itens {
 			display: grid;
 			gap: 30px;
+			padding-top: 20px;
 
 			.item {
 				display: flex;
 				align-items: center;
 				flex-direction: column;
 				gap: 30px;
+				text-align: center;
 	
 				.image {
 					width: 100%;
@@ -3268,18 +3270,8 @@ footer {
 			}
 
 			@media (min-width: 800px) {
-				.item {
-					flex-direction: row;
-					gap: 0;
-
-					&:nth-child(even) {
-						flex-direction: row-reverse;
-					}
-
-					.image, .content {
-						width: 50%;
-					}					
-				}
+				gap: 50px;
+    			grid-template-columns: 1fr 1fr;
 			}
 		}		
 	}
