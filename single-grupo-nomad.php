@@ -19,7 +19,7 @@
                 </div>
                 <div class="direita">
                     <?php the_sub_field('direita') ?>
-                    <a href="<?php the_field('comprar_viagem') ?>" title="Comprar viagem" class="btn">Compre agora</a>
+                    <a href="<?php the_field('comprar_viagem') ?>" title="Comprar viagem" class="btn">Garanta sua vaga</a>
                 </div>
             <?php endwhile; else : endif; ?>
             </div>
@@ -27,7 +27,13 @@
 
         <section class="description">
             <div class="container">
-            <?php the_field('descricao') ?>
+                <?php the_field('descricao') ?>
+            </div>
+        </section>
+
+        <section class="guia">
+            <div class="container">
+                <h3><?php the_field('titulo_da_sessao') ?></h3>
             </div>
         </section>
     </main>
