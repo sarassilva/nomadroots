@@ -35,7 +35,7 @@
 
         <?php 
 		if( get_field('ativar_sessao_1') == 'true' ) { ?>		
-            <section class="guia">
+            <section class="guias">
                 <div class="container">
                     <h3><?php the_field('titulo_da_sessao') ?></h3>
 
@@ -43,11 +43,11 @@
                         <div class="guiaCarousel">
                             <?php if( have_rows('guias') ): ?>
                                 <?php while( have_rows('guias') ): the_row(); ?>
-                                    <div class="content">
+                                    <div class="guia">
                                         <div class="image">
                                             <img src="<?php the_sub_field('imagem') ?>" />
                                         </div>
-                                        <div class="hold">			    						
+                                        <div class="content">			    						
                                             <div class="name"><?php the_sub_field('nome') ?></div>
                                             <div class="bio"><?php the_sub_field('mini_descricao') ?></div>
                                         </div>
