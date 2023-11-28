@@ -17,18 +17,9 @@ window.addEventListener('load',function(){
 	      settings: {
 	        slidesToShow: 2.5,
 	        slidesToScroll: 1.5,
-	        itemWidth: 150,
 	        duration: 0.25,
 	    	}
-		}, {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 3.5,
-	        slidesToScroll: 1.5,
-	        itemWidth: 150,
-	        duration: 0.25,
-	      }
-	    }
+		}
 	  ]
 	});
 });
