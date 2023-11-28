@@ -10,6 +10,7 @@ window.addEventListener('load',function(){
 	        prev: '.glider-prev.gC',
 	        next: '.glider-next.gC'
 	    },
+        
 	    responsive: [
 	   	{
 	      breakpoint: 1030,
@@ -22,7 +23,7 @@ window.addEventListener('load',function(){
 		}, {
             breakpoint: 1500,
             settings: {
-              slidesToShow: 1,9,
+              slidesToShow: 1.9,
               slidesToScroll: 1.9,
               duration: 0.25,
               itemWidth: 650,
