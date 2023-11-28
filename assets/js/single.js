@@ -40,3 +40,18 @@ window.addEventListener('load',function(){
 	  ]
 	});
 });
+
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.livroItem'), {
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    draggable: true,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
+	    arrows: {
+	        prev: '.glider-prev.lC',
+	        next: '.glider-next.lC'
+	    },
+	});
+});

@@ -87,6 +87,64 @@
                 </div>
             </section>
         <?php }?>
+
+        <?php 
+		if( get_field('ativar_sessao_3') == 'true' ) { ?>		
+            <section class="livroEAutor">
+                <div class="container">
+                <h3><?php the_field('titulo_da_sessao') ?></h3>
+
+                    <div class="livroSessao">
+                        <h4><?php the_field('segundo_titulo') ?></h4>
+                        <div class="glider-contain">
+                            <div class="livroItem">
+                                <?php if( have_rows('livros') ): ?>
+                                    <?php while( have_rows('livros') ): the_row(); ?>
+                                        <div class="livro">
+                                            <div class="image">
+                                                <img src="<?php the_sub_field('capa') ?>" />
+                                            </div>
+                                            <div class="content">			    						
+                                                <div class="name"><?php the_sub_field('nome_do_livro') ?></div>
+                                                <div class="bio"><?php the_sub_field('sinopse') ?></div>
+                                                <p><a href="<?php the_sub_field('link_de_compra') ?>" title="compre esse livro">Compre o seu aqui</a>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>				    	
+                            </div>
+                            <button class="glider-prev lC">&lsaquo;</button>
+                            <button class="glider-next lC">&rsaquo;</button>
+                        </div>
+                    </div>
+
+                    <div class="autorSessao">
+                        <h4><?php the_field('terceiro_titulo') ?></h4>
+                        <div class="glider-contain">
+                            <div class="autorItem">
+                                <?php if( have_rows('autores') ): ?>
+                                    <?php while( have_rows('autores') ): the_row(); ?>
+                                        <div class="autor">
+                                            <div class="image">
+                                                <img src="<?php the_sub_field('imagem') ?>" />
+                                            </div>
+                                            <div class="content">			    						
+                                                <div class="name"><?php the_sub_field('nome_do_livro') ?></div>
+                                                <div class="bio"><?php the_sub_field('descricao') ?></div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>				    	
+                            </div>
+                            <button class="glider-prev aC">&lsaquo;</button>
+                            <button class="glider-next aC">&rsaquo;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php }?>
+
+
     </main>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />

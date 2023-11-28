@@ -3141,6 +3141,11 @@ footer {
 		padding: 60px 0;
 		color: #lib.colors[greenDark];
 
+		.container {
+			display: grid;
+			gap: 10px
+		}
+
 		h2 {
 			font-weight: normal;
 			font-family: 'Clearface';
@@ -3157,8 +3162,11 @@ footer {
 			}
 		}
 
-		@media (min-width: 1100px) {
-			
+		@media (min-width: 1000px) {
+			.container {
+				grid-template-columns: 1fr 1fr;
+    			gap: 60px;
+			}
 		}
 	}
 
@@ -3281,5 +3289,28 @@ footer {
     			grid-template-columns: 1fr 1fr;
 			}
 		}		
+	}
+
+	.livroEAutor {
+		padding: 80px 0;
+
+		h3 {
+			font-weight: normal;
+			font-family: 'Clearface';
+			font-size: 2.5rem;
+    		margin: 0 0 30px;
+			text-align: center;
+		}
+
+		h4 {
+			text-decoration: underline;
+			font-weight: normal;
+		}
+	}
+
+	.roteiro {
+		background-color: #lib.colors[greenDark];
+		color: #lib.colors[beige];
+		padding: 80px 0;
 	}
   }
