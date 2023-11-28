@@ -27,7 +27,9 @@
 
         <section class="description">
             <div class="container">
-                <?php the_field('descricao') ?>
+                <div class="metade">
+                    <?php the_field('descricao') ?>
+            </div>
             </div>
         </section>
 
