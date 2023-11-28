@@ -67,19 +67,20 @@
             <section class="viagemLeitura">
                 <div class="container">
                     <h3><?php the_field('titulo_da_sessao_2') ?></h3>
-
-                    <?php if( have_rows('itens') ): ?>
-                        <?php while( have_rows('itens') ): the_row(); ?>
-                        <div class="item">
-                            <div class="image">
-                                <img src="<?php the_sub_field('imagem') ?>" />
+                    <div class="itens">
+                        <?php if( have_rows('itens') ): ?>
+                            <?php while( have_rows('itens') ): the_row(); ?>
+                            <div class="item">
+                                <div class="image">
+                                    <img src="<?php the_sub_field('imagem') ?>" />
+                                </div>
+                                <div class="content">			    						
+                                    <?php the_sub_field('mini_texto') ?>
+                                </div>
                             </div>
-                            <div class="content">			    						
-                                <?php the_sub_field('mini_texto') ?>
-                            </div>
-                        </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>	
+                            <?php endwhile; ?>
+                        <?php endif; ?>	
+                    </div>
                 </div>
             </section>
         <?php }?>
