@@ -55,3 +55,33 @@ window.addEventListener('load',function(){
 	    },
 	});
 });
+
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.autorItem'), {
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    draggable: true,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
+	    arrows: {
+	        prev: '.glider-prev.aC',
+	        next: '.glider-next.aC'
+	    },
+	});
+});
+
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.roteiroImg'), {
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    draggable: true,
+	    scrollLock: false,
+	    dots: false,
+	    rewind: true,
+	    arrows: {
+	        prev: '.glider-prev.aC',
+	        next: '.glider-next.aC'
+	    },
+	});
+});

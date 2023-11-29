@@ -142,6 +142,28 @@
             </section>
         <?php }?>
 
+        <section class="roteiro">
+            <div class="container">
+                <h3><?php the_field('titulo_roteiro') ?></h3>
+                <div class="data"><span><?php the_field('dias') ?></span></div>
+
+                <div class="content">
+                    <div class="roteiroTexto">
+                        <?php the_field('roteiro') ?>
+                    </div>
+                                   
+                    <div class="galeria glider-contain">
+                        <div class="roteiroImg">
+                            <?php if( have_rows('autores') ): ?>
+                                <?php while( have_rows('autores') ): the_row(); ?>
+                                    <img src="<?php the_sub_field('imagem') ?>" />
+                                    <?php endwhile; ?>
+                            <?php endif; ?>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>                       
 
     </main>
 
