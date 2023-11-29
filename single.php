@@ -206,6 +206,10 @@
 		</div>
 	</section>
 
+    <section class="buy">
+        <?php $product->get_price(); ?>
+    </section>
+
     </main>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
