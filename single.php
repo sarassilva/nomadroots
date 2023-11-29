@@ -208,10 +208,14 @@
 
     <section class="buy">
     <?php
-global $product;
-$pid = $product->get_id();
+global $post, $woocommerce;
+$product = wc_get_product( $post->ID );
+if ($product) {
+    echo '<p class="price">$' . $product->get_price() . '</p>' ;
+    echo '<a href="'.get_permalink( $post->ID ).'" class="btn btn-primary ">Shop Now</a>';
+    }
+}
 ?>
-<a href="<?php echo do_shortcode( '[add_to_cart_url id=' . $pid . ']' ) ?>" class="your-classes-here">Add to cart</a>
     </section>
 
     </main>
