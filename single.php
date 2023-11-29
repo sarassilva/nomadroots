@@ -210,12 +210,9 @@
     <?php
 global $post, $woocommerce;
 $product = wc_get_product( $post->ID );
-if ($product) {
-    echo '<p class="price">$' . $product->get_price() . '</p>' ;
-    echo '<a href="'.get_permalink( $post->ID ).'" class="btn btn-primary ">Shop Now</a>';
-    }
-}
 ?>
+<?php $product->get_price(); ?>
+<a href="<?php get_permalink( $post->ID ); ?>">Add to cart</a>
     </section>
 
     </main>
