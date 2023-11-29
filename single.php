@@ -207,7 +207,11 @@
 	</section>
 
     <section class="buy">
-    <?php echo $product->get_price_html(); ?>
+    <?php
+global $product;
+
+?>
+<?php echo $product->get_price_html(); ?>
 <a href="<?php get_permalink( $post->ID ); ?>">Add to cart</a>
     </section>
 
