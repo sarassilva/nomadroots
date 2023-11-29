@@ -160,6 +160,7 @@
                                     <?php endwhile; ?>
                             <?php endif; ?>	
                         </div>
+                        <button class="glider-next aC">&rsaquo;</button>
                     </div>
                 </div>
             </div>
