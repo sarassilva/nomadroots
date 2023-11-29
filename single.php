@@ -146,22 +146,23 @@
             <div class="container">
                 <h3><?php the_field('titulo_roteiro') ?></h3>
                 <div class="data"><span><?php the_field('dias') ?></span></div>
-
-                <div class="content">
-                    <div class="roteiroTexto">
-                        <?php the_field('roteiro') ?>
-                    </div>
                                    
-                    <div class="galeria glider-contain">
-                        <div class="roteiroImg">
-                            <?php if( have_rows('imagem_roteiro') ): ?>
-                                <?php while( have_rows('imagem_roteiro') ): the_row(); ?>
-                                    <img src="<?php the_sub_field('imagem') ?>" />
-                                    <?php endwhile; ?>
-                            <?php endif; ?>	
-                        </div>
-                        <button class="glider-next aC">&rsaquo;</button>
+                <div class="glider-contain">
+                    <div class="roteiroImg">
+                        <?php if( have_rows('roteiro') ): ?>
+                            <?php while( have_rows('roteiro') ): the_row(); ?>
+                                <div class="content">
+                                    <div class="imagem">
+                                        <img src="<?php the_sub_field('imagem') ?>" />
+                                    </div>
+                                    <div class="roteiroTexto">
+                                        <?php the_sub_field('texto') ?>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>	
                     </div>
+                    <button class="glider-next aC">&rsaquo;</button>
                 </div>
             </div>
         </section>                       
