@@ -207,11 +207,7 @@
 	</section>
 
     <section class="buy">
-    <?php
-global $post, $woocommerce;
-$product = wc_get_product( $post->ID );
-?>
-<?php $product->get_price(); ?>
+    <?php echo $product->get_price_html(); ?>
 <a href="<?php get_permalink( $post->ID ); ?>">Add to cart</a>
     </section>
 
