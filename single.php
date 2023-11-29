@@ -154,8 +154,8 @@
                                    
                     <div class="galeria glider-contain">
                         <div class="roteiroImg">
-                            <?php if( have_rows('autores') ): ?>
-                                <?php while( have_rows('autores') ): the_row(); ?>
+                            <?php if( have_rows('imagem_roteiro') ): ?>
+                                <?php while( have_rows('imagem_roteiro') ): the_row(); ?>
                                     <img src="<?php the_sub_field('imagem') ?>" />
                                     <?php endwhile; ?>
                             <?php endif; ?>	
