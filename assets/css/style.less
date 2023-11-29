@@ -3453,9 +3453,9 @@ border: 0px solid #ffffff;
 			display: grid;
     		gap: 40px;
 
-			.galeria {
+			.imagem {
 				width: 100%;
-				height: 500px;
+				height: 350px;
 				object-fit: cover;
 
 				img {
@@ -3488,13 +3488,16 @@ border: 0px solid #ffffff;
 		
 		@media (min-width: 980px) {
 			.content {
-				grid-template-columns: 1fr 1fr;
+				display: flex;
+    			flex-direction: row-reverse;
 
-				.galeria {
+				.imagem {
 					height: 400px;
+					width: 50%;
 				}
 
 				.roteiroTexto {
+					width: 50%;
 					max-height: 400px;
 				}
 			}
