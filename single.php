@@ -148,7 +148,7 @@
                 <div class="data"><span><?php the_field('dias') ?></span></div>
                                    
                 <div class="glider-contain">
-                    <div class="roteiroImg">
+                    <div class="roteiroCarousel">
                         <?php if( have_rows('roteiro') ): ?>
                             <?php while( have_rows('roteiro') ): the_row(); ?>
                                 <div class="content">
@@ -162,7 +162,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
-                    <button class="glider-next aC">&rsaquo;</button>
+                    <button class="glider-next rC">&rsaquo;</button>
                 </div>
             </div>
         </section>                       

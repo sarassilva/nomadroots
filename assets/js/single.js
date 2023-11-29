@@ -72,7 +72,7 @@ window.addEventListener('load',function(){
 });
 
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.roteiroImg'), {
+	new Glider(document.querySelector('.roteiroCarousel'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    draggable: true,
@@ -81,7 +81,7 @@ window.addEventListener('load',function(){
 	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.aC',
-	        next: '.glider-next.aC'
+	        next: '.glider-next.rC'
 	    },
 	});
 });
