@@ -3448,8 +3448,11 @@ border: 0px solid #ffffff;
 			}
 		}
 
+		.glider-contain {
+			margin: 40px 0;
+		}
+
 		.content {
-			margin-top: 40px;
 			display: grid;
     		gap: 40px;
 
@@ -3462,6 +3465,7 @@ border: 0px solid #ffffff;
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
+					border-radius: 15px;
 				}
 				
 			}
@@ -3471,6 +3475,11 @@ border: 0px solid #ffffff;
 				overflow-y: scroll;
 				padding-right: 30px;
 			}
+		}
+
+		.glider-prev, .glider-next {
+			top: auto;
+    		bottom: 24%;
 		}
 
 		*::-webkit-scrollbar {
@@ -3493,13 +3502,17 @@ border: 0px solid #ffffff;
 
 				.imagem {
 					height: 400px;
-					width: 50%;
+					width: 48%;
 				}
 
 				.roteiroTexto {
-					width: 50%;
+					width: 52%;
 					max-height: 400px;
 				}
+			}
+
+			.glider-prev, .glider-next {
+				bottom: 40%;
 			}
 		}
 	}

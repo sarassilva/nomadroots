@@ -164,8 +164,47 @@
                     </div>
                     <button class="glider-next rC">&rsaquo;</button>
                 </div>
+
+                <a href="#" class="btn">Garanta sua vaga</a>
             </div>
-        </section>                       
+        </section>  
+        
+        <section class="testimonials">
+		<div class="container">
+			<h3>Quem leu o mundo em grupo com a gente</h3>
+
+			<div class="glider-contain">
+		        <div class="testimonial">
+		        	<?php
+				    $new_loop = new WP_Query( array(
+				    'post_type' => 'depoimento',
+				    'posts_per_page' => 10,
+				    'tax_query' => array(
+			            array(
+			                'taxonomy' => 'area-do-depoimento',
+			                'field' => 'slug',
+			                'terms' => array( 'home' ),
+			            ),
+			        ),
+				    ) ); ?>
+
+				    <?php if ( $new_loop->have_posts() ) : ?>
+				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+
+		            <div>
+		            	<div class="aspas"></div>
+		            	<?php the_content(); ?>
+	            		<div class="name"><?php the_title(); ?></div> 
+		            </div>
+	
+		            <?php endwhile; else: endif;?>
+					<?php wp_reset_query(); ?>
+		        </div>
+		        <button class="glider-prev ttm">&lsaquo;</button>
+		        <button class="glider-next ttm">&rsaquo;</button>
+		    </div>
+		</div>
+	</section>
 
     </main>
 
