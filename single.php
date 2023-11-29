@@ -207,21 +207,18 @@
 	</section>
 
     <section class="buy">
-    <?php
-global $product;
-
-?>
-<?php echo $product->get_price_html(); ?>
-
-<table class="woocommerce-product-attributes shop_attributes">
-	<?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
-		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">
-			<th class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute['label'] ); ?></th>
-			<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post( $product_attribute['value'] ); ?></td>
-		</tr>
-	<?php endforeach; ?>
-</table>
-<a href="<?php get_permalink( $post->ID ); ?>">Add to cart</a>
+    <?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		
+		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+			<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
+			<div class="summary entry-summary">				
+				<?php do_action( 'woocommerce_single_product_summary' ); ?>
+			</div>	
+			<?php do_action( 'woocommerce_after_single_product_summary' );	?>
+			<?php do_action( 'woocommerce_after_single_product' ); ?>
+			<?php endwhile;  ?>
+			<?php do_action( 'woocommerce_after_main_content' );?>
     </section>
 
     </main>
