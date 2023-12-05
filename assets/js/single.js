@@ -98,5 +98,14 @@ window.addEventListener('load',function(){
 	    prev: '.glider-prev.g',
 	    next: '.glider-next.g'
 	  },
+	  responsive: [
+		{
+		breakpoint: 1030,
+		settings: {
+			slidesToShow: 2.5,
+			slidesToScroll: 1,
+			}
+		}
+	  ]
 	});
 });
