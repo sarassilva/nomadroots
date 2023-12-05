@@ -89,25 +89,14 @@ window.addEventListener('load',function(){
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.galeria'), {
 	  // Mobile-first defaults
-	  slidesToShow: 1,
+	  slidesToShow: 1.5,
 	  slidesToScroll: 1,
 	  scrollLock: false,
 	  rewind: true,
-	  draggable: false,
+	  draggable: true,
 	  arrows: {
 	    prev: '.glider-prev.g',
 	    next: '.glider-next.g'
 	  },
-	  responsive: [
-		{
-	      // screens greater than >= 1024px
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 1.5,
-	        slidesToScroll: 1,
-	        duration: 0.25
-	      }
-	    }
-	  ]
 	});
 });
