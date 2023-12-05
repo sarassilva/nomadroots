@@ -15,7 +15,7 @@
 <header>
 	<button id="mobile-menu" class="" onclick="menuMobile()" name="Menu de navegação">Abrir</button>
 
-	<a class="logo-nomad" title="NomadRoots" href="<?php echo get_home_url(); ?>" rel="Home">NomadRoots</a>
+	<a class="logo-nomad mobile" title="NomadRoots" href="<?php echo get_home_url(); ?>" rel="Home">NomadRoots</a>
 
 	<div class="main-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
