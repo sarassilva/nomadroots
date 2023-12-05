@@ -70,4 +70,9 @@ register_sidebar( array(
     'after_title' => '</div>',
 ) );
 
+//hooks
+add_action( 'woocommerce_before_add_to_cart_quantity', 'woosuite_echo_qty_front_add_cart' );
+function woosuite_echo_qty_front_add_cart() {
+    echo '<div class="qty-label">NNúmero de viajantes: </div>';   
+}
 ?>
