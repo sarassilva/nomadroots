@@ -219,14 +219,12 @@
 	</section>
 
     <section id="comprar" class="buy">
-    <?php while ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
-		
-		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-			<div class="summary entry-summary">				
-				<?php do_action( 'woocommerce_single_product_summary' ); ?>
-			</div>	
-			<?php endwhile;  ?>
+            <h2><?php the_field('titulo_compra') ?></h2>
+            <?php the_field('informacoes') ?>
+		    <?php do_action( 'woocommerce_single_product_summary' ); ?>
+		<?php endwhile;  ?>
     </section>
    
 
