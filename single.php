@@ -5,7 +5,7 @@
             <div class="content">
                 <h1><?php the_title(); ?></h1>
                 <div class="data"><?php the_field('data') ?></div>
-                <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
+                <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
             </div>
         </section>
 
