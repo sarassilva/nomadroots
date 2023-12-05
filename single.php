@@ -19,7 +19,7 @@
                 </div>
                 <div class="direita">
                     <?php the_sub_field('direita') ?>
-                    <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
+                    <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
                 </div>
             <?php endwhile; else : endif; ?>
             </div>
@@ -84,7 +84,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
-                    <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('botao') ?></a>
+                    <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('botao') ?></a>
                 </div>
             </section>
         <?php }?>
@@ -166,7 +166,7 @@
                     <button class="glider-next rC">&rsaquo;</button>
                 </div>
 
-                <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('botao') ?></a>
+                <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('botao') ?></a>
             </div>
         </section>  
         
@@ -174,12 +174,11 @@
 		<div class="container">
 			<h3>Quem leu o mundo em grupo com a gente</h3>
 
-			<div class="glider-contain">
 		        <div class="testimonial">
 		        	<?php
 				    $new_loop = new WP_Query( array(
 				    'post_type' => 'depoimento',
-				    'posts_per_page' => 10,
+				    'posts_per_page' => 3,
 				    'tax_query' => array(
 			            array(
 			                'taxonomy' => 'area-do-depoimento',
@@ -201,9 +200,7 @@
 		            <?php endwhile; else: endif;?>
 					<?php wp_reset_query(); ?>
 		        </div>
-		        <button class="glider-prev ttm">&lsaquo;</button>
-		        <button class="glider-next ttm">&rsaquo;</button>
-		    </div>
+
 		</div>
 	</section>
 
