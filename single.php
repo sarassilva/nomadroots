@@ -171,23 +171,51 @@
         </section>  
         
         <section class="testimonials">
-        <h3>Quem leu o mundo em grupo com a gente</h3>
+            <h3>Quem leu o mundo em grupo com a gente</h3>
 
-        <div class="glider-contain">
-            <div class="galeria">
-                <?php if( have_rows('galeria') ): ?>
-                    <?php while( have_rows('galeria') ): the_row(); ?>
-                        <div class="imagem">
-                            <img src="<?php the_sub_field('imagem') ?>" />
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>				    	
+            <div class="glider-contain">
+                <div class="galeria">
+                    <?php if( have_rows('galeria') ): ?>
+                        <?php while( have_rows('galeria') ): the_row(); ?>
+                            <div class="imagem">
+                                <img src="<?php the_sub_field('imagem') ?>" />
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>				    	
+                </div>
+                <button class="glider-prev g">&lsaquo;</button>
+                <button class="glider-next g">&rsaquo;</button>
             </div>
-            <button class="glider-prev g">&lsaquo;</button>
-            <button class="glider-next g">&rsaquo;</button>
-        </div>
 
-		
+            <div class="container">		
+
+                <div class="testimonial">
+                    <?php
+                    $new_loop = new WP_Query( array(
+                    'post_type' => 'depoimento',
+                    'posts_per_page' => 3,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'area-do-depoimento',
+                            'field' => 'slug',
+                            'terms' => array( 'home' ),
+                        ),
+                    ),
+                    ) ); ?>
+
+                    <?php if ( $new_loop->have_posts() ) : ?>
+                    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+
+                    <div class="item">
+                        <div class="aspas"></div>
+                        <?php the_content(); ?>
+                        <div class="name"><?php the_title(); ?></div> 
+                    </div>
+
+                    <?php endwhile; else: endif;?>
+                    <?php wp_reset_query(); ?>
+                </div>
+            </div>		
 	</section>
 
    
