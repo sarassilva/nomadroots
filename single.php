@@ -5,7 +5,7 @@
             <div class="content">
                 <h1><?php the_title(); ?></h1>
                 <div class="data"><?php the_field('data') ?></div>
-                <a href="<?php the_permalink();?>/#comprar-viagem" title="" class="btn">Compre agora</a>
+                <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
             </div>
         </section>
 
@@ -19,7 +19,7 @@
                 </div>
                 <div class="direita">
                     <?php the_sub_field('direita') ?>
-                    <a href="<?php the_field('comprar_viagem') ?>" title="Comprar viagem" class="btn">Garanta sua vaga</a>
+                    <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
                 </div>
             <?php endwhile; else : endif; ?>
             </div>
@@ -84,6 +84,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
+                    <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('botao') ?></a>
                 </div>
             </section>
         <?php }?>
@@ -165,7 +166,7 @@
                     <button class="glider-next rC">&rsaquo;</button>
                 </div>
 
-                <a href="#" class="btn">Garanta sua vaga</a>
+                <a href="<?php the_permalink();?>/#comprar" title="" class="btn"><?php the_field('botao') ?></a>
             </div>
         </section>  
         
@@ -206,7 +207,7 @@
 		</div>
 	</section>
 
-    <section id="comprar-viagem" class="buy">
+    <section id="comprar" class="buy">
     <?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		
