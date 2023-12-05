@@ -5,7 +5,7 @@
             <div class="content">
                 <h1><?php the_title(); ?></h1>
                 <div class="data"><?php the_field('data') ?></div>
-                <a href="<?php the_field('comprar_viagem') ?>" title="" class="btn">Compre agora</a>
+                <a href="<?php the_permalink();?>/#comprar-viagem" title="" class="btn">Compre agora</a>
             </div>
         </section>
 
@@ -206,7 +206,7 @@
 		</div>
 	</section>
 
-    <section class="buy">
+    <section id="comprar-viagem" class="buy">
     <?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		
