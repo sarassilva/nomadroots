@@ -76,59 +76,80 @@ function woosuite_echo_qty_front_add_cart() {
     echo '<div class="label">Número de viajantes</div>';   
 }
 
-function woocommerce_quantity_input( $args = array(), $product = null, $echo = true ) {
-  
-    if ( is_null( $product ) ) {
-       $product = $GLOBALS['product'];
-    }
-  
+function woocommerce_quantity_input($data = null) {
+    global $product;
+    if (!$data) {
     $defaults = array(
-       'input_id' => uniqid( 'quantity_' ),
-       'input_name' => 'quantity',
-       'input_value' => '1',
-       'classes' => apply_filters( 'woocommerce_quantity_input_classes', array( 'input-text', 'qty', 'text' ), $product ),
-       'max_value' => apply_filters( 'woocommerce_quantity_input_max', -1, $product ),
-       'min_value' => apply_filters( 'woocommerce_quantity_input_min', 0, $product ),
-       'step' => apply_filters( 'woocommerce_quantity_input_step', 1, $product ),
-       'pattern' => apply_filters( 'woocommerce_quantity_input_pattern', has_filter( 'woocommerce_stock_amount', 'intval' ) ? '[0-9]*' : '' ),
-       'inputmode' => apply_filters( 'woocommerce_quantity_input_inputmode', has_filter( 'woocommerce_stock_amount', 'intval' ) ? 'numeric' : '' ),
-       'product_name' => $product ? $product->get_title() : '',
+    'input_name'   => 'quantity',
+    'input_value'   => '1',
+    'max_value'     => apply_filters( 'woocommerce_quantity_input_max', '', $product ),
+    'min_value'     => apply_filters( 'woocommerce_quantity_input_min', '', $product ),
+    'step'         => apply_filters( 'woocommerce_quantity_input_step', '1', $product ),
+    'style'         => apply_filters( 'woocommerce_quantity_style', 'float:left;', $product )
     );
-  
-    $args = apply_filters( 'woocommerce_quantity_input_args', wp_parse_args( $args, $defaults ), $product );
-   
-    // Apply sanity to min/max args - min cannot be lower than 0.
-    $args['min_value'] = max( $args['min_value'], 0 );
-    // Note: change 20 to whatever you like
-    $args['max_value'] = 0 < $args['max_value'] ? $args['max_value'] : 20;
-  
-    // Max cannot be lower than min if defined.
-    if ( '' !== $args['max_value'] && $args['max_value'] < $args['min_value'] ) {
-       $args['max_value'] = $args['min_value'];
-    }
-   
-    $options = '';
-     
-    for ( $count = $args['min_value']; $count <= $args['max_value']; $count = $count + $args['step'] ) {
-  
-       // Cart item quantity defined?
-       if ( '' !== $args['input_value'] && $args['input_value'] >= 1 && $count == $args['input_value'] ) {
-         $selected = 'selected';      
-       } else $selected = '';
-  
-       $options .= '<option value="' . $count . '"' . $selected . '>' . $count . '</option>';
-  
-    }
-      
-    $string = '<div class="quantity"><span>Qty</span><select name="' . $args['input_name'] . '">' . $options . '</select></div>';
-  
-    if ( $echo ) {
-       echo $string;
     } else {
-       return $string;
+    $defaults = array(
+    
+    'input_name'   => $data['input_name'],
+    
+    'input_value'   => $data['input_value'],
+    'step'         => apply_filters( 'cw_woocommerce_quantity_input_step', '1', $product ),
+    
+    'max_value'     => apply_filters( 'cw_woocommerce_quantity_input_max', '', $product ),
+    
+    'min_value'     => apply_filters( 'cw_woocommerce_quantity_input_min', '', $product ),
+    
+    'style'         => apply_filters( 'cw_woocommerce_quantity_style', 'float:left;', $product )
+    
+    );
+    
     }
-   
- }
+    
+    
+    
+    if ( ! empty( $defaults['min_value'] ) )
+    
+    $min = $defaults['min_value'];
+    
+    else $min = 1;
+    
+    
+    
+    if ( ! empty( $defaults['max_value'] ) )
+    
+    $max = $defaults['max_value'];
+    
+    else $max = 15;
+    
+    
+    
+    if ( ! empty( $defaults['step'] ) )
+    
+    $step = $defaults['step'];
+    
+    else $step = 1;
+    
+    
+    
+    $options = '';
+    
+    
+    
+    for ( $count = $min; $count <= $max; $count = $count+$step ) {
+    
+    $selected = $count === $defaults['input_value'] ? ' selected' : '';
+    
+    $options .= '<option value="' . $count . '"'.$selected.'>' . $count . '</option>';
+    
+    }
+    
+    
+    
+    echo '<div class="cw_quantity_select" style="' . $defaults['style'] . '"><select name="' . esc_attr( $defaults['input_name'] ) . '" title="' . _x( 'Qty', 'Product Description', 'woocommerce' ) . '" class="cw_qty">' . $options . '</select></div>';
+    
+    
+    
+    }
 
 }
 
