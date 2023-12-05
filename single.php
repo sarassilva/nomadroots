@@ -218,6 +218,16 @@
             </div>		
 	</section>
 
+    <section id="comprar" class="buy">
+    <?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		
+		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+			<div class="summary entry-summary">				
+				<?php do_action( 'woocommerce_single_product_summary' ); ?>
+			</div>	
+			<?php endwhile;  ?>
+    </section>
    
 
     </main>
