@@ -3646,6 +3646,39 @@ border: 0px solid #ffffff;
 			display: none;
 		}
 
+		tr {
+			display: grid;
+			text-align: left;
+		}
+
+		.label {
+			font-weight: 400;
+    		font-size: 1.2rem;
+			margin-bottom: 5px;
+		}
+
+		.variations {
+			width: 100%;
+
+			select {
+				width: 100%;
+				background: transparent;
+				color: #fff;
+				border: 1px solid #fff;
+				padding: 10px;
+				border-radius: 10px;
+				font-size: 1rem;
+
+				option {
+					color: lib.colors[greenDark];
+				}
+			}
+		}
+
+		.single_variation_wrap {
+			margin-top: 15px;
+		}
+
 		.single_add_to_cart_button {
 			background-color: #lib.colors[orange];
 			color: #lib.colors[beige];
