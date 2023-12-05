@@ -171,8 +171,23 @@
         </section>  
         
         <section class="testimonials">
-		<div class="container">
-			<h3>Quem leu o mundo em grupo com a gente</h3>
+        <h3>Quem leu o mundo em grupo com a gente</h3>
+
+        <div class="glider-contain">
+            <div class="galeria">
+                <?php if( have_rows('galeria') ): ?>
+                    <?php while( have_rows('galeria') ): the_row(); ?>
+                        <div class="imagem">
+                            <img src="<?php the_sub_field('imagem') ?>" />
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>				    	
+            </div>
+            <button class="glider-prev g">&lsaquo;</button>
+            <button class="glider-next g">&rsaquo;</button>
+        </div>
+
+		<div class="container">			
 
 		        <div class="testimonial">
 		        	<?php

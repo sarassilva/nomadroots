@@ -87,7 +87,7 @@ window.addEventListener('load',function(){
 });
 
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.testimonial'), {
+	new Glider(document.querySelector('.galeria'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -95,17 +95,16 @@ window.addEventListener('load',function(){
 	  rewind: true,
 	  draggable: false,
 	  arrows: {
-	    prev: '.glider-prev.ttm',
-	    next: '.glider-next.ttm'
+	    prev: '.glider-prev.g',
+	    next: '.glider-next.g'
 	  },
 	  responsive: [
 		{
 	      // screens greater than >= 1024px
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 3,
+	        slidesToShow: 1.5,
 	        slidesToScroll: 1,
-	        itemWidth: 150,
 	        duration: 0.25
 	      }
 	    }
