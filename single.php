@@ -187,48 +187,10 @@
             <button class="glider-next g">&rsaquo;</button>
         </div>
 
-		<div class="container">			
-
-		        <div class="testimonial">
-		        	<?php
-				    $new_loop = new WP_Query( array(
-				    'post_type' => 'depoimento',
-				    'posts_per_page' => 3,
-				    'tax_query' => array(
-			            array(
-			                'taxonomy' => 'area-do-depoimento',
-			                'field' => 'slug',
-			                'terms' => array( 'home' ),
-			            ),
-			        ),
-				    ) ); ?>
-
-				    <?php if ( $new_loop->have_posts() ) : ?>
-				    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
-
-		            <div>
-		            	<div class="aspas"></div>
-		            	<?php the_content(); ?>
-	            		<div class="name"><?php the_title(); ?></div> 
-		            </div>
-	
-		            <?php endwhile; else: endif;?>
-					<?php wp_reset_query(); ?>
-		        </div>
-
-		</div>
+		
 	</section>
 
-    <section id="comprar" class="buy">
-    <?php while ( have_posts() ) : ?>
-		<?php the_post(); ?>
-		
-		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-			<div class="summary entry-summary">				
-				<?php do_action( 'woocommerce_single_product_summary' ); ?>
-			</div>	
-			<?php endwhile;  ?>
-    </section>
+   
 
     </main>
 
