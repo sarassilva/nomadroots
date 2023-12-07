@@ -42,26 +42,29 @@
                 <div class="container">
                     <h3><?php the_field('titulo_da_sessao') ?></h3>
 
-                    <div class="glider-contain">
-                        <div class="guiaCarousel">
-                            <?php if( have_rows('guias') ): ?>
-                                <?php while( have_rows('guias') ): the_row(); ?>
-                                    <div class="guia">
-                                        <div class="image">
-                                            <img src="<?php the_sub_field('imagem') ?>" />
+                    <?php 
+		            if( get_field('numero_de_guias') == '3+' ) { ?>	
+                        <div class="glider-contain">
+                            <div class="guiaCarousel">
+                                <?php if( have_rows('guias') ): ?>
+                                    <?php while( have_rows('guias') ): the_row(); ?>
+                                        <div class="guia">
+                                            <div class="image">
+                                                <img src="<?php the_sub_field('imagem') ?>" />
+                                            </div>
+                                            <div class="content">			    						
+                                                <div class="name"><?php the_sub_field('nome') ?></div>
+                                                <div class="bio"><?php the_sub_field('mini_descricao') ?></div>
+                                            </div>
                                         </div>
-                                        <div class="content">			    						
-                                            <div class="name"><?php the_sub_field('nome') ?></div>
-                                            <div class="bio"><?php the_sub_field('mini_descricao') ?></div>
-                                        </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>				    	
+                                    <?php endwhile; ?>
+                                <?php endif; ?>				    	
+                            </div>
+                            <button class="glider-prev gC">&lsaquo;</button>
+                            <button class="glider-next gC">&rsaquo;</button>
                         </div>
-                        <button class="glider-prev gC">&lsaquo;</button>
-                        <button class="glider-next gC">&rsaquo;</button>
-                    </div>
-                </div>
+                    <?php }?>
+                </div>  
             </section>
         <?php }?>
 

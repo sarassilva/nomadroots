@@ -528,7 +528,7 @@ header {
 			display: flex;
 		    flex-direction: column;
 		    align-items: baseline;
-		    padding: 5% 5% 5% 10%;
+		    padding: 5% 0;
 		    gap: 20px;
 		    width: 50%;
 			}
@@ -622,6 +622,8 @@ header {
 
 			.image {
 				border-radius: 0 0 20px 0;
+				margin-left: calc((100vw - 100%) / 2 * -1);
+    			width: calc(100% - 100px);
 
 				.img {
 					border-radius: 0 0 20px 0;
@@ -633,7 +635,7 @@ header {
 			}
 
 			.content {
-				padding: 5% 10% 5% 5%;
+				padding: 5% 0;
 				text-align: right;
 				align-items: flex-end;
 
@@ -872,13 +874,14 @@ header {
 	@media (min-width: 1024px) {
 		.container {
 			display: flex;
-			max-width: 100%;
 		}
 
 		.image {
 			width: 40%;
 			height: 320px;
 			border-radius: 0;
+			margin-left: calc((100vw - 100%) / 2 * -1);
+    		width: calc(100% - 100px);
 
 			img {
 				border-radius: 0;
@@ -892,7 +895,7 @@ header {
 
 		.content {
 			width: calc(100% - 40%);
-			padding: 0 10% 0 0;
+			padding: 0;
 			text-align: right;
 			font-size: 1.1rem;
 			max-width: 765px;
