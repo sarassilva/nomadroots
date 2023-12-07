@@ -447,6 +447,7 @@ header {
 	position: relative;
 	background-color: #lib.colors[beige];
 	font-size: 1.1rem;
+	overflow: hidden;
 
 	h2 {
 		#lib.titleS2();
@@ -515,7 +516,7 @@ header {
 		}
 	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 1100px) {
 		padding:0;
 		border-radius: 0;
 
@@ -547,7 +548,6 @@ header {
 			.image {
 				width: 50%;
 				border-radius: 0;
-				overflow: hidden;
 
 				.glider-slide {
 					margin: 0;
@@ -583,6 +583,18 @@ header {
 
 				.roteiroGlider {
 					margin-right: calc((100vw - 100%) / 2 * -1);
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1497px) {
+		.container {
+			.desktop {
+				display: block;
+
+				.roteiroGlider {
+					margin-right: calc((100vw - 1200px) / 2 * -1);
 				}
 			}
 		}
@@ -1332,7 +1344,6 @@ footer {
 		}
 
 		.glider-next {
-			right: 20px;
 			left: auto;
 		}
 
@@ -1388,6 +1399,12 @@ footer {
 		.content {
 			padding: 0;
 			width: 50%;
+		}
+	}
+
+	@media (min-width: 1497px) {
+		.where {
+			margin-right: calc((100vw - 1200px) / 2 * -1);
 		}
 	}
 }
