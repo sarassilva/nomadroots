@@ -570,8 +570,8 @@ header {
 			}
 
 			.glider-next {
-				right: 20px;
-				left: auto;			
+				right: calc((100vw - 207%) / 2 * -1);
+				left: auto;
 			}
 
 			.mobile {
@@ -581,7 +581,7 @@ header {
 			.desktop {
 				display: block;
 
-				.roteiroGlider {
+				.roteiroGlider, .grupoGlider {
 					margin-right: calc((100vw - 100%) / 2 * -1);
 				}
 			}
@@ -593,9 +593,9 @@ header {
 			.desktop {
 				display: block;
 
-				.roteiroGlider {
+				.roteiroGlider, .grupoGlider {
 					margin-right: calc((100vw - 1200px) / 2 * -1);
-				}
+				}				
 			}
 		}
 	}
