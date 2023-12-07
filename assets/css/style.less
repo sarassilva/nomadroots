@@ -1907,13 +1907,14 @@ footer {
 
 .duvidas {
 	color: #lib.colors[blue];
+	overflow: hidden;
 
 	.container {
 		display: grid;
-		width: 100%;
+		//width: 100%;
 
 		.content {
-			padding: 50px 10%;
+			//padding: 50px 10%;
 		}
 	}
 
@@ -1932,18 +1933,19 @@ footer {
 			display: flex;
 			flex-direction: row-reverse;
 			align-items: center;
-			max-width: 1920px;
+			gap: 100px;
 
 			.content {
 				width: 55%;
-				padding: 0 10% 0 15%;
+				padding: 0;
 			}
 		}
 
 		.image {
-			width: 45%;
 			height: 300px;
 			object-fit: cover;
+			margin-right: calc((100vw - 100%) / 2 * -1);
+    		width: calc(100% - 100px);
 
 			img {
 				width: 100%;
