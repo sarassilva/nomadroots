@@ -64,6 +64,25 @@
                             <button class="glider-next gC">&rsaquo;</button>
                         </div>
                     <?php }?>
+
+                    <?php 
+		            if( get_field('numero_de_guias') == '1 a 2' ) { ?>	
+                            <div class="guiaCarousel2">
+                                <?php if( have_rows('guias_pequeno') ): ?>
+                                    <?php while( have_rows('guias_pequeno') ): the_row(); ?>
+                                        <div class="guia">
+                                            <div class="image">
+                                                <img src="<?php the_sub_field('imagem') ?>" />
+                                            </div>
+                                            <div class="content">			    						
+                                                <div class="name"><?php the_sub_field('nome') ?></div>
+                                                <div class="bio"><?php the_sub_field('mini_descricao') ?></div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>				    	
+                            </div>
+                    <?php }?>
                 </div>  
             </section>
         <?php }?>

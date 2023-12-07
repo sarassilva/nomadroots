@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
 	      breakpoint: 1030,
 	      settings: {
 	        slidesToShow: 1.5,
-	        slidesToScroll: 1.5,
+	        slidesToScroll: 1,
 	        duration: 0.25,
             itemWidth: 650,
 	    	}
@@ -24,15 +24,7 @@ window.addEventListener('load',function(){
             breakpoint: 1400,
             settings: {
               slidesToShow: 1.9,
-              slidesToScroll: 1.9,
-              duration: 0.25,
-              itemWidth: 650,
-              }
-          }, {
-            breakpoint: 1800,
-            settings: {
-              slidesToShow: 2.5,
-              slidesToScroll: 1.5,
+              slidesToScroll: 1,
               duration: 0.25,
               itemWidth: 650,
               }
