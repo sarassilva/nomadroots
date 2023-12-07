@@ -2566,11 +2566,12 @@ footer {
 		background-color: #lib.colors[blue];
 		padding: 60px 0;
 		color: #lib.colors[beige];
+		overflow: hidden;
 
 		.container {
-			width: 100%;
-			max-width: 100%;
-			padding-left: 10%;
+			//width: 100%;
+			//max-width: 100%;
+			//padding-left: 10%;
 		}
 
 		.image {
@@ -2601,28 +2602,46 @@ footer {
 	    left: auto;
 	    top: 0;
 	    color: #fff;
-	    height: 200px;
+	    height: 100%;
 	    padding: 0 40px;
 	    background: rgb(255,255,255);
-	    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0000006b 47%);
+	    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #0000002e 47%);
 		}
 
 		@media (min-width: 1100px) {
 			.container {
 				display: flex;
-		    align-items: center;
-		    gap: 60px;
-		    justify-content: space-between;
+				align-items: center;
+				gap: 60px;
+				justify-content: space-between;
 
-		    h3 {
-		    	width: 275px;
-    			margin: 0;
-		    }
+				h3 {
+					width: 275px;
+					margin: 0;
+				}
 
-		    .glider-contain {
-		    	width: calc(100% - 335px);
-    			margin: 0;
-		    }
+				.glider-contain {
+					width: calc(100% - 335px);
+					margin: 0;
+				}
+			}
+		}
+
+		.glider-next {
+			right: calc((100vw - 100%) / 2 * -1);
+		}
+
+		.tCarousel {
+			margin-right: calc((100vw - 100%) / 2 * -1);
+		}
+
+		@media (min-width: 1497px) {
+			.glider-next {
+				right: calc((100vw - 1200px) / 2 * -1);
+			}
+
+			.mCarousel  {
+				margin-right: calc((100vw - 1260px) / 2 * -1);
 			}
 		}
 	}
