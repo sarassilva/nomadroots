@@ -63,7 +63,7 @@ window.addEventListener('load',function(){
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.tCarousel'), {
-	    slidesToShow: 1,
+	    slidesToShow: 1.2,
 	    slidesToScroll: 1,
 	    itemWidth: 400,
 	    draggable: true,
