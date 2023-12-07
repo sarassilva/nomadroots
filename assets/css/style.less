@@ -521,11 +521,10 @@ header {
 
 		.container {
 			display: flex;
-			max-width: 100%;
-    	width: 100%;
+			gap: 100px;
 
 			.content {
-				display: flex;
+			display: flex;
 		    flex-direction: column;
 		    align-items: baseline;
 		    padding: 5% 5% 5% 10%;
@@ -581,6 +580,10 @@ header {
 
 			.desktop {
 				display: block;
+
+				.roteiroGlider {
+					margin-right: calc((100vw - 100%) / 2 * -1);
+				}
 			}
 		}
 	}
@@ -1319,6 +1322,8 @@ footer {
 
 		.glider-slide {
 			margin: 0;
+			border-radius: 0 0 0 20px;
+    		background-color: #lib.colors[blue];
 		}
 
 		.glider-prev, .glider-next {
@@ -1374,6 +1379,10 @@ footer {
 
 		.where {
 			margin-right: calc((100vw - 100%) / 2 * -1);
+		}
+
+		.glider-next {
+			right: calc((100vw - 207%) / 2 * -1);
 		}
 
 		.content {
@@ -1730,10 +1739,10 @@ footer {
 	.turmaPopup {
 		visibility: hidden;
 		position: absolute;
-		width: 80%;
+		width: 90%;
 		background-color: #lib.colors[orange];
 		color: #lib.colors[beige];
-		padding: 20px 50px;
+		padding: 40px 50px 20px;
 		opacity: 0;
 		max-width: 1000px;
 		left: 0;
@@ -1744,7 +1753,9 @@ footer {
 		transition: all .2s linear;
 		bottom: 0;
     display: block;
-    height: fit-content;
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
 
 		ul {
@@ -1765,8 +1776,8 @@ footer {
 
 		button {
 			position: absolute;
-	    top: -10px;
-	    right: -10px;
+	    top: 10px;
+	    right: 10px;
 	    border: 0;
 	    background: #fff;
 	    padding: 8px 16px;
@@ -1797,6 +1808,9 @@ footer {
 	    .content {
 	    	width: 50%;
 	    	padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 	    }
 
 	    .image {
