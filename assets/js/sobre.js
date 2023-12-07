@@ -67,7 +67,7 @@ window.addEventListener('load',function(){
 	    slidesToScroll: 1,
 	    itemWidth: 400,
 	    draggable: true,
-	    scrollLock: false,
+	    scrollLock: true,
 	    dots: false,
 	    rewind: true,
 	    arrows: {
@@ -86,15 +86,15 @@ window.addEventListener('load',function(){
 	    }, {
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 2.5,
+	        slidesToShow: 2.8,
 	        slidesToScroll: 1.5,
 	        itemWidth: 150,
 	        duration: 0.25
 	      }
 	    }, {
-	      breakpoint: 1700,
+	      breakpoint: 1400,
 	      settings: {
-	        slidesToShow: 4.5,
+	        slidesToShow: 3.5,
 	        slidesToScroll: 1.5,
 	        itemWidth: 150,
 	        duration: 0.25
