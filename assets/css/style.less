@@ -2468,16 +2468,12 @@ footer {
 	    font-size: 1.4rem;
 		}
 
-		.tCarousel {
-			margin-right: calc((100vw - 1200px) / 2 * -1);
-		}
-
 		.content {
 			background-color: #lib.colors[greenDark];
 			color: #lib.colors[beige];
 			text-align: center;
 			border-radius: 15px;
-    	overflow: hidden;
+    		overflow: hidden;
 
     	.image {
     		height: 400px;
@@ -2515,8 +2511,7 @@ footer {
 			display: none;
 		}
 
-		.glider-next {
-			right: calc((100vw - 1200px) / 2 * -1);
+		.glider-next {			
 			background: rgb(255,255,255);
 			background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(243 235 213 / 62%) 47%);
 			left: auto;
@@ -2524,6 +2519,26 @@ footer {
 			top: 0;
 			width: 160px;
 			font-size: 60px;
+		}
+
+		@media (min-width: 600px) {
+			.glider-next {
+				right: calc((100vw - 80%) / 2 * -1);
+			}
+
+			.tCarousel {
+				margin-right: calc((100vw - 80%) / 2 * -1);
+			}
+		}
+
+		@media (min-width: 1497px) {
+			.glider-next {
+				right: calc((100vw - 1200px) / 2 * -1);
+			}
+
+			.tCarousel {
+				margin-right: calc((100vw - 1200px) / 2 * -1);
+			}
 		}
 	}
 
