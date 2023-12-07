@@ -436,7 +436,7 @@ header {
 
 .home {
 	header {
-		.logo-nomad {
+		.logo-nomad, .internPages {
 			display: none;
 		}
 
@@ -2466,9 +2466,9 @@ footer {
 		color: #162417;
 
 		.container {
-			max-width: 100%;
-			width: 100%;
-			padding-left: 10%;
+			//max-width: 100%;
+			//width: 100%;
+			//padding-left: 10%;
 		}
 
 		h2 {
@@ -2479,6 +2479,10 @@ footer {
 			font-weight: 400;
 	    margin: 13px 0 40px;
 	    font-size: 1.4rem;
+		}
+
+		.tCarousel {
+			margin-right: calc((100vw - 1200px) / 2 * -1);
 		}
 
 		.content {
@@ -2525,14 +2529,14 @@ footer {
 		}
 
 		.glider-next {
-			right: 0;
-	    background: rgb(255,255,255);
-	    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(243 235 213 / 62%) 47%);
-	    left: auto;
-	    height: 100%;
-	    top: 0;
-	    width: 160px;
-	    font-size: 60px;
+			right: margin-right: calc((100vw - 1200px) / 2 * -1);;
+			background: rgb(255,255,255);
+			background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgb(243 235 213 / 62%) 47%);
+			left: auto;
+			height: 100%;
+			top: 0;
+			width: 160px;
+			font-size: 60px;
 		}
 	}
 
