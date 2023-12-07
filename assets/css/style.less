@@ -1662,6 +1662,7 @@ footer {
 	background-color: #lib.colors[purple];
 	color: #fff;
 	position: relative;
+	overflow: hidden;
 
 	.container {
 		display: grid;
@@ -1784,18 +1785,20 @@ footer {
 		.container {
 			display: flex;
 	    flex-direction: row-reverse;
-	    max-width: 1920px;
 	    align-items: center;
+		gap: 100px;
 
 	    .content {
 	    	width: 50%;
-	    	padding: 0 10% 0 15%
+	    	padding: 0;
 	    }
 
 	    .image {
 	    	width: 50%;
 	    	height: 580px;
 	    	object-fit: cover;
+			margin-right: calc((100vw - 100%) / 2 * -1);
+    		width: calc(100% - 100px);
 
 	    	img {
 	    		width: 100%;
