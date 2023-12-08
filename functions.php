@@ -87,19 +87,7 @@ function woocommerce_add_to_cart_button_text_single() {
     return __( 'Reserve', 'woocommerce' ); 
 }
 
-add_filter( 'woocommerce_variable_sale_price_html', 'custom_variable_price_format', 10, 2 );
-add_filter( 'woocommerce_variable_price_html', 'custom_variable_price_format', 10, 2 );
-function custom_variable_price_format( $price, $product ) {
-$prices = $product->get_variation_prices( true );
-$min_price = current( $prices['price'] );
-$min_regular_price = current( $prices['regular_price'] );
-if ( $min_price !== $min_regular_price ) {
-$price = sprintf( __( 'From: %1$s', 'woocommerce' ), wc_price( $min_price ) );
-} else {
-$price = wc_price( $min_price );
-}
-return $price;
-}
+
 
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
@@ -144,20 +132,19 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
 }
 
 
-add_action( 'woocommerce_after_add_to_cart_quantity', 'bbloomer_product_price_recalculate' );
- 
-function bbloomer_product_price_recalculate() {
+add_action( 'woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_variation_price' );
+  
+function bbloomer_update_price_with_variation_price() {
    global $product;
-   echo '<div id="subtot" class="subtotal">Total: <span></span></div>';
-   $price = $product->get_price();
-   $currency = get_woocommerce_currency_symbol();
+   $price = $product->get_price_html();
    wc_enqueue_js( "     
-      $('[name=quantity]').on('input change', function() { 
-         var qty = $(this).val();
-         var price = '" . esc_js( $price ) . "';
-         var price_string = (price*qty).toFixed(2);
-         $('#subtot > span').html('" . esc_js( $currency ) . "'+price_string);
-      }).change();
+      $(document).on('found_variation', 'form.cart', function( event, variation ) {   
+         if(variation.price_html) $('.summary > p.price').html(variation.price_html);
+         $('.woocommerce-variation-price').hide();
+      });
+      $(document).on('hide_variation', 'form.cart', function( event, variation ) {   
+         $('.summary > p.price').html('" . $price . "');
+      });
    " );
 }
 
