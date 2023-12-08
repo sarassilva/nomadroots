@@ -128,58 +128,6 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
       </label>
   </div>';
 }
-
-<?php
 add_action( 'woocommerce_after_add_to_cart_button', 'cxc_product_price_recalculate_call_back' );
-
-function cxc_product_price_recalculate_call_back() {
-	global $product;
-	$price = $product->get_price();
-	$currency = get_woocommerce_currency_symbol();
-	?>
-	<div class="cxc-sub-totals">
-		<span class="cxc-sub-head">Sub Total:</span><span class="cxc-app-price"></span>
-	</div>
-	<style type="text/css">
-		.cxc-sub-totals { display: inline-block; border: 1px solid #000; padding: 14px; letter-spacing: 1px; }
-		.cxc-sub-totals span.cxc-sub-head { margin-right: 5px; }
-	</style>
-	<script type="text/javascript">
-		jQuery( document ).ready( function() {
-			setTimeout( function() {
-				jQuery('input[name=quantity]').change();
-			}, 100 );
-			jQuery(document).on('change', 'input[name=quantity]', function() { 
-				var cxc_qty = jQuery(this).val();
-				var price = '<?php echo esc_js( $price ); ?>';
-				var comman_price = '<?php echo esc_js( $price ); ?>';
-				var cxc_currency = '<?php echo esc_js( $currency ); ?>';
-				if( jQuery(this).closest( '.entry-summary' ).find('.cart').hasClass('variations_form') ){
-					var variation_arr = jQuery.parseJSON(jQuery(this).closest( '.entry-summary' ).find('.cart').attr('data-product_variations'));
-					var v_id = jQuery(this).closest( '.entry-summary' ).find('.cart .variation_id').val();	
-					if( variation_arr !== undefined && variation_arr.length > 0 ){										
-						jQuery(variation_arr).each(function (key, value) {
-							if( v_id == value.variation_id ){
-								price = value.display_price;
-							}
-						});
-					}
-					if( v_id == '' || v_id == 0 || v_id === undefined ){
-						price = comman_price;
-					}
-				}				
-				var cxc_price = ( price * cxc_qty ).toFixed(2);
-				jQuery('.cxc-sub-totals > span.cxc-app-price').html( cxc_currency +''+cxc_price );
-			});
-			jQuery(document).on('change', '.variations select', function() { 
-				setTimeout( function() {
-					jQuery('input[name=quantity]').change();
-				}, 100 );				
-			});
-		} );
-	</script>
-	<?php
-} 
-?>
 
 ?>
