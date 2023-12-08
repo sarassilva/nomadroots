@@ -165,6 +165,15 @@
             </section>
         <?php }?>
 
+        <?php 
+		if( get_field('ativar_sessao_4') == 'true' ) { ?>	
+        <section class="playlist">
+            <div class="container">
+                <?php the_field('playlist'); ?>
+            </div>
+        </section>
+        <?php }?>
+
         <section class="roteiro">
             <div class="container">
                 <h3><?php the_field('titulo_roteiro') ?></h3>
