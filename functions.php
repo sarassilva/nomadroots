@@ -134,7 +134,7 @@ add_action( 'woocommerce_after_add_to_cart_quantity', 'bbloomer_product_price_re
  
 function bbloomer_product_price_recalculate() {
    global $product;
-   echo '<div id="subtot" style="display:inline-block;">Total: <span></span></div>';
+   echo '<div id="subtot" class="subtotal">Total: <span></span></div>';
    $price = $product->get_price();
    $currency = get_woocommerce_currency_symbol();
    wc_enqueue_js( "     
