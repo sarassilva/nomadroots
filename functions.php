@@ -76,14 +76,16 @@ function woosuite_echo_qty_front_add_cart() {
     echo '<div class="label">Número de viajantes</div>';   
 }
 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 35 );
-
 function move_variation_price() {
     remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
     add_action( 'woocommerce_after_add_to_cart_quantity', 'woocommerce_single_variation', 10 );
 }
 add_action( 'woocommerce_before_add_to_cart_form', 'move_variation_price' );
+
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_add_to_cart_button_text_single' ); 
+function woocommerce_add_to_cart_button_text_single() {
+    return __( 'Reserve', 'woocommerce' ); 
+}
 
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
