@@ -76,4 +76,47 @@ function woosuite_echo_qty_front_add_cart() {
     echo '<div class="label">Número de viajantes</div>';   
 }
 
+function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
+    global $product;
+  $product_quantity = array(
+      'input_name'  	=> 'quantity',
+      'input_value'  	=> $args['input_value'],
+      'max_value'  	=> apply_filters( 'woocommerce_quantity_input_max', '', $product ),
+      'min_value'  	=> apply_filters( 'woocommerce_quantity_input_min', '', $product ),
+      'step' 		=> apply_filters( 'woocommerce_quantity_input_step', '1', $product ),
+      'style'		=> apply_filters( 'woocommerce_quantity_style', 'float:left; margin-right:10px;', $product )
+  );
+  if ( ! empty( $product_quantity['min_value'] ) )
+      $min = $product_quantity['min_value'];
+  else
+  $min = 1;
+        if($args['min_value']) { $min = $args['min_value']; }
+      if ( ! empty( $product_quantity['max_value'] ) )
+          $max = $product_quantity['max_value'];
+      else $max = 5;
+          if($args['max_value']) { $max = $args['max_value']; }
+      if ( ! empty( $product_quantity['step'] ) )
+      $step = $product_quantity['step'];
+      else $step = 1;
+  if(isset($args['input_name'])) {
+      $product_quantity['input_name'] = $args['input_name'];
+  }
+  $options = '';
+  if ($max == -1)
+      $max = 5;
+  for ( $count = $min; $count <= $max; $count = $count+$step ) {
+      $selected = "";
+      if($args['input_value'] == $count) {
+          $selected = 'selected="selected"';
+      }
+      $options .= '<option '.$selected.' value="' . $count . '">' . $count . '</option>';
+  }
+  echo '
+  <div class="quantity quantity_select" style="' . $product_quantity['style'] . '">
+      <label><span>Ποσότητα: </span>
+          <select name="' . esc_attr( $product_quantity['input_name'] ) . '" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="qty">' . $options . '</select>
+      </label>
+  </div>';
+}
+
 ?>
