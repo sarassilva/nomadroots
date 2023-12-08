@@ -113,7 +113,6 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
   }
   echo '
   <div class="quantity quantity_select" style="' . $product_quantity['style'] . '">
-      <label><span>Ποσότητα: </span>
           <select name="' . esc_attr( $product_quantity['input_name'] ) . '" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="qty">' . $options . '</select>
       </label>
   </div>';
