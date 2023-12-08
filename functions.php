@@ -76,6 +76,9 @@ function woosuite_echo_qty_front_add_cart() {
     echo '<div class="label">Número de viajantes</div>';   
 }
 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
   $product_quantity = array(
