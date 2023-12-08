@@ -128,6 +128,6 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
       </label>
   </div>';
 }
-add_action( 'woocommerce_after_add_to_cart_button', 'cxc_product_price_recalculate_call_back' );
+
 
 ?>
