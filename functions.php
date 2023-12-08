@@ -79,6 +79,12 @@ function woosuite_echo_qty_front_add_cart() {
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 35 );
 
+function move_variation_price() {
+    remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
+    add_action( 'woocommerce_after_add_to_cart_quantity', 'woocommerce_single_variation', 10 );
+}
+add_action( 'woocommerce_before_add_to_cart_form', 'move_variation_price' );
+
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
   $product_quantity = array(
