@@ -87,6 +87,20 @@ function woocommerce_add_to_cart_button_text_single() {
     return __( 'Reserve', 'woocommerce' ); 
 }
 
+add_filter( 'woocommerce_variable_sale_price_html', 'custom_variable_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'custom_variable_price_format', 10, 2 );
+function custom_variable_price_format( $price, $product ) {
+$prices = $product->get_variation_prices( true );
+$min_price = current( $prices['price'] );
+$min_regular_price = current( $prices['regular_price'] );
+if ( $min_price !== $min_regular_price ) {
+$price = sprintf( __( 'From: %1$s', 'woocommerce' ), wc_price( $min_price ) );
+} else {
+$price = wc_price( $min_price );
+}
+return $price;
+}
+
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
   $product_quantity = array(
