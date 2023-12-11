@@ -140,33 +140,48 @@ function bbloomer_update_price_with_variation_price() {
     global $product;
 
     wc_enqueue_js("
-        $(document).on('found_variation', 'form.cart', function(event, variation) {   
-            if (variation.price_html) {
-                $('p.price').html(variation.price_html);
-
-                // Pegue o valor selecionado do campo .qtd
-                var quantity = parseInt($('.qtd').val());
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('qtd')) {
+                // Pegue o valor selecionado de .qtd
+                var quantity = parseInt(e.target.value);
 
                 // Pegue o preço da variação sem HTML e formate para número
-                var variationPrice = parseFloat(variation.display_price.replace(/[^\d.,-]/g, '').replace(',', '.'));
+                var variationPrice = parseFloat(document.querySelector('p.price').textContent.replace(/[^\d.,-]/g, '').replace(',', '.'));
 
                 // Calcule o preço multiplicado pela quantidade
                 var totalPrice = variationPrice * quantity;
 
                 // Mostre o novo preço no seu local desejado
-                $('.price').text('Total: ' + totalPrice.toFixed(2)); // Ajuste conforme necessário
+                document.querySelector('.single_variation').textContent = 'Total: ' + totalPrice.toFixed(2); // Ajuste conforme necessário
             }
-
-            $('.woocommerce-variation-price').hide();
         });
 
-        $(document).on('hide_variation', 'form.cart', function(event, variation) {   
-            $('p.price').html('" . $product->get_price_html() . "');
+        document.addEventListener('found_variation', function(e) {
+            if (e.detail.variation.price_html) {
+                document.querySelector('p.price').innerHTML = e.detail.variation.price_html;
+
+                // Pegue o valor selecionado de .qtd
+                var quantity = parseInt(document.querySelector('.qtd').value);
+
+                // Pegue o preço da variação sem HTML e formate para número
+                var variationPrice = parseFloat(e.detail.variation.display_price.replace(/[^\d.,-]/g, '').replace(',', '.'));
+
+                // Calcule o preço multiplicado pela quantidade
+                var totalPrice = variationPrice * quantity;
+
+                // Mostre o novo preço no seu local desejado
+                document.querySelector('.single_variation').textContent = 'Total: ' + totalPrice.toFixed(2); // Ajuste conforme necessário
+            }
+
+            document.querySelector('.woocommerce-variation-price').style.display = 'none';
+        });
+
+        document.addEventListener('hide_variation', function() {
+            document.querySelector('p.price').innerHTML = '" . $product->get_price_html() . "';
+            document.querySelector('.single_variation').innerHTML = ''; // Limpe o conteúdo da classe .single_variation quando a variação estiver oculta
         });
     ");
 }
-
-
 
 
 ?>
