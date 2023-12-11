@@ -164,7 +164,7 @@ const faqBox = document.querySelector('.faqBox');
 const seta = document.querySelector('.down');
 function faq() {
 	faqBox.classList.toggle('open');
-	seta.classList.toggle('rotate')
+	seta.classList.toggle('rotate');
 ;}
 
 const popupBox = document.querySelector('.turmaPopup');
