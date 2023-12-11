@@ -132,20 +132,17 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
 }
 
 
-add_action( 'woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_variation_price' );
+add_filter( 'formatted_woocommerce_price', function($formatted, $row, $decimals, $decimal_separator, $thousand_separator ) {
+    return is_product() ? '<span class=number>' . $formatted . '</span>' : $formatted;
+  },10, 5);
   
-function bbloomer_update_price_with_variation_price() {
-   global $product;
-   $price = $product->get_price_html();
-   wc_enqueue_js( "     
-      $(document).on('found_variation', 'form.cart', function( event, variation ) {   
-         if(variation.price_html) $('.summary > p.price').html(variation.price_html);
-         $('.woocommerce-variation-price').hide();
-      });
-      $(document).on('hide_variation', 'form.cart', function( event, variation ) {   
-         $('.summary > p.price').html('" . $price . "');
-      });
-   " );
-}
+add_action('woocommerce_after_add_to_cart_quantity', function() {
+global $product;
+if (!$product->is_single()) return;
+?>
+    <input type="hidden" name="simple-product-price" value="<?php echo $product->get_price() ?>">
+
+<?php
+});
 
 ?>
