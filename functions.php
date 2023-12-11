@@ -155,7 +155,7 @@ function bbloomer_update_price_with_variation_price() {
                 var totalPrice = variationPrice * quantity;
 
                 // Mostre o novo preço no seu local desejado
-                $('.seu-elemento-de-preco').text('Total: ' + totalPrice.toFixed(2)); // Ajuste conforme necessário
+                $('.woocommerce-Price-amount bdi').text('Total: ' + totalPrice.toFixed(2)); // Ajuste conforme necessário
             }
 
             $('.woocommerce-variation-price').hide();
