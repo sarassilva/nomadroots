@@ -140,6 +140,7 @@ function bbloomer_update_price_with_variation_price() {
    global $product;
    $price = $product->get_price_html();
    $qtd = $('.qty').val();
+   $newPrice = $price * $qtd;
 
    wc_enqueue_js( "     
       $(document).on('found_variation', 'form.cart', function( event, variation ) {   
@@ -150,7 +151,6 @@ function bbloomer_update_price_with_variation_price() {
          $('p.price').html('" . $price . "');
       });
       $(document).on('multiplicaPrice', 'form.cart', function(event, variation) {
-        $newPrice = $price * $qtd;
         $('p.price').html('" . $newPrice . "');
       });
    " );
