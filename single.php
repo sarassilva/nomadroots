@@ -265,6 +265,28 @@
 
     </main>
 
+    <script>
+    // Função para calcular o valor total
+    function calcularTotal() {
+      // Obter o valor selecionado do elemento select
+      var quantidadeSelecionada = parseInt(document.querySelector('.qtd').value, 10);
+
+      // Obter o preço base do elemento p.price
+      var precoBase = parseFloat(document.querySelector('.price').innerText.replace('Preço: $', ''));
+
+      // Calcular o valor total
+      var total = quantidadeSelecionada * precoBase;
+
+      // Atualizar o valor do elemento .single_variation
+      document.querySelector('.single_variation').innerText = 'Total: $' + total.toFixed(2);
+    }
+
+    // Adicionar um ouvinte de eventos para o evento de mudança no elemento select
+    document.querySelector('.qtd').addEventListener('change', calcularTotal);
+
+    // Chamar a função calcularTotal inicialmente para exibir o total inicial
+    calcularTotal();
+  </script>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
