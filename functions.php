@@ -150,10 +150,11 @@ function bbloomer_update_price_with_variation_price() {
       });
 
       $(document).on('multiPrice', 'form.cart', function(event, variation) {
-        var quantity = parseInt($('.qtd').val());        
+        var quantity = parseInt($('.qtd').val());
+        console.log(quantity);    
       })
 
-      console.log(quantity);
+      
    " );
 }
 
