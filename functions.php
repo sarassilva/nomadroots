@@ -139,7 +139,6 @@ add_action( 'woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_vari
 function bbloomer_update_price_with_variation_price() {
    global $product;
    $price = $product->get_price_html();
-   $qtd = $('.qty').val();
    $newPrice = $price * $qtd;
 
    wc_enqueue_js( "     
