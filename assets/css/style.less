@@ -1909,6 +1909,12 @@ footer {
 		display: block;
 		margin-top: 35px;
 		color: transparent;
+		transition: all .2s linear;
+
+		&.rotate {
+			transform: rotate(180deg);
+    		transition: all .2s linear;
+		}
 	}
 
 	.faqBox {
@@ -3849,8 +3855,8 @@ border: 0px solid #ffffff;
 
 		.subtotal {
 			font-size: 1.8rem;
-		font-family: 'Clearface';
-		font-weight: 500;
+			font-family: 'Clearface';
+			font-weight: 500;
 		}
 
 		.single_add_to_cart_button.button, .single_add_to_cart_button.button:disabled {
