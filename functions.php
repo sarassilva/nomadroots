@@ -139,6 +139,8 @@ add_action( 'woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_vari
 function bbloomer_update_price_with_variation_price() {
    global $product;
    $price = $product->get_price_html();
+   $qtd = $('.qty').val();
+
    wc_enqueue_js( "     
       $(document).on('found_variation', 'form.cart', function( event, variation ) {   
          if(variation.price_html) $('p.price').html(variation.price_html);
@@ -146,6 +148,10 @@ function bbloomer_update_price_with_variation_price() {
       });
       $(document).on('hide_variation', 'form.cart', function( event, variation ) {   
          $('p.price').html('" . $price . "');
+      });
+      $(document).on('multiplicaPrice', 'form.cart', function(event, variation) {
+        $newPrice = $price * $qtd;
+        $('p.price').html('" . $newPrice . "');
       });
    " );
 }
