@@ -265,25 +265,6 @@
 
     </main>
 
-<script>
-    $('body').on('change', '[name=quantity]', function(e) {
-    const form = this.closest('form')
-    const priceinput = form.querySelector('[name=simple-product-price]')
-    let unitprice = 0
-    if (priceinput) {
-      unitprice = priceinput.value
-    } else {
-      const data = JSON.parse(form.dataset['product_variations'])
-      const currentvariation = form.querySelector('[name=variation_id]')
-      if (!currentvariation) return
-      const variation = data.find(variation => variation.variation_id == currentvariation.value)
-      if (!variation) return
-      unitprice = variation.display_price
-    }
-    const total = (unitprice * e.target.value).toFixed(2)
-    form.querySelector('.single_variation_wrap .woocommerce-Price-amount .number').innerText = total
-  })
-    </script>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
