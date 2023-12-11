@@ -131,6 +131,57 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
   </div>';
 }
 
+add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 31 );
 
+function woocommerce_total_product_price() {
+    global $woocommerce, $product;
+    $product_type = $product->get_type(); ?> 
+
+    <script>
+        function addCommas(nStr) {
+            nStr += '';
+            const x = nStr.split('.');
+            let x1 = x[0];
+            const x2 = x.length > 1 ? '.' + x[1] : '';
+            const rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return x1 + x2;
+        }
+
+        function resetVariations() {
+            jQuery('.reset_variations').click(function() {
+                jQuery('.current-price').html('');
+            });
+        }
+
+        function updateCurrentPrice(productType) {
+            jQuery(function($){                
+                let price = <?php echo $product->get_price(); ?>;
+                const currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
+
+                $('[name=quantity]').change(function(){
+                    if (!(this.value < 1)) {
+                        if (productType === 'variable') {
+                            price = jQuery('.single_variation_wrap .woocommerce-Price-amount.amount bdi').first().contents().filter(function() {
+                                return this.nodeType == 3;
+                            }).text().replace(',','');
+                        }
+
+                        const product_total = parseFloat(price * this.value);
+
+                        $('.current-price').html( currency + addCommas(product_total.toFixed(2)));
+                    }
+                });
+            });
+        }
+
+        updateCurrentPrice('<?php echo $product_type; ?>');
+        resetVariations();
+    
+    </script>
+    <?php
+}
 
 ?>
