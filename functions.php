@@ -106,7 +106,7 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
         if($args['min_value']) { $min = $args['min_value']; }
       if ( ! empty( $product_quantity['max_value'] ) )
           $max = $product_quantity['max_value'];
-      else $max = 5;
+      else $max = 20;
           if($args['max_value']) { $max = $args['max_value']; }
       if ( ! empty( $product_quantity['step'] ) )
       $step = $product_quantity['step'];
@@ -116,7 +116,7 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
   }
   $options = '';
   if ($max == -1)
-      $max = 5;
+      $max = 20;
   for ( $count = $min; $count <= $max; $count = $count+$step ) {
       $selected = "";
       if($args['input_value'] == $count) {
@@ -132,17 +132,5 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
 }
 
 
-add_filter( 'formatted_woocommerce_price', function($formatted, $row, $decimals, $decimal_separator, $thousand_separator ) {
-    return is_product() ? '<span class=number>' . $formatted . '</span>' : $formatted;
-  },10, 5);
-  
-add_action('woocommerce_after_add_to_cart_quantity', function() {
-global $product;
-if (!$product->is_single()) return;
-?>
-    <input type="hidden" name="simple-product-price" value="<?php echo $product->get_price() ?>">
-
-<?php
-});
 
 ?>
