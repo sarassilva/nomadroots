@@ -134,29 +134,38 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
 
 
 
-add_action( 'woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_variation_price' );
-  
+add_action('woocommerce_variable_add_to_cart', 'bbloomer_update_price_with_variation_price');
+
 function bbloomer_update_price_with_variation_price() {
-   global $product;
-   $price = $product->get_price_html();
+    global $product;
 
-   wc_enqueue_js( "     
-      $(document).on('found_variation', 'form.cart', function( event, variation ) {   
-         if(variation.price_html) $('p.price').html(variation.price_html);
-         $('.woocommerce-variation-price').hide();
-      });
-      $(document).on('hide_variation', 'form.cart', function( event, variation ) {   
-         $('p.price').html('" . $price . "');
-      });
+    wc_enqueue_js("
+        $(document).on('found_variation', 'form.cart', function(event, variation) {   
+            if (variation.price_html) {
+                $('p.price').html(variation.price_html);
 
-      $(document).on('multiPrice', 'form.cart', function(event, variation) {
-        var quantity = parseInt($('.qtd').val());
-        console.log(quantity);    
-      })
+                // Pegue o valor selecionado do campo .qtd
+                var quantity = parseInt($('.qtd').val());
 
-      
-   " );
+                // Pegue o preço da variação sem HTML e formate para número
+                var variationPrice = parseFloat(variation.display_price.replace(/[^\d.,-]/g, '').replace(',', '.'));
+
+                // Calcule o preço multiplicado pela quantidade
+                var totalPrice = variationPrice * quantity;
+
+                // Mostre o novo preço no seu local desejado
+                $('.price').text('Total: ' + totalPrice.toFixed(2)); // Ajuste conforme necessário
+            }
+
+            $('.woocommerce-variation-price').hide();
+        });
+
+        $(document).on('hide_variation', 'form.cart', function(event, variation) {   
+            $('p.price').html('" . $product->get_price_html() . "');
+        });
+    ");
 }
+
 
 
 
