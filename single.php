@@ -223,7 +223,8 @@
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
-                    <button class="glider-next rC">&rsaquo;</button>
+                    <button class="glider-prev hC">&lsaquo;</button>
+                    <button class="glider-next hC">&rsaquo;</button>
                 </div>
             </section>
         </div>
