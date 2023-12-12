@@ -251,7 +251,7 @@
 
     <?php while ( have_posts() ) : ?>
     <?php the_post(); ?>
-        <section id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
+        <div id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
             <div class="black">
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
@@ -259,7 +259,13 @@
                         <?php do_action( 'woocommerce_single_product_summary' ); ?>                    
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="related">
+            <section class="container">
+                <?php do_action( 'woo_commerce_after_single_product_summary'); ?>  
+            </section>
+        </div>
     <?php endwhile;  ?>
    
 
