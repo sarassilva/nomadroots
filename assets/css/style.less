@@ -3707,13 +3707,38 @@ border: 0px solid #ffffff;
 	}
 
 	.hotel {
+		color: #lib.colors[greenDark];
+		overflow: hidden;
+
 		h3 {
 			#lib.titleS2();
 		}
 
 		.content {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			display: flex;
+			align-items: center;
+    		gap: 100px;
+			
+			.texto {
+				width: 50%;
+			}
+
+			.image {
+				height: 580px;
+				object-fit: cover;
+				margin-right: calc((100vw - 100%) / 2 * -1);
+				width: calc(100% - 100px);
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			h4 {
+				text-transform: uppercase;				
+			}
 		}
 	}
 
