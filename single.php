@@ -200,6 +200,34 @@
                 <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('botao') ?></a>
             </div>
         </section>  
+
+        <?php 
+		if( get_field('ativar_sessao_6') == 'true' ) { ?>	
+        <div class="hotel">
+            <section class="container">
+                <h3><?php the_field('titulo_hotel') ?></h3>
+
+                <div class="glider-contain">
+                    <div class="hotelCarousel">
+                        <?php if( have_rows('hotel') ): ?>
+                            <?php while( have_rows('hotel') ): the_row(); ?>
+                                <div class="content">                                    
+                                    <div class="texto">
+                                        <h4><?php the_sub_field('nome') ?></h4>
+                                        <p><?php the_sub_field('mini_descricao') ?></p>
+                                    </div>
+                                    <div class="imagem">
+                                        <img src="<?php the_sub_field('imagem') ?>" />
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>	
+                    </div>
+                    <button class="glider-next rC">&rsaquo;</button>
+                </div>
+            </section>
+        </div>
+        <?php }?>
         
         <section class="testimonials">
             <h3>Quem leu o mundo em grupo com a gente</h3>
@@ -271,28 +299,6 @@
 
     </main>
 
-    <script>
-    // Função para calcular o valor total
-    function calcularTotal() {
-      // Obter o valor selecionado do elemento select
-      var quantidadeSelecionada = parseInt(document.querySelector('.qtd').value, 10);
-
-      // Obter o preço base do elemento p.price
-      var precoBase = parseFloat(document.querySelector('.price').innerText.replace('Preço: $', ''));
-
-      // Calcular o valor total
-      var total = quantidadeSelecionada * precoBase;
-
-      // Atualizar o valor do elemento .single_variation
-      document.querySelector('.single_variation').innerText = 'Total: $' + total.toFixed(2);
-    }
-
-    // Adicionar um ouvinte de eventos para o evento de mudança no elemento select
-    document.querySelector('.qtd').addEventListener('change', calcularTotal);
-
-    // Chamar a função calcularTotal inicialmente para exibir o total inicial
-    calcularTotal();
-  </script>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
