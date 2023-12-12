@@ -81,7 +81,7 @@ window.addEventListener('load',function(){
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.galeria'), {
 	  // Mobile-first defaults
-	  slidesToShow: 1.5,
+	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  scrollLock: false,
 	  rewind: true,
@@ -94,7 +94,7 @@ window.addEventListener('load',function(){
 		{
 		breakpoint: 1030,
 		settings: {
-			slidesToShow: 2.5,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			}
 		}
