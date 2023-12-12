@@ -43,6 +43,8 @@ if ( $related_products ) : ?>
 					wc_get_template_part( 'content', 'product' );
 					?>
 
+<p><?php the_field('mini_descricao') ?></p>
+
 			<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
