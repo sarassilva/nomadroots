@@ -215,6 +215,10 @@
                                     <div class="texto">
                                         <h4><?php the_sub_field('nome') ?></h4>
                                         <p><?php the_sub_field('mini_descricao') ?></p>
+
+                                        <?php if( get_sub_field('link') ): ?>
+                                            <a href="<?php the_sub_field('link'); ?>" class="linkbtn">Ver mais fotos</a>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="imagem">
                                         <img src="<?php the_sub_field('imagem') ?>" />
