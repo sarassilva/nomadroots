@@ -3714,6 +3714,22 @@ border: 0px solid #ffffff;
 			position: relative;
 		}
 
+		.glider-slide {
+			margin: 0;
+		}
+
+		.hotelCarousel {
+			margin-right: calc((100vw - 1200px) / 2 * -1);
+
+			.glider-slide {
+				opacity: 0;
+
+				&.active {
+					opacity: 1;
+				}
+			}
+		}
+
 		h3 {
 			#lib.titleS2();
 			position: absolute;
