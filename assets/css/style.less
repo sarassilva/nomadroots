@@ -3709,6 +3709,7 @@ border: 0px solid #ffffff;
 	.hotel {
 		color: #lib.colors[greenDark];
 		overflow: hidden;
+		padding: 60px 0;
 
 		.container {
 			position: relative;
@@ -3720,7 +3721,6 @@ border: 0px solid #ffffff;
 
 		h3 {
 			#lib.titleS2();
-			font-size: 2rem;
 		}
 
 		.content {
@@ -3730,7 +3730,7 @@ border: 0px solid #ffffff;
 			flex-direction: column;
 			
 			.texto {
-				width: 50%;
+				width: 100%;
 
 				a.linkbtn {
 					color: #7d8971;
@@ -3754,8 +3754,6 @@ border: 0px solid #ffffff;
 			.imagem {
 				height: 580px;
 				object-fit: cover;
-				margin-right: calc((100vw - 100%) / 2 * -1);
-				width: calc(100% - 100px);
 
 				img {
 					width: 100%;
@@ -3788,7 +3786,6 @@ border: 0px solid #ffffff;
 
 		@media (min-width: 1030px) {
 			h3 {
-				#lib.titleS2();
 				position: absolute;
 				top: 10%;
 			}
@@ -3796,6 +3793,10 @@ border: 0px solid #ffffff;
 			.content {
 				gap: 100px;
 				flex-direction: row;
+
+				.texto {
+					width: 50%;
+				}
 			}
 
 			.hotelCarousel {
