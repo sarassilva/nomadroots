@@ -139,11 +139,11 @@ function bbloomer_update_price_with_variation_price() {
    $price = $product->get_price_html();
    wc_enqueue_js( "     
       $(document).on('found_variation', 'form.cart', function( event, variation ) {   
-         if(variation.price_html) $('.summary > p.price').html(variation.price_html);
+         if(variation.price_html) $('p.price').html(variation.price_html);
          $('.woocommerce-variation-price').hide();
       });
       $(document).on('hide_variation', 'form.cart', function( event, variation ) {   
-         $('.summary > p.price').html('" . $price . "');
+         $('p.price').html('" . $price . "');
       });
    " );
 }
