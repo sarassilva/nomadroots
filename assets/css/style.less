@@ -3897,14 +3897,24 @@ border: 0px solid #ffffff;
 
 		.product {
 			background-color: #lib.colors[orange];
-			border-radius: 0 0 15px 15px;
+			border-radius: 15px;
 
 			.price, .button {
-				display: none;
+				display: none !important;
 			}
 
 			img {
 				border-radius: 15px 15px 0 0;
+			}
+
+			h2 {
+				font-family: 'Planc';
+				text-align: left;
+				margin: 0;
+				padding: 0;
+				background-color: #lib.colors[greenDark];
+				display: inline-block;
+				color: #fff;
 			}
 		}
 	}

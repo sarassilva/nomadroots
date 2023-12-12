@@ -164,6 +164,14 @@ function bbloomer_rename_related_products() {
    return "Você também pode gostar";
 }
 
+//change number related 
+add_filter( 'woocommerce_output_related_products_args', 'bbloomer_change_number_related_products', 9999 );
+function bbloomer_change_number_related_products( $args ) {
+    $args['posts_per_page'] = 3; // # of related products
+    $args['columns'] = 3; // # of columns per row
+    return $args;
+}
+
 add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static function( $args ) {
     $args['class'] = 'select';
     return $args;
