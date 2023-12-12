@@ -996,17 +996,20 @@ footer {
 	    	margin:0;			
 
 			a {
-				display: flex;
+				display: grid;
 				align-items: center;
+				grid-template-columns: 35px 1fr;
+				gap: 15px;
 
 					&::before {
 					background-size: 100%;
 					background-image: url(../images/spotify.webp);
+					background-repeat: no-repeat;
 					content: ' ';
 					display: block;
-					width: 40px;
-	    		height: 40px;
-	    		margin-right: 10px;
+					width: 35px;
+    				height: 35px;
+					margin-right: 10px;
 				}
 			}
 		}
@@ -1020,8 +1023,7 @@ footer {
 		}
 
 		.wp-social-link {
-			background-color: transparent !important;
-			background-image: url('../images/instagram.svg');
+			background-color: transparent !important;			
 			background-repeat: no-repeat;
 			background-size: 100%;
 			text-indent: -9999px;
@@ -1029,16 +1031,21 @@ footer {
 			width: 50px;
 			height: 50px;
 
-			&.wp-social-link-spotify {
-				background-image: none;
+			svg {
+				fill: #c15c17;
+				color: #c15c17;
+				height: 45px;
+				width: 45px;
+			}
+
+			&.wp-social-link-instagram {
+				background-image: url('../images/instagram.svg');
+			}
+
+			&.wp-social-link-spotify {				background-image: none;
     			text-indent: inherit;
 
-				svg {
-					fill: #c15c17;
-					color: #c15c17;
-					height: 45px;
-					width: 45px;
-				}
+				
 			}
 			
 
@@ -3784,7 +3791,7 @@ border: 0px solid #ffffff;
 
 		@media (min-width: 1200px) {
 			padding: 0;
-			
+
 			h3 {
 				position: absolute;
     			top: 10%;
@@ -3795,12 +3802,16 @@ border: 0px solid #ffffff;
 				flex-direction: row;
 
 				.texto {
-					width: 50%;
+					width: 40%;
+				}
+
+				.imagem {
+					width: 60%;
 				}
 			}
 
 			.glider-prev {
-				bottom: 10%;
+				bottom: 12%;
 				left: 35%;
 				top: auto;
 			}
@@ -3809,7 +3820,7 @@ border: 0px solid #ffffff;
 				left: -18%;
 				right: 0;
 				top: auto;
-				bottom: 10%;
+				bottom: 12%;
 			}
 
 			.hotelCarousel {
@@ -3840,10 +3851,7 @@ border: 0px solid #ffffff;
 			overflow-x: scroll;
 			padding-bottom: 20px;
 			margin-left: 10%;
-
-			*::-webkit-scrollbar {
-				height: 6px;
-			}
+			
 		}
 
 		.glider-prev {
@@ -3874,6 +3882,11 @@ border: 0px solid #ffffff;
 		.testimonial {
 			display: flex;
 			gap: 60px;
+			width: 1200px;
+
+			*::-webkit-scrollbar {
+				height: 6px;
+			}
 
 			.item {
 				color: #fff;
