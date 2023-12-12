@@ -249,18 +249,18 @@
             </div>		
 	</section>
 
-    <section id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
-        <div class="black">
-            <div class="container">
-                <?php while ( have_posts() ) : ?>
-                <?php the_post(); ?>
-                    <h2><?php the_field('titulo_compra') ?></h2>
-                    <?php the_field('informacoes') ?>
-                    <?php do_action( 'woocommerce_single_product_summary' ); ?>
-                <?php endwhile;  ?>
+    <?php while ( have_posts() ) : ?>
+    <?php the_post(); ?>
+        <section id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
+            <div class="black">
+                <div class="container">
+                        <h2><?php the_field('titulo_compra') ?></h2>
+                        <?php the_field('informacoes') ?>
+                        <?php do_action( 'woocommerce_single_product_summary' ); ?>                    
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endwhile;  ?>
    
 
     </main>
