@@ -3718,18 +3718,6 @@ border: 0px solid #ffffff;
 			margin: 0;
 		}
 
-		.hotelCarousel {
-			margin-right: calc((100vw - 1200px) / 2 * -1);
-
-			.glider-slide {
-				opacity: 0;
-
-				&.active {
-					opacity: 1;
-				}
-			}
-		}
-
 		h3 {
 			#lib.titleS2();
 			position: absolute;
@@ -3796,6 +3784,20 @@ border: 0px solid #ffffff;
 			color: #lib.colors[greenDark];
 			bottom: 10%;
     		top: auto;
+		}
+
+		@media (min-width: 1030px) 
+			.hotelCarousel {
+				margin-right: calc((100vw - 1200px) / 2 * -1);
+	
+				.glider-slide {
+					opacity: 0;
+	
+					&.active {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 
