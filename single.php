@@ -294,6 +294,14 @@
             </div>
         </div>
 
+        <?php 
+		if( get_field('ativar_sessao_8') == 'true' ) { ?>
+        <div class="faq">
+            <section class="container">
+            </section>
+        </div>
+        <?php }?>
+
         <div class="relateds">
             <section class="container">
                 <?php do_action( 'woocommerce_after_single_product_summary'); ?>  
