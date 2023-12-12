@@ -147,6 +147,16 @@ function bbloomer_update_price_with_variation_price() {
    " );
 }
 
+//remove tabs
+add_filter( 'woocommerce_product_tabs', 'my_remove_all_product_tabs', 98 );
+ 
+function my_remove_all_product_tabs( $tabs ) {
+  unset( $tabs['description'] );        // Remove the description tab
+  unset( $tabs['reviews'] );       // Remove the reviews tab
+  unset( $tabs['additional_information'] );    // Remove the additional information tab
+  return $tabs;
+}
+
 
 add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static function( $args ) {
     $args['class'] = 'select';
