@@ -102,6 +102,21 @@ window.addEventListener('load',function(){
 	});
 });
 
+window.addEventListener('load',function(){
+	new Glider(document.querySelector('.hotelCarousel'), {
+	  // Mobile-first defaults
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  scrollLock: false,
+	  rewind: true,
+	  draggable: true,
+	  arrows: {
+	    prev: '.glider-prev.hC',
+	    next: '.glider-next.hC'
+	  }
+	});
+});
+
 //update price when qtd change
 document.querySelector(".qty").addEventListener("change", calculoPrecoQtd);
 
