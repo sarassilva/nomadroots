@@ -3710,6 +3710,10 @@ border: 0px solid #ffffff;
 		color: #lib.colors[greenDark];
 		overflow: hidden;
 
+		.container {
+			position: relative;
+		}
+
 		h3 {
 			#lib.titleS2();
 		}
@@ -3721,6 +3725,24 @@ border: 0px solid #ffffff;
 			
 			.texto {
 				width: 50%;
+
+				a.linkbtn {
+					color: #7d8971;
+					border: 1px solid #7d8971;
+					text-transform: uppercase;
+					font-size: .7rem;
+					padding: 8px 15px 5px;
+					display: inline-block;
+					border-radius: 20px;
+					letter-spacing: 1px;
+					margin-top: 15px;
+
+					&:hover {
+						background: #7d8971;
+    					color: #fff;
+						text-decoration: none;
+					}
+				}
 			}
 
 			.imagem {
