@@ -157,12 +157,6 @@ function my_remove_all_product_tabs( $tabs ) {
   return $tabs;
 }
 
-// overrider wc
-function mytheme_add_woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-  }
-  add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
-
 //rename title related posts
 add_filter( 'woocommerce_product_related_products_heading', 'bbloomer_rename_related_products' );
  

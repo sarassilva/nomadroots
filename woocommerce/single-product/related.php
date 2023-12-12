@@ -41,9 +41,9 @@ if ( $related_products ) : ?>
 					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
 					wc_get_template_part( 'content', 'product' );
-					?>
 
-<p><?php the_field('mini_descricao') ?></p>
+                    <p><?php the_field('mini_descricao') ?></p>
+					?>
 
 			<?php endforeach; ?>
 
