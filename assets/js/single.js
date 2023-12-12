@@ -101,3 +101,23 @@ window.addEventListener('load',function(){
 	  ]
 	});
 });
+
+//update price when qtd change
+document.querySelector(".qty").addEventListener("change", calculoPrecoQtd);
+
+function calculoPrecoQtd() {
+    var qtd = parseInt(document.querySelector('.qty').value, 10);
+
+    var oldPrice = document.querySelector('.price bdi').textContent;
+    var precoCheio = parseInt(oldPrice.replace('R$', '').replace(".", "").trim(), 10);
+    
+
+    var calculo = precoCheio * qtd;
+
+    var valorFinal = calculo.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+});
+
+    document.querySelector('.single_variation').innerText = 'Total: ' + valorFinal;
+}

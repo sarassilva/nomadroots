@@ -88,7 +88,7 @@ function woocommerce_add_to_cart_button_text_single() {
 }
 
 
-
+// turn qtd to dropdown 
 function woocommerce_quantity_input($args = array(), $product = null, $echo = true) {
     global $product;
   $product_quantity = array(
@@ -97,7 +97,6 @@ function woocommerce_quantity_input($args = array(), $product = null, $echo = tr
       'max_value'  	=> apply_filters( 'woocommerce_quantity_input_max', '', $product ),
       'min_value'  	=> apply_filters( 'woocommerce_quantity_input_min', '', $product ),
       'step' 		=> apply_filters( 'woocommerce_quantity_input_step', '1', $product ),
-      'style'		=> apply_filters( 'woocommerce_quantity_style', 'float:left; margin-right:10px;', $product )
   );
   if ( ! empty( $product_quantity['min_value'] ) )
       $min = $product_quantity['min_value'];
