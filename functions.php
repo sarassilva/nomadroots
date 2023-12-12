@@ -147,4 +147,10 @@ function bbloomer_update_price_with_variation_price() {
    " );
 }
 
+
+add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static function( $args ) {
+    $args['class'] = 'select';
+    return $args;
+}, 2 );
+
 ?>
