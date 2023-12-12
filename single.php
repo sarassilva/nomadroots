@@ -263,7 +263,7 @@
 
         <div class="related">
             <section class="container">
-                <?php do_action( 'woo_commerce_after_single_product_summary'); ?>  
+                <?php do_action( 'woocommerce_after_single_product_summary'); ?>  
             </section>
         </div>
     <?php endwhile;  ?>
