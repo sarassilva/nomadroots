@@ -158,10 +158,10 @@ function my_remove_all_product_tabs( $tabs ) {
 }
 
 //rename title related posts
-remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
-add_action( 'woocommerce_shop_loop_item_title', 'wp67610449_woocommerce_template_loop_product_title', 10 );
-function wp67610449_woocommerce_template_loop_product_title() {
-    echo '<h3 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">Você também pode gostar</h3>'; 
+add_filter( 'woocommerce_product_related_products_heading', 'bbloomer_rename_related_products' );
+ 
+function bbloomer_rename_related_products() {
+   return "Você também pode gostar";
 }
 
 add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static function( $args ) {
