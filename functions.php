@@ -177,4 +177,11 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static func
     return $args;
 }, 2 );
 
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+add_action('woocommerce_shop_loop_item_title', 'soChangeProductsTitle', 10 );
+function soChangeProductsTitle() {
+    echo '<h3 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '"><span>' . get_the_title() . '</span></h3>';
+}
+
+
 ?>
