@@ -151,6 +151,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < perguntas.length; i++) {
         perguntas[i].addEventListener('click', function () {
+            // Adiciona a classe .show à pergunta clicada
+            this.classList.toggle('show');
+
             var resposta = this.nextElementSibling;
 
             resposta.classList.toggle('show');
