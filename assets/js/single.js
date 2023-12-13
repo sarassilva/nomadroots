@@ -148,7 +148,7 @@ function faq() {
 //faq colapsed
 $(function () { 
     $(".question").click(function() {        
-        $(this).next().toggle();
+        $(this).next().slideDown();
 
         if($('.answer .hide-links:visible').length > 1) {
             $('.answer .hide-links:visible').hide();
