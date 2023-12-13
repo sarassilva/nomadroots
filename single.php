@@ -297,10 +297,7 @@
         <?php 
 		if( get_field('ativar_sessao_8') == 'true' ) { ?>
         <section class="faq">
-            <div class="container">
-                <?php if( have_rows('perguntas') ):
-                    while( have_rows('perguntas') ) : the_row();
-                ?>			    
+            <div class="container">                			    
                     <div class="flex">
                         <div class="content">
                             <h3><?php the_field('titulo_faq') ?></h3>
@@ -311,10 +308,13 @@
                         <div class="image">
                             <img src="<?php the_field('simbolo_faq') ?>" />
                         </div>
-                    </div>
-                <?php endwhile; else : endif; ?>
+                    </div>                
                 <div class="faqBox">
-                    <?php echo do_shortcode('[sp_easyaccordion id="2112"]'); ?>
+                <?php if( have_rows('perguntas') ):
+                    while( have_rows('perguntas') ) : the_row();
+                    ?>
+                        <p><?php the_sub_field('titulo') ?></p>
+                    <?php endwhile; else : endif; ?>
                 </div>
             </div>		
         </section>
