@@ -313,7 +313,7 @@
                     <div class="faqBox">
                         <?php if( have_rows('perguntas') ): ?>
                             <?php while( have_rows('perguntas') ): the_row(); ?>
-                                <div class="question"><?php the_sub_field('titulo') ?></div>
+                                <div class="question"><?php the_sub_field('duvida') ?></div>
                                 <div class="answer"><?php the_sub_field('resposta') ?></div>
                             <?php endwhile; ?>
                         <?php endif; ?>	
