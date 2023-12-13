@@ -3847,15 +3847,26 @@ border: 0px solid #ffffff;
 		.question {
 			text-transform: uppercase;
 			font-family: 'Futura';
-			padding: 12px 20px;
+			padding: 15px 20px 15px 40px;
 			font-weight: 600;
 			letter-spacing: 3px;
 			border: 1px solid #lib.colors[greenDark];
 			font-size: 0.65rem;
+			position: relative;
 
 			&::before {
 				content: '+';
-				display: inline-block;
+				font-size: 15px;
+				height: 10px;
+				position: absolute;
+				top: 10px;
+				left: 20px;
+			}
+
+			&.aberta {
+				&::before {
+					content: '-';
+				}
 			}
 		}
 

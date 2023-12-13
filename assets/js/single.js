@@ -148,14 +148,19 @@ function faq() {
 //faq colapsed
 $(function () {
     $(".question").click(function () {
-        var resposta = $(this).next('.answer');
+        var perguntaAtual = $(this);
+        var respostaAtual = perguntaAtual.next('.answer');
+        respostaAtual.slideToggle('show');
 
-        resposta.slideToggle('show');
+        var todasPerguntas = $(".question").not(perguntaAtual);		
+        todasPerguntas.removeClass('aberta');
 
-        var respostasVisiveis = $('.answer:visible').not(resposta);
+        var respostasVisiveis = $('.answer:visible').not(respostaAtual);
 
         if (respostasVisiveis.length > 0) {
             respostasVisiveis.slideUp('show');
         }
+		
+        perguntaAtual.toggleClass('aberta');
     });
 });
