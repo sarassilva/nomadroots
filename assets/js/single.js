@@ -146,33 +146,13 @@ function faq() {
 ;}
 
 //faq colapsed
-document.addEventListener('DOMContentLoaded', function () {
-    var perguntas = document.querySelectorAll('.question');
+$(function () { 
+    $(".question").click(function() {        
+        $(this).next().toggle();
 
-    for (var i = 0; i < perguntas.length; i++) {
-        perguntas[i].addEventListener('click', function () {
-            // Encontrar a resposta correspondente à pergunta clicada
-            var resposta = this.nextElementSibling;
-
-            // Fechar todas as respostas
-            fecharTodasRespostas();
-
-            // Adiar a adição da classe para garantir a transição suave
-            setTimeout(function () {
-                resposta.classList.toggle('show');
-            }, 50);
-        });
-    }
-
-    // Função para fechar todas as respostas
-    function fecharTodasRespostas() {
-        var respostas = document.querySelectorAll('.answer');
-
-        for (var j = 0; j < respostas.length; j++) {
-            respostas[j].classList.remove('show');
+        if($('.answer .hide-links:visible').length > 1) {
+            $('.answer .hide-links:visible').hide();
+            $(this).next().slideDown();
         }
-    }
-});
-
-
-
+    }); 
+})
