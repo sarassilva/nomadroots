@@ -151,29 +151,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < perguntas.length; i++) {
         perguntas[i].addEventListener('click', function () {
-            // Remove a classe .show de todas as perguntas
-            var todasPerguntas = document.querySelectorAll('.question');
-            for (var j = 0; j < todasPerguntas.length; j++) {
-                todasPerguntas[j].classList.remove('show');
-            }
-
-            // Adiciona a classe .show à pergunta clicada
-            this.classList.add('show');
-
+            // Encontrar a resposta correspondente à pergunta clicada
             var resposta = this.nextElementSibling;
 
-            resposta.classList.toggle('show');
+            // Verificar se a resposta está visível
+            var respostaEstaVisivel = resposta.classList.contains('show');
 
-            var respostasVisiveis = document.querySelectorAll('.answer .hide-links.show');
+            // Fechar todas as respostas
+            fecharTodasRespostas();
 
-            if (respostasVisiveis.length > 1) {
-                for (var k = 0; k < respostasVisiveis.length; k++) {
-                    respostasVisiveis[k].classList.remove('show');
-                }
-
-                resposta.classList.add('show');
+            // Abrir a resposta clicada, a menos que já esteja visível
+            if (!respostaEstaVisivel) {
+                resposta.classList.toggle('show');
             }
         });
     }
+
+    // Função para fechar todas as respostas
+    function fecharTodasRespostas() {
+        var respostas = document.querySelectorAll('.answer');
+
+        for (var j = 0; j < respostas.length; j++) {
+            respostas[j].classList.remove('show');
+        }
+    }
 });
+
 
