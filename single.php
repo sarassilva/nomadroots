@@ -309,7 +309,14 @@
                             <img src="<?php the_field('simbolo_faq') ?>" />
                         </div>
                     </div>                
-                
+
+                    <div class="faqBox">
+                        <?php if( have_rows('perguntas') ): ?>
+                            <?php while( have_rows('perguntas') ): the_row(); ?>
+                                <p><?php the_sub_field('resposta') ?></p>
+                            <?php endwhile; ?>
+                        <?php endif; ?>	
+                    </div>
             </div>		
         </section>
         <?php }?>
