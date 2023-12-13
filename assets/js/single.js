@@ -148,10 +148,10 @@ function faq() {
 //faq colapsed
 $(function () { 
     $(".question").click(function() {        
-        $(this).next().slideDown();
+        $(this).next().toggleClass('show');
 
-        if($('.answer .hide-links:visible').length > 1) {
-            $('.answer .hide-links:visible').hide();
+        if($('.answer:visible').length > 1) {
+            $('.answer:visible').hide();
             $(this).next().slideDown();
         }
     }); 
