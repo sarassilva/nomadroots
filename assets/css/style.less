@@ -312,7 +312,7 @@ header {
 
     .logo-nomad {
 		display: block;
-		
+
     	&.mobile {
 			display: none;
 		}
@@ -3842,7 +3842,21 @@ border: 0px solid #ffffff;
 
 	.faq {
 		background-color: #lib.colors[beigeMedium];
-		color: #lib.colors[greenDark]
+		color: #lib.colors[greenDark];
+
+		.question {
+			text-transform: uppercase;
+			font-family: 'Futura';
+			padding: 12px 20px;
+			font-weight: 600;
+			letter-spacing: 3px;
+			border: 1px solid #lib.colors[greenDark];
+			font-size: 0.65rem;
+		}
+
+		.answer {
+			display: none;
+		}
 	}
 
 	.testimonials {
