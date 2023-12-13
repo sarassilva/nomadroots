@@ -85,7 +85,7 @@ window.addEventListener('load',function(){
 	  slidesToScroll: 1,
 	  scrollLock: false,
 	  rewind: true,
-	  draggable: true,
+	  draggable: false,
 	  arrows: {
 	    prev: '.glider-prev.g',
 	    next: '.glider-next.g'
@@ -160,7 +160,7 @@ $(function () {
         if (respostasVisiveis.length > 0) {
             respostasVisiveis.slideUp('show');
         }
-		
+
         perguntaAtual.toggleClass('aberta');
     });
 });
