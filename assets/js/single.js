@@ -146,13 +146,24 @@ function faq() {
 ;}
 
 //faq colapsed
-$(function () { 
-    $(".question").click(function() {        
-        $(this).next().slideToggle('show');
+document.addEventListener('DOMContentLoaded', function () {
+	var perguntas = document.querySelectorAll('.question');
 
-        if($('.answer:visible').length > 1) {
-            $('.answer:visible').hide();
-            $(this).next().slideToggle();
-        }
-    }); 
-})
+	for (var i = 0; i < perguntas.length; i++) {
+		perguntas[i].addEventListener('click', function () {
+			var resposta = this.nextElementSibling;
+
+			resposta.style.display = (resposta.style.display === 'none' || resposta.style.display === '') ? 'block' : 'none';
+
+			var respostasVisiveis = document.querySelectorAll('.answer .hide-links:visible');
+
+			if (respostasVisiveis.length > 1) {
+				for (var j = 0; j < respostasVisiveis.length; j++) {
+					respostasVisiveis[j].style.display = 'none';
+				}
+
+				resposta.style.display = 'block';
+			}
+		});
+	}
+});
