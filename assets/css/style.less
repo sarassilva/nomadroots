@@ -3852,10 +3852,22 @@ border: 0px solid #ffffff;
 			letter-spacing: 3px;
 			border: 1px solid #lib.colors[greenDark];
 			font-size: 0.65rem;
+
+			&::before {
+				content: '+';
+				display: inline-block;
+			}
 		}
 
 		.answer {
-			display: none;
+			visibility: hidden;
+			transition: all .2s linear;
+			height: 0;
+
+			&.show {
+				visibility: visible;
+				height: auto;
+			}
 		}
 	}
 
