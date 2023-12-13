@@ -313,7 +313,8 @@
                     <div class="faqBox">
                         <?php if( have_rows('perguntas') ): ?>
                             <?php while( have_rows('perguntas') ): the_row(); ?>
-                                <p><?php the_sub_field('resposta') ?></p>
+                                <div class="question"><?php the_sub_field('titulo') ?></div>
+                                <div class="answer"><?php the_sub_field('resposta') ?></div>
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
@@ -334,6 +335,8 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/single.js"></script>
  
 <?php get_footer(); ?>

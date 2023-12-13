@@ -144,3 +144,17 @@ function faq() {
 	faqBox.classList.toggle('open');
 	seta.classList.toggle('rotate');
 ;}
+
+//faq colapsed
+$(function () { 
+    if($(window).width() <= 899){
+    $(".question").click(function() {        
+        $(this).next().toggle();
+
+        if($('.answer .hide-links:visible').length > 1) {
+            $('.answer .hide-links:visible').hide();
+            $(this).next().show();
+        }
+    }); 
+}
+})
