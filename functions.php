@@ -177,14 +177,4 @@ add_filter( 'woocommerce_dropdown_variation_attribute_options_args', static func
     return $args;
 }, 2 );
 
-add_filter( 'woocommerce_get_price_html', 'cw_change_product_price_display' );
-add_filter( 'woocommerce_cart_item_price', 'cw_change_product_price_display' );
-function cw_change_product_price_display( $price ) {
-    // Your additional text in a translatable string
-    $text = __('Preço unitário:');
-
-    // returning the text before the price
-    return $text . ' ' . $price;
-}
-
 ?>
