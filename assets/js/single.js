@@ -151,48 +151,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < perguntas.length; i++) {
         perguntas[i].addEventListener('click', function () {
-            // Verifica se a pergunta já possui a classe .show
-            var perguntaAtual = this;
-            var jaTemClasseShow = perguntaAtual.classList.contains('show');
-
             // Remove a classe .show de todas as perguntas
             var todasPerguntas = document.querySelectorAll('.question');
             for (var j = 0; j < todasPerguntas.length; j++) {
                 todasPerguntas[j].classList.remove('show');
             }
 
-            // Adiciona a classe .show à pergunta clicada, a menos que já tenha
-            if (!jaTemClasseShow) {
-                perguntaAtual.classList.add('show');
+            // Adiciona a classe .show à pergunta clicada
+            this.classList.add('show');
+
+            var resposta = this.nextElementSibling;
+
+            resposta.classList.toggle('show');
+
+            var respostasVisiveis = document.querySelectorAll('.answer .hide-links.show');
+
+            if (respostasVisiveis.length > 1) {
+                for (var k = 0; k < respostasVisiveis.length; k++) {
+                    respostasVisiveis[k].classList.remove('show');
+                }
+
+                resposta.classList.add('show');
             }
-
-            var resposta = perguntaAtual.nextElementSibling;
-
-            // Abre ou fecha a resposta com scroll suave
-            toggleAnswer(resposta);
         });
     }
-
-    // Função para abrir ou fechar a resposta com scroll suave
-    function toggleAnswer(resposta) {
-        resposta.classList.toggle('show');
-
-        if (resposta.classList.contains('show')) {
-            var alturaResposta = resposta.scrollHeight;
-            resposta.style.maxHeight = alturaResposta + 'px';
-        } else {
-            resposta.style.maxHeight = '0';
-        }
-
-        // Fecha outras respostas abertas
-        var respostasVisiveis = document.querySelectorAll('.answer.show');
-        for (var k = 0; k < respostasVisiveis.length; k++) {
-            if (respostasVisiveis[k] !== resposta) {
-                respostasVisiveis[k].classList.remove('show');
-                respostasVisiveis[k].style.maxHeight = '0';
-            }
-        }
-    }
 });
-
 
