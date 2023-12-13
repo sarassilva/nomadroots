@@ -154,16 +154,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Encontrar a resposta correspondente à pergunta clicada
             var resposta = this.nextElementSibling;
 
-            // Verificar se a resposta está visível
-            var respostaEstaVisivel = resposta.classList.contains('show');
-
             // Fechar todas as respostas
             fecharTodasRespostas();
 
-            // Abrir a resposta clicada, a menos que já esteja visível
-            if (!respostaEstaVisivel) {
+            // Adiar a adição da classe para garantir a transição suave
+            setTimeout(function () {
                 resposta.classList.toggle('show');
-            }
+            }, 50);
         });
     }
 
@@ -176,5 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 
 
