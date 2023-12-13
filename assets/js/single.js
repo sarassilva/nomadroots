@@ -136,3 +136,11 @@ function calculoPrecoQtd() {
 
     document.querySelector('.single_variation').innerText = 'Total: ' + valorFinal;
 }
+
+//faq
+const faqBox = document.querySelector('.faqBox');
+const seta = document.querySelector('.down');
+function faq() {
+	faqBox.classList.toggle('open');
+	seta.classList.toggle('rotate');
+;}
