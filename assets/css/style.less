@@ -3844,6 +3844,11 @@ border: 0px solid #ffffff;
 		background-color: #lib.colors[beigeMedium];
 		color: #lib.colors[greenDark];
 
+		.faqBox {
+			display: grid;
+			gap: 15px;
+		}
+
 		.question {
 			text-transform: uppercase;
 			font-family: 'Futura';
@@ -3866,6 +3871,8 @@ border: 0px solid #ffffff;
 			&.aberta {
 				&::before {
 					content: '-';
+					font-size: 19px;
+    				top: 8px;
 				}
 			}
 		}
