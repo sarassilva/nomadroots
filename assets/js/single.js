@@ -151,8 +151,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < perguntas.length; i++) {
         perguntas[i].addEventListener('click', function () {
+            // Remove a classe .show de todas as perguntas
+            var todasPerguntas = document.querySelectorAll('.question');
+            for (var j = 0; j < todasPerguntas.length; j++) {
+                todasPerguntas[j].classList.remove('show');
+            }
+
             // Adiciona a classe .show à pergunta clicada
-            this.classList.toggle('show');
+            this.classList.add('show');
 
             var resposta = this.nextElementSibling;
 
@@ -161,8 +167,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var respostasVisiveis = document.querySelectorAll('.answer .hide-links.show');
 
             if (respostasVisiveis.length > 1) {
-                for (var j = 0; j < respostasVisiveis.length; j++) {
-                    respostasVisiveis[j].classList.remove('show');
+                for (var k = 0; k < respostasVisiveis.length; k++) {
+                    respostasVisiveis[k].classList.remove('show');
                 }
 
                 resposta.classList.add('show');
@@ -170,3 +176,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
