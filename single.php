@@ -296,10 +296,28 @@
 
         <?php 
 		if( get_field('ativar_sessao_8') == 'true' ) { ?>
-        <div class="faq">
-            <section class="container">
-            </section>
-        </div>
+        <section class="faq">
+            <div class="container">
+                <?php if( have_rows('perguntas') ):
+                    while( have_rows('perguntas') ) : the_row();
+                ?>			    
+                    <div class="flex">
+                        <div class="content">
+                            <h3><?php the_field('titulo_faq') ?></h3>
+                            <p><?php the_field('mini_texto_faq') ?></p>
+
+                            <button class="down" onclick="faq()">Ver perguntas</button>
+                        </div>
+                        <div class="image">
+                            <img src="<?php the_field('simbolo_faq') ?>" />
+                        </div>
+                    </div>
+                <?php endwhile; else : endif; ?>
+                <div class="faqBox">
+                    <?php echo do_shortcode('[sp_easyaccordion id="2112"]'); ?>
+                </div>
+            </div>		
+        </section>
         <?php }?>
 
         <div class="relateds">
