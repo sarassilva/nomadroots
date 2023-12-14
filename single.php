@@ -289,7 +289,9 @@
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
                         <?php the_field('informacoes') ?>
-                        <?php do_action( 'woocommerce_single_product_summary' ); ?>                    
+                        <div class="relative">
+                            <?php do_action( 'woocommerce_single_product_summary' ); ?>  
+                        </div>                 
                 </div>
             </div>
         </div>
