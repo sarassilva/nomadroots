@@ -289,11 +289,7 @@
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
                         <div class="preco">
-                            <?php 
-                            if( $product->is_type( 'simple' ) ) {
-                                echo $product->get_price_html(); 
-                            }
-                            ?>
+                        <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
                         </div>
                         <?php the_field('informacoes') ?>
                         <div class="relative">
