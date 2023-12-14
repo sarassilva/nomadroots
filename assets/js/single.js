@@ -123,7 +123,7 @@ document.querySelector(".qty").addEventListener("change", calculoPrecoQtd);
 function calculoPrecoQtd() {
     var qtd = parseInt(document.querySelector('.qty').value, 10);
 
-    var oldPrice = document.querySelector('.price bdi').textContent;
+    var oldPrice = document.querySelector('.preco bdi').textContent;
     var precoCheio = parseInt(oldPrice.replace('R$', '').replace(".", "").trim(), 10);
     
 
