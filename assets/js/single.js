@@ -165,5 +165,3 @@ $(function () {
     });
 });
 
-//cupom
-document.querySelector('.wc-block-components-totals-coupon a').innerText = 'Adicionar cupom';
