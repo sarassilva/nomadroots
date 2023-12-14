@@ -4020,7 +4020,11 @@ border: 0px solid #ffffff;
 			font-weight: 400;
     		font-size: 1.2rem;
 			margin-bottom: 5px;
-		}		
+		}
+		
+		.price, .preco {
+			display: none;
+		}
 
 		.productPrice {
 			font-family: 'Clearface';
@@ -4032,12 +4036,8 @@ border: 0px solid #ffffff;
 			margin: 0;
 			width: 200px;
 			text-align: center;
-			display: none;
-		}
-
-		.preco {
-
-		}
+			display: block;
+		}		
 
 		.reset_variations {
 			display: none !important;
@@ -4143,6 +4143,30 @@ border: 0px solid #ffffff;
 				span {
 					padding: 2px;
 					background-color: #lib.colors[greenDark];
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-cart {
+	header {
+		position: relative;
+		padding: 40px 0;
+		width: 100%;
+		top: 0;
+		margin-bottom: 30px;
+
+		.main-menu {
+			ul {
+				li {
+					a {
+						color: #lib.colors[greenDark];
+
+						&:hover {
+							color: #fff;
+						}
+					}
 				}
 			}
 		}
