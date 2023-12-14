@@ -134,7 +134,7 @@ function calculoPrecoQtd() {
     currency: 'BRL'
 });
 
-    document.querySelector('.single_variation').innerText = 'Total: ' + valorFinal;
+    document.querySelector('.woocommerce-Price-amount bdi').innerText = valorFinal;
 }
 
 //faq
