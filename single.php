@@ -288,6 +288,9 @@
             <div class="black">
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
+                        <div class="preco">
+                            <?php echo $product->get_price_html(); ?>
+                        </div>
                         <?php the_field('informacoes') ?>
                         <div class="relative">
                             <?php do_action( 'woocommerce_single_product_summary' ); ?>  
