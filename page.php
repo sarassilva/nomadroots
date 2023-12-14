@@ -10,10 +10,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-    var cupomLink = document.querySelector('.wc-block-components-totals-coupon a');
-    if (cupomLink) {
-        cupomLink.textContent = 'Adicionar cupom';
-    }
+    var cupomLink = document.querySelector('.wc-block-components-totals-coupon-link').textContent = 'Adicionar cupom';
 });
 
 </script>   
