@@ -9,8 +9,13 @@
 </main>
 
 <script>
-    //cupom
-    document.querySelector('.wc-block-components-totals-coupon a').innerText = 'Adicionar cupom';
+    document.addEventListener('DOMContentLoaded', function () {
+    var cupomLink = document.querySelector('.wc-block-components-totals-coupon a');
+    if (cupomLink) {
+        cupomLink.textContent = 'Adicionar cupom';
+    }
+});
+
 </script>   
 
 <?php get_footer(); ?>
