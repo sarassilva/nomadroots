@@ -290,7 +290,7 @@
                         <h2><?php the_field('titulo_compra') ?></h2>
                         <div class="preco">
                             <?php 
-                            if( $product->is_type( 'variable' ) ) {
+                            if( $product->is_type( 'simple' ) ) {
                                 echo $product->get_price_html(); 
                             }
                             ?>
