@@ -289,7 +289,7 @@
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
                         <div class="preco">
-                        <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+                            <?php echo $product->get_price_html(); ?>
                         </div>
                         <?php the_field('informacoes') ?>
                         <div class="relative">
