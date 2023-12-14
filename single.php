@@ -289,7 +289,11 @@
                 <div class="container">
                         <h2><?php the_field('titulo_compra') ?></h2>
                         <div class="preco">
-                            <?php echo $product->get_price_html(); ?>
+                            <?php 
+                            if( $product->is_type( 'variable' ) ) {
+                                echo $product->get_price_html(); 
+                            }
+                            ?>
                         </div>
                         <?php the_field('informacoes') ?>
                         <div class="relative">
