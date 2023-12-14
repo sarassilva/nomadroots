@@ -4177,9 +4177,13 @@ border: 0px solid #ffffff;
 		}
 	}
 
-	.wc-block-components-title.wc-block-components-title {
+	.wc-block-components-title.wc-block-components-title, .wc-block-formatted-money-amount, .wc-block-components-totals-wrapper {
 		font-weight: normal;
     	font-family: 'Clearface';
+	}
+
+	.wc-block-components-totals-item__label {
+		font-weight: normal;
 	}
 
 	.components-button {
@@ -4195,5 +4199,23 @@ border: 0px solid #ffffff;
 		font-size: 0.7rem;
 		display: inline-block;
 		cursor: pointer;
+		transition: all .2s linear;
+
+		&:hover {
+			background-color: #lib.colors[greenDark];
+			text-decoration: none;
+			transition: all .2s linear;
+		}
+	}
+
+	a {
+		color: #lib.colors[greenDark];
+	}
+
+	.wc-block-components-totals-coupon {
+		a {
+			position: relative;
+			text-indent: -9999px;
+		}
 	}
 }
