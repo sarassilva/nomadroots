@@ -2302,42 +2302,47 @@ footer {
 				border: 0;
 				background-color: transparent;
 				padding: 10px 0;
+				background-color: #lib.colors[greenDark];
 			}		
 
 			.contnt {
-		    flex-direction: column;
-		    gap: 20px;
-		    height: 0;
-    		opacity: 0;
-    		visibility: hidden;
-    		transition: all .1s linear;
+				flex-direction: column;
+				gap: 20px;
+				height: 0;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .1s linear;
 
-		    &.show {
-		    	display: flex;
-		    	height: auto;
-	    		opacity: 1;
-	    		visibility: visible;
-	    		transition: all .1s linear;
-	    		margin: 20px 0;
-		    }
+				&.show {
+					display: flex;
+					height: auto;
+					opacity: 1;
+					visibility: visible;
+					transition: all .1s linear;
+					margin: 20px 0;
+				}
 
-		    p {
-		    	margin: auto;
-		    }
+				p {
+					margin: auto;
+				}
 			}
 		}	
 
 		@media (min-width: 1090px) {
 			.container {
 				display: flex;
-				gap: 100px;
+				gap: 10%;
+			}
+
+			h2 {
+				font-size: 2.4rem;
 			}
 			
 			.titles { 
 				width: 45%;
 			}
 
-			.hold {
+			.stps {
 				width: 50%;
 			}
 		}
