@@ -191,8 +191,10 @@
 
 	<section class="steps">
 		<div class="container">
-			<h2><?php the_field('titulo_passo') ?></h2>
-			<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
+			<div class="titles">
+				<h2><?php the_field('titulo_passo') ?></h2>
+				<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
+			</div>
 
 			<div class="stps">
 		    	<?php if( have_rows('passo_a_passo') ): ?>
