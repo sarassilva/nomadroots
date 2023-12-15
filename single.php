@@ -5,7 +5,7 @@
             <div class="content">
                 <h1><?php the_title(); ?></h1>
                 <div class="data"><?php the_field('data') ?></div>
-                <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
+                <a href="<?php the_permalink();?>#comprar" title="" class="btn">Compre agora</a>
             </div>
         </section>
 
@@ -19,7 +19,7 @@
                 </div>
                 <div class="direita">
                     <?php the_sub_field('direita') ?>
-                    <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('comprar_viagem') ?></a>
+                    <a href="<?php the_permalink();?>#comprar" title="" class="btn">Garanta sua vaga</a>
                 </div>
             <?php endwhile; else : endif; ?>
             </div>
@@ -284,7 +284,18 @@
 
     <?php while ( have_posts() ) : ?>
     <?php the_post(); ?>
-  
+        <div id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
+            <div class="black">
+                <div class="container">
+                        <h2><?php the_field('titulo_compra') ?></h2>
+                            <p class="preco <?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+                        <?php the_field('informacoes') ?>
+                        <div class="relative">                       
+                            <?php do_action( 'woocommerce_single_product_summary' ); ?>  
+                        </div>                 
+                </div>
+            </div>
+        </div>
 
         <?php 
 		if( get_field('ativar_sessao_8') == 'true' ) { ?>
