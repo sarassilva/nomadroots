@@ -2305,11 +2305,15 @@ footer {
 				position: relative;
 				text-align: left;
 				width: 100%;
+				display: flex;
+    			justify-content: space-between;
+				align-items: center;
 
 				&::after {
-					content: '›';
-					font-size: 15px;
+					content: '>';
+					font-size: 2rem;
 					display: block;
+					color: #lib.colors[greenDark];
 				}
 
 				span {
