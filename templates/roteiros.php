@@ -192,8 +192,11 @@
 	<section class="steps">
 		<div class="container">
 			<div class="titles">
-				<h2><?php the_field('titulo_passo') ?></h2>
-				<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
+				<div>
+					<h2><?php the_field('titulo_passo') ?></h2>
+					<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
+				</div>
+				<a href="<?php the_field('numero'); ?>" class="btn desktop">Fale com a gente</a>
 			</div>
 
 			<div class="stps">
