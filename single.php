@@ -284,7 +284,18 @@
 
     <?php while ( have_posts() ) : ?>
     <?php the_post(); ?>
-        
+        <div id="comprar" class="buy" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
+            <div class="black">
+                <div class="container">
+                        <h2><?php the_field('titulo_compra') ?></h2>
+                           
+                        <?php the_field('informacoes') ?>
+                        <div class="relative">                       
+                            <?php do_action( 'woocommerce_single_product_summary' ); ?>  
+                        </div>                 
+                </div>
+            </div>
+        </div>
 
         <?php 
 		if( get_field('ativar_sessao_8') == 'true' ) { ?>
