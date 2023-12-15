@@ -203,7 +203,7 @@
 		    			<div class="hold">  			
 							
 		    				<button class="number">
-	    						<?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?>
+	    						<span><?php the_sub_field('numero'); ?>. <?php the_sub_field('titulo'); ?></span>
 	    					</button>
 
 	    					<div class="contnt">
