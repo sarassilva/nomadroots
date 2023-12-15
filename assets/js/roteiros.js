@@ -138,27 +138,30 @@ window.addEventListener('load',function(){
 });
 
 
- $(document).ready(function() {
-  // Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
-  if ($(window).width() > 1200) {
-    $('.contnt:first').addClass('first');
-  }
-
-  $('.number').click(function() {
-    // Encontrar a div .content mais próxima ao botão clicado
-    var content = $(this).next('.contnt');        
-
-    // Verificar se a div clicada já possui a classe 'show'
-    var isAlreadyVisible = content.hasClass('show');
-
-    // Remover a classe .show de todas as outras divs
-    $('.contnt').removeClass('show');
-
-    // Adicionar a classe .show se a div clicada não a possuir
-    if (isAlreadyVisible) {
-      content.addClass('show');
-    } else {
-    	content.addClass('show');
-    }
+$(document).ready(function() {
+	// Adicionar a classe 'show' ao primeiro elemento se a largura da tela for maior que 1200px
+	if ($(window).width() > 1200) {
+	  $('.contnt:first').addClass('first');
+	}
+  
+	$('.number').click(function() {
+	  var content = $(this).next('.contnt');        
+  
+	  var isAlreadyVisible = content.hasClass('show');
+  
+	  // Remover a classe .show de todas as outras divs
+	  $('.contnt').removeClass('show');
+  
+	  // Adicionar a classe .show se a div clicada não a possuir
+	  if (!isAlreadyVisible) {
+		content.addClass('show');
+	  }
+  
+	  // Adicionar a classe .down ao .number se a .contnt correspondente estiver visível
+	  $('.number').removeClass('down');
+	  if (content.hasClass('show')) {
+		$(this).addClass('down');
+	  }
+	});
   });
-});
+  
