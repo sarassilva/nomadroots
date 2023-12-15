@@ -2277,7 +2277,7 @@ footer {
 			position: relative;
 
 			strong {
-				font-size: .9em;
+				font-size: .8em;
 			}
 
 			.hold {
@@ -2354,7 +2354,6 @@ footer {
 				display: flex;
 				gap: 10%;
 			}
-
 			
 
 			h2 {
@@ -2369,8 +2368,26 @@ footer {
 				width: 50%;
 
 				.hold {
-					.image {
-						height: 300px;
+					.contnt {
+						.image {
+							height: 270px;
+							position: absolute;
+							left: 0;
+							width: 40%;
+							top: 180px;
+						}
+
+						&.first {
+							display: flex;
+							height: auto;
+							opacity: 1;
+							visibility: visible;
+							transition: all 0.1s linear;
+
+							.texto {
+								visibility: hidden;
+							}
+						}
 					}
 				}
 			}
