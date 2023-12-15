@@ -2304,10 +2304,12 @@ footer {
 				background-color: transparent;
 				position: relative;
 				text-align: left;
-				font-family: '';
+				width: 100%;
 
 				&::after {
-
+					content: '›';
+					font-size: 15px;
+					display: block;
 				}
 
 				span {
@@ -2359,8 +2361,9 @@ footer {
 				width: 50%;
 
 				.hold {
-					.image {}
+					.image {
 						height: 300px;
+					}
 				}
 			}
 			
