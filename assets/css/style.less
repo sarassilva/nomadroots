@@ -65,11 +65,11 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
   scroll-behavior: smooth;
 
   @media (min-width: 1024px) {
-  	font-size: 16px;
+  	font-size: 17px;
   }
 }
 
@@ -2164,8 +2164,8 @@ footer {
 		background-color: #lib.colors[orangeLight];
 
 		h3 {
-    	#lib.titleS1();
-    }
+			#lib.titleS1();
+		}
 	}
 
 	.destinos {
@@ -2270,7 +2270,7 @@ footer {
 
 		.subtitle {
 			max-width: 565px;
-    	font-size: 1.1rem;
+    		font-size: 1.1rem;
 		}
 
 		.stps {
@@ -2282,7 +2282,7 @@ footer {
 
 			.hold {
 				.image {
-					width: 300px;
+					width: 100%;
 			    height: 400px;
 			    object-fit: cover;
 
@@ -2327,66 +2327,8 @@ footer {
 			}
 		}	
 
-		@media (min-width: 1200px) {
-			height: 710px;
-
-			.stps {
-				.hold {
-					display: flex;
-					justify-content: center;
-
-					.image {
-						width: 30%;
-					}
-				}
-
-				.texto {
-					width: calc(100% - 320px - 30%);
-					opacity: 0;
-				}
-
-				.contnt {
-					height: 0;
-			    opacity: 0;
-			    visibility: hidden;
-			    transition: all 0.1s linear;
-			    flex-direction: row;
-			    justify-content: space-between;
-			    position: absolute;
-			    width: 100%;
-			    top: 0;
-
-			    &.show {
-			    	flex-direction: row;
-			    	margin: 0;
-
-			    	.texto {
-			    		opacity: 1;
-			    	}
-			    }
-
-			    &.first {
-			    	display: flex;
-				    height: auto;
-				    opacity: 1;
-				    visibility: visible;
-				    transition: all 0.1s linear;
-			    }
-			  }
-			}			
-
-			button {
-				font-size: 1.3rem;
-		    cursor: pointer;
-		    color: #fff;
-		    border: 0;
-		    background-color: transparent;
-		    padding: 10px 0;
-		    width: 35%;
-		    font-family: 'Clearface';
-		    text-align: left;
-		    z-index: 999;
-			}	
+		@media (min-width: 1090px) {
+				
 		}
 	}
 
