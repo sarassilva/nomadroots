@@ -60,7 +60,7 @@
 		            		<div class="btns">
 		            		<?php 
 							if( get_field('ativar_botoes') == 'true' ) { ?>				        	
-					        	<a href="<?php the_sub_field('comprar_viagem') ?>" title="" class="btn">Comprar viagem</a>
+					        	<a href="<?php the_field('link') ?>" title="" class="btn">Ver roteiro completo</a>
 					        <?php } else { ?>
 					        	<button class="btn outline">Em breve</button>
 					        <?php }?>	
