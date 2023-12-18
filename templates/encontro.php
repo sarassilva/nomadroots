@@ -40,14 +40,16 @@
                 <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
                     <div class="image">
-                        <div class="tag"><?php the_field('tipo_de_encontro') ?></div>
-                        <?php  if ( has_post_thumbnail() ) {
-                            the_post_thumbnail();
-                        } ?>
-                        <div class="title">
-                            <h4><?php the_title(); ?></h4>
-                            <p class="subtitle"><?php the_field('subtitulo') ?>  </p>
-                        </div>
+                        <a href="<?php the_field('link') ?>">
+                            <div class="tag"><?php the_field('tipo_de_encontro') ?></div>
+                            <?php  if ( has_post_thumbnail() ) {
+                                the_post_thumbnail();
+                            } ?>
+                            <div class="title">
+                                <h4><?php the_title(); ?></h4>
+                                <p class="subtitle"><?php the_field('subtitulo') ?>  </p>
+                            </div>
+                        </a>
                     </div>
 
                 <?php endwhile; else: endif;?>
