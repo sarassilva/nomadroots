@@ -4,7 +4,7 @@
 
 <?php get_header(); ?>
 
-<main class="roteirosNomad">
+<main class="encontroNomad">
 	<section class="main-banner" style="background-image: url('<?php the_field('imagem_principal') ?>')">
 		<div class="content">
 			<h1><?php the_field('titulo') ?></h1>
