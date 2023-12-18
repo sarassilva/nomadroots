@@ -2217,17 +2217,32 @@ footer {
 			#lib.titleS1();
 			font-size: 2.5rem;
 			max-width: 600px;
-			margin: auto;
+			margin: 0 0 40px;
 			text-align: center;
+		}
+
+		.encontrosNomad {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 30px;
 		}
 	}
 
 	.image {
     	width: 100%;
-    	height: 500px;
+    	height: 400px;
     	object-fit: cover;
     	border-radius: 15px;
     	position: relative;
+
+		.tag {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			background-color: #lib.colors[beigeMedium];
+			padding: 5px 10px;
+			border-radius: 10px;
+		}
 
     	img {
     		width: 100%;
@@ -2248,7 +2263,7 @@ footer {
 
     		h4 {
     			#lib.titleS2();
-    			font-size: 2rem;
+    			font-size: 1.6rem;
     		}
 
     		.subtitle {
@@ -2280,6 +2295,20 @@ footer {
 		h3 {
 			color: #162416;
 			font-size: 2.4rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.encontrosItens {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.image {
+			.title {
+				h4 {
+					font-size: 2rem;
+				}
+			}
 		}
 	}
 }

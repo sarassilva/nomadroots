@@ -31,7 +31,7 @@
                     array(
                         'taxonomy' => 'sessao-do-encontro',
                         'field' => 'slug',
-                        'terms' => array( 'home' ),
+                        'terms' => array( 'encontro-produto' ),
                     ),
                 ),
                 ) ); ?>
@@ -40,6 +40,7 @@
                 <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
 
                     <div class="image">
+                        <div class="tag"><?php the_field('tipo_de_encontro') ?></div>
                         <?php  if ( has_post_thumbnail() ) {
                             the_post_thumbnail();
                         } ?>
