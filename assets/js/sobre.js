@@ -1,8 +1,7 @@
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.nCarousel'), {
-	    slidesToShow: 'auto',
+	    slidesToShow: 1.2,
 	    slidesToScroll: 1,
-	    itemWidth: 400,
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
@@ -16,9 +15,8 @@ window.addEventListener('load',function(){
 	      // screens greater than >= 1024px
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 3,
+	        slidesToShow: 2.2,
 	        slidesToScroll: 1,
-	        itemWidth: 150,
 	        duration: 0.25
 	      }
 	    }
