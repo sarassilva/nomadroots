@@ -31,7 +31,7 @@
                     array(
                         'taxonomy' => 'sessao-do-encontro',
                         'field' => 'slug',
-                        'terms' => array( 'encontro-produto' ),
+                        'terms' => array( 'produto' ),
                     ),
                 ),
                 ) ); ?>
