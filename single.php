@@ -15,10 +15,21 @@
 		        while( have_rows('caixa_principal') ) : the_row();
 		        ?>
                 <div class="esquerda">
-                    <?php the_sub_field('esquerda') ?>
+                    <div>
+                        <h2><?php the_sub_field('titulo') ?></h2>
+                        <h3><?php the_sub_field('subtitulo') ?></h3>
+                    </div>
+                    <div>
+                        <div class="title2"><?php the_sub_field('data') ?></div>
+                        <p><?php the_sub_field('saida') ?></p>
+                    </div>
                 </div>
                 <div class="direita">
-                    <?php the_sub_field('direita') ?>
+                    <div>
+                        <div class="title2"><?php the_sub_field('dias') ?></div>
+                        <p><?php the_sub_field('frase') ?></p>
+                        <?php the_sub_field('quartos_e_valores') ?>
+                    </div>
                     <a href="<?php the_permalink();?>#comprar" title="" class="btn">Garanta sua vaga</a>
                 </div>
             <?php endwhile; else : endif; ?>
