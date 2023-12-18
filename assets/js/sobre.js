@@ -15,7 +15,7 @@ window.addEventListener('load',function(){
 	      // screens greater than >= 1024px
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 2.2,
+	        slidesToShow: 2.5,
 	        slidesToScroll: 1,
 	        duration: 0.25
 	      }
