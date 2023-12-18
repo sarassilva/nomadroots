@@ -2226,70 +2226,70 @@ footer {
 			grid-template-columns: 1fr;
 			gap: 30px;
 		}
-	}
 
-	.image {
-    	width: 100%;
-    	height: 400px;
-    	object-fit: cover;
-    	border-radius: 15px;
-    	position: relative;
-
-		.tag {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			background-color: #cdc1a2;
-			padding: 5px 15px 3px;
-			border-radius: 5px;
-			font-size: .7rem;
-			text-transform: uppercase;
-		}
-
-    	img {
-    		width: 100%;
-    		height: 100%;
-    		object-fit: cover;
-    		border-radius: 15px;
-    	}
-
-    	.title {
-    		position: absolute;
-    		bottom: 0;
-    		padding: 20px 40px 0;
-    		background: rgb(255,255,255);
-			background: linear-gradient(180deg, transparent 0%, rgba(213,201,171,1) 47%);
-			border-radius: 0 0 15px 15px;
-			transition: all .2s linear;
+		.image {
 			width: 100%;
-
-    		h4 {
-    			#lib.titleS2();
-    			font-size: 1.6rem;
-    		}
-
-    		.subtitle {
-    			opacity: 0;
-    			transition: all .2s linear;
-    			visibility: none;
-    			height: 0;
-    		}
-    	}
-
-    	&:hover {
-    		.title {
-    			transition: all .2s linear;
-    			padding: 20px 40px 10px;
-
-    			.subtitle {
-	    			height: auto;
-	    			visibility: visible;
-	    			opacity: 1;
-	    			transition: all .2s linear;
-	    		}
-    		}    		
-    	}
-    }
+			height: 400px;
+			object-fit: cover;
+			border-radius: 15px;
+			position: relative;
+	
+			.tag {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				background-color: #cdc1a2;
+				padding: 5px 15px 3px;
+				border-radius: 5px;
+				font-size: .7rem;
+				text-transform: uppercase;
+			}
+	
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 15px;
+			}
+	
+			.title {
+				position: absolute;
+				bottom: 0;
+				padding: 20px 40px 0;
+				background: rgb(255,255,255);
+				background: linear-gradient(180deg, transparent 0%, rgba(213,201,171,1) 47%);
+				border-radius: 0 0 15px 15px;
+				transition: all .2s linear;
+				width: 100%;
+	
+				h4 {
+					#lib.titleS2();
+					font-size: 1.6rem;
+				}
+	
+				.subtitle {
+					opacity: 0;
+					transition: all .2s linear;
+					visibility: none;
+					height: 0;
+				}
+			}
+	
+			&:hover {
+				.title {
+					transition: all .2s linear;
+					padding: 20px 40px 10px;
+	
+					.subtitle {
+						height: auto;
+						visibility: visible;
+						opacity: 1;
+						transition: all .2s linear;
+					}
+				}    		
+			}
+		}
+	}
 
 	.testimonials {
 		background-color: #lib.colors[beigeMedium];
