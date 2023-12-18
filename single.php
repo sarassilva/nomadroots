@@ -27,9 +27,9 @@
                 <div class="direita">
                     <div>
                         <div class="title2"><?php the_sub_field('dias') ?></div>
-                        <p><?php the_sub_field('frase') ?></p>
-                        <?php the_sub_field('quartos_e_valores') ?>
+                        <p><?php the_sub_field('frase') ?></p>                        
                     </div>
+                    <?php the_sub_field('quartos_e_valores') ?>
                     <a href="<?php the_permalink();?>#comprar" title="" class="btn">Garanta sua vaga</a>
                 </div>
             <?php endwhile; else : endif; ?>
