@@ -22,8 +22,36 @@
 	<section class="destinos">
 		<div class="container">
 			<h2><?php the_field('titulo_destinos') ?></h2>
+			<div class="encontrosItens">
+                <?php
+                $new_loop = new WP_Query( array(
+                'post_type' => 'roteiro',
+                'posts_per_page' => 10,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'destino',
+                        'field' => 'slug',
+                        'terms' => array( 'roteiro-1' ),
+                    ),
+                ),
+                ) ); ?>
 
-			
+                <?php if ( $new_loop->have_posts() ) : ?>
+                <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
+
+                    <div class="image">
+                        <?php  if ( has_post_thumbnail() ) {
+                            the_post_thumbnail();
+                        } ?>
+                        <div class="title">
+                            <h4><?php the_title(); ?></h4>
+                            <p class="subtitle"><?php the_field('subtitulo') ?>  </p>
+                        </div>
+                    </div>
+
+                <?php endwhile; else: endif;?>
+                <?php wp_reset_query(); ?>
+            </div>
 		</div>
 	</section>
 
@@ -31,7 +59,7 @@
 
 	<section class="testimonials">
 		<div class="container">
-			<h3>Com a palavra, nossos viajantes-leitores.</h3>
+			<h3>Quem leu o mundo com a gente através dos encontros</h3>
 
 			<div class="glider-contain">
 		        <div class="testimonial">
