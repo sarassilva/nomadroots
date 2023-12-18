@@ -1071,6 +1071,7 @@ footer {
 			display: block;
 			width: 50px;
 			height: 50px;
+			border-radius: 0;
 
 			svg {
 				fill: #c15c17;
@@ -1093,7 +1094,7 @@ footer {
 
 			&.wp-social-link-mail {
 				background-image: url('../images/envelope.svg');
-				background-size: 90%;
+				background-size: 86%;
 			}
 
 			a {
@@ -2547,9 +2548,13 @@ footer {
 
 		.content {
 			background-color: #lib.colors[orange];
-			color: #lib.colors[greenDark];
+			color: #lib.colors[beigeMedium];
 			padding: 50px 60px;
 			margin: 0;
+
+			&:nth-child(n) {
+				background-color: #lib.colors[orange];
+			}
 
 			&:nth-child(2n) {
 				background-color: #lib.colors[beigeMedium];
