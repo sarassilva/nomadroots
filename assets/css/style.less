@@ -2522,8 +2522,6 @@ footer {
 	}
 
 	.nomadCarousel {
-		background-color: #lib.colors[orange2];
-		padding: 80px 0;
 
 		.container {
 		}
@@ -2542,25 +2540,20 @@ footer {
 		}
 
 		.content {
-			background-color: #lib.colors[beigeMedium];
+			background-color: #lib.colors[orange];
 			color: #lib.colors[greenDark];
-			padding: 25px 30px;
-	    border-radius: 14px;
+			padding: 35px 30px;
+			margin: 0;
+
+			&:nth-child(2n) {
+				background-color: #lib.colors[beigeMedium];
+			}
 	    
 
 	    .scroll {
-	    	height: 300px;
-		    display: flex;
-		    justify-content: flex-start;
-		    align-items: end;
-		    transition: all .2s linear;
-		    flex-direction: column;
-		    overflow: hidden;
-		    transform: translateY(134px);
-		    padding-right:20px;
 
 		    h4 {
-					#lib.titleS2();
+				#lib.titleS2();
 			    margin: auto auto 0 0;
 			    font-size: 2.2rem;
 			    width: 200px;
