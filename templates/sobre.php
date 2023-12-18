@@ -25,28 +25,25 @@
 		</video>
 	</section>
 
-	<section class="nomadCarousel">
-		<div class="container">
-			<h2><?php the_field('titulo_h2') ?> </h2>
-			<h3><?php the_field('subtitulo') ?> </h3>
+	<section class="nomadCarousel">		
 
-			<div class="glider-contain">
-		    	<div class="nCarousel">
-			    	<?php if( have_rows('carousel_nomad') ): ?>
-			    		<?php while( have_rows('carousel_nomad') ): the_row(); ?>
-			    			<div class="content">
-			    				<div class="scroll">
-									<h4><?php the_sub_field('titulo') ?></h4>
-									<p><?php the_sub_field('texo') ?></p>
-								</div>
-			    			</div>
-			    		<?php endwhile; ?>
-			    	<?php endif; ?>				    	
-			    </div>
-			    <button class="glider-prev nc">&lsaquo;</button>
-			    <button class="glider-next nc">&rsaquo;</button>
+		<div class="glider-contain">
+			<div class="nCarousel">
+				<?php if( have_rows('carousel_nomad') ): ?>
+					<?php while( have_rows('carousel_nomad') ): the_row(); ?>
+						<div class="content">
+							<div class="scroll">
+								<h4><?php the_sub_field('titulo') ?></h4>
+								<p><?php the_sub_field('texo') ?></p>
+							</div>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>				    	
 			</div>
+			<button class="glider-prev nc">&lsaquo;</button>
+			<button class="glider-next nc">&rsaquo;</button>
 		</div>
+
 	</section>
 
 	<section class="nomadTeam">
