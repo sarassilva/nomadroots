@@ -29,6 +29,12 @@
 
 		<div class="glider-contain">
 			<div class="nCarousel">
+				<div class="content">
+					<div class="scroll">
+						<h2><?php the_field('titulo_h2') ?> </h2>
+						<h3><?php the_field('subtitulo') ?> </h3>
+					</div>
+				</div>
 				<?php if( have_rows('carousel_nomad') ): ?>
 					<?php while( have_rows('carousel_nomad') ): the_row(); ?>
 						<div class="content">
