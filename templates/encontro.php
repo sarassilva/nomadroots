@@ -25,13 +25,13 @@
 			<div class="encontrosItens">
                 <?php
                 $new_loop = new WP_Query( array(
-                'post_type' => 'roteiro',
+                'post_type' => 'encontro-nomad',
                 'posts_per_page' => 10,
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'destino',
+                        'taxonomy' => 'sessao-do-encontro',
                         'field' => 'slug',
-                        'terms' => array( 'roteiro-1' ),
+                        'terms' => array( 'home' ),
                     ),
                 ),
                 ) ); ?>
