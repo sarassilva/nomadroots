@@ -273,7 +273,7 @@
                         array(
                             'taxonomy' => 'area-do-depoimento',
                             'field' => 'slug',
-                            'terms' => array( 'home' ),
+                            'terms' => array( 'encontros' ),
                         ),
                     ),
                     ) ); ?>
