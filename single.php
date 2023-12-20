@@ -265,30 +265,16 @@
             <div class="container">		
 
                 <div class="testimonial">
-                    <?php
-                    $new_loop = new WP_Query( array(
-                    'post_type' => 'depoimento',
-                    'posts_per_page' => 3,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'area-do-depoimento',
-                            'field' => 'slug',
-                            'terms' => array( 'encontros' ),
-                        ),
-                    ),
-                    ) ); ?>
+                    <?php if( have_rows('depoimentos') ): ?>
+                        <?php while( have_rows('depoimentos') ): the_row(); ?>
+                            <div class="item">
+                                <div class="aspas"></div>
+                                <?php the_sub_field('texto') ?>
+                                <div class="name"><?php the_sub_field('nome') ?></div> 
+                            </div>
 
-                    <?php if ( $new_loop->have_posts() ) : ?>
-                    <?php while ( $new_loop->have_posts() ) : $new_loop->the_post(); ?>
-
-                    <div class="item">
-                        <div class="aspas"></div>
-                        <?php the_content(); ?>
-                        <div class="name"><?php the_title(); ?></div> 
-                    </div>
-
-                    <?php endwhile; else: endif;?>
-                    <?php wp_reset_query(); ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>	
                 </div>
             </div>		
 	</section>
