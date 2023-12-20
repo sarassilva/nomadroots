@@ -126,7 +126,7 @@
 		if( get_field('ativar_sessao_3') == 'true' ) { ?>		
             <section class="livroEAutor">
                 <div class="container">
-                <h3><?php the_field('titulo_da_sessao_2') ?></h3>
+                <h3><?php the_field('titulo_da_sessao_3') ?></h3>
 
                     <div class="livroSessao">
                         <h4><?php the_field('segundo_titulo') ?></h4>
