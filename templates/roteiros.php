@@ -196,7 +196,7 @@
 					<h2><?php the_field('titulo_passo') ?></h2>
 					<p class="subtitle"><?php the_field('mini_texto_passo') ?></p>
 				</div>
-				<a href="<?php the_field('numero'); ?>" class="btn desktop">Fale com a gente</a>
+				<a href="<?php echo get_home_url(); ?>/roteiros/#contato" class="btn desktop">Fale com a gente</a>
 			</div>
 
 			<div class="stps">
@@ -223,7 +223,7 @@
 		    	<?php endif; ?>				    	
 		    </div>
 
-			<a href="<?php the_field('numero'); ?>" class="btn mobile">Fale com a gente</a>
+			<a href="<?php echo get_home_url(); ?>/roteiros/#contato" class="btn mobile">Fale com a gente</a>
 		</div>
 	</section>
 
@@ -264,7 +264,7 @@
 		</div>
 	</section>
 
-	<section class="contact">
+	<section class="contact" id="contato">
 		<div class="container">
 	        <div class="content">
 	        	<h3><?php the_field('titulo_ct') ?></h3>
