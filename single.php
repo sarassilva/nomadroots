@@ -269,7 +269,7 @@
                         <?php while( have_rows('depoimentos') ): the_row(); ?>
                             <div class="item">
                                 <div class="aspas"></div>
-                                <?php the_sub_field('texto') ?>
+                               <p> <?php the_sub_field('texto') ?></p>
                                 <div class="name"><?php the_sub_field('nome') ?></div> 
                             </div>
 
