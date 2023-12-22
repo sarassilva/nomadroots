@@ -2436,20 +2436,20 @@ footer .partners .wp-block-columns {
   padding: 50px 75px;
   margin: 0;
 }
-.aboutNomad .nomadCarousel .content:nth-child(n) {
+.aboutNomad .nomadCarousel .content:nth-child(1n) {
   background-color: #c15c17;
 }
 .aboutNomad .nomadCarousel .content:nth-child(2n) {
-  background-color: #62632d;
+  background-color: #62632d !important;
 }
 .aboutNomad .nomadCarousel .content:nth-child(3n) {
-  background-color: #1d2a10;
+  background-color: #1d2a10 !important;
 }
 .aboutNomad .nomadCarousel .content:nth-child(4n) {
-  background-color: #0a2889;
+  background-color: #0a2889 !important;
 }
 .aboutNomad .nomadCarousel .content:nth-child(5n) {
-  background-color: #cdc1a2;
+  background-color: #cdc1a2 !important;
   color: #1d2a10;
 }
 .aboutNomad .nomadCarousel .content .scroll {
