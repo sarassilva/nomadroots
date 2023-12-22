@@ -188,12 +188,21 @@ function soChangeProductsTitle() {
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
+//remove dashboard links
 function remove_menus(){
 
     remove_menu_page( 'edit.php' );                   //Posts
     remove_menu_page( 'edit-comments.php' );          //Comments
     remove_menu_page( 'tools.php' );                  //Tools
  
-  }
-  add_action( 'admin_menu', 'remove_menus' );
+}
+add_action( 'admin_menu', 'remove_menus' );
+
+// remove woocommerce product description
+add_action( 'add_meta_boxes_product', 'remove_metaboxes_edit_product', 9999 );
+ 
+function remove_metaboxes_edit_product() {	
+	remove_meta_box( 'woocommerce-product-data', 'product', 'normal' );
+}
+ 
 ?>
