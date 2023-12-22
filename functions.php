@@ -189,13 +189,17 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
 
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function hide_menu() {
 
-function woo_remove_product_tabs( $tabs ) {
-
-    unset( $tabs['description'] );      	// Remove the description tab
-
-    return $tabs;
+    $user = wp_get_current_user();
+    if($user && isset($user->user_login) && 'admin2' == $user->user_login) {
+        
+        remove_menu_page( 'edit.php' ); //Plugins
+        remove_menu_page( 'tools.php' ); //Tools
+        remove_menu_page( 'edit-comments.php' );         
+    }
+    
 }
+add_action('admin_head', 'hide_menu');
 
 ?>
