@@ -254,7 +254,7 @@
 				            array(
 				                'taxonomy' => 'sessao-do-encontro',
 				                'field' => 'slug',
-				                'terms' => array( 'home' ),
+				                'terms' => array( 'home-pt' ),
 				            ),
 				        ),
 					    ) ); ?>
