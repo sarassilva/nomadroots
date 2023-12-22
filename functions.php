@@ -189,13 +189,13 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
 
-function hide_menu() {
-        
-    remove_menu_page( 'edit.php' );
-    remove_menu_page( 'tools.php' ); 
-    remove_menu_page( 'edit-comments.php' );         
-    
-}
-add_action('admin_head', 'hide_menu');
+
+function remove_admin_bar_link() { 
+    global $wp_admin_bar; 
+    $wp_admin_bar->remove_menu( 'edit.php' ); 
+    $wp_admin_bar->remove_menu( 'tools.php' ); 
+    $wp_admin_bar->remove_menu( 'comments' ); 
+} 
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_link' );
 
 ?>
