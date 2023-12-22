@@ -691,7 +691,7 @@ header .logo-nomad.hide {
   }
   .meetNomad .glider-prev {
     display: block;
-    left: 0;
+    left: -20px;
   }
 }
 .vagas {
