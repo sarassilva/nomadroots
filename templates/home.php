@@ -163,6 +163,13 @@
 						    $new_loop = new WP_Query( array(
 						    'post_type' => 'grupo-nomad',
 						    'posts_per_page' => 10,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'status-da-viagem',
+									'field' => 'slug',
+									'terms' => array( 'proximas-viagens' ),
+								),
+							),
 						    ) ); ?>
 
 						    <?php if ( $new_loop->have_posts() ) : ?>
