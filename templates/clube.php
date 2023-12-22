@@ -14,7 +14,7 @@
 				<img src="<?php the_sub_field('logo') ?>" alt="Clube Nomad" />
 				<div class="btns">
 					<a class="btn blue" target="_blank" href="<?php the_sub_field('botao') ?>" title="Inscreva-se no Clube Nomad">Inscreva-se</a>
-					<a class="btn blue outline" target="_blank" href="<?php the_sub_field('botao') ?>" title="Já faço parte do Clube Nomad">Já faço parte</a>
+					<a class="btn blue outline" target="_blank" href="<?php the_sub_field('botao_ja_faco_parte') ?>" title="Já faço parte do Clube Nomad">Já faço parte</a>
 				</div>
 			</div>
 		</section>
