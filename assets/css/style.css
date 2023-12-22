@@ -3937,6 +3937,7 @@ footer .partners .wp-block-columns {
   width: 100%;
   top: 0;
   margin-bottom: 30px;
+  z-index: 1;
 }
 .woocommerce-cart header .logo-nomad,
 .woocommerce-checkout header .logo-nomad,
