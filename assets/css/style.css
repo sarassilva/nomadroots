@@ -3930,7 +3930,8 @@ footer .partners .wp-block-columns {
   background-color: #1d2a10;
 }
 .woocommerce-cart header,
-.woocommerce-checkout header {
+.woocommerce-checkout header,
+.page-template-default header {
   position: relative;
   padding: 40px 0;
   width: 100%;
@@ -3938,19 +3939,23 @@ footer .partners .wp-block-columns {
   margin-bottom: 30px;
 }
 .woocommerce-cart header .logo-nomad,
-.woocommerce-checkout header .logo-nomad {
+.woocommerce-checkout header .logo-nomad,
+.page-template-default header .logo-nomad {
   background-image: url(../images/logocart.svg);
 }
 .woocommerce-cart header #mobile-menu,
-.woocommerce-checkout header #mobile-menu {
+.woocommerce-checkout header #mobile-menu,
+.page-template-default header #mobile-menu {
   background-image: url(../images/menu-hamburguer2.svg);
 }
 .woocommerce-cart header .main-menu ul li a,
-.woocommerce-checkout header .main-menu ul li a {
+.woocommerce-checkout header .main-menu ul li a,
+.page-template-default header .main-menu ul li a {
   color: #1d2a10;
 }
 .woocommerce-cart header .main-menu ul li a:hover,
-.woocommerce-checkout header .main-menu ul li a:hover {
+.woocommerce-checkout header .main-menu ul li a:hover,
+.page-template-default header .main-menu ul li a:hover {
   color: #fff;
 }
 .woocommerce-cart .wc-block-components-title.wc-block-components-title,
