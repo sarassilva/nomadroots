@@ -123,11 +123,13 @@
         <?php }?>
 
         <?php 
-		if( get_field('ativar_sessao_3') == 'true' ) { ?>		
+		if( get_field('ativar_sessao_3') == 'true' ) { ?>
+
             <section class="livroEAutor">
                 <div class="container">
                 <h3><?php the_field('titulo_da_sessao_3') ?></h3>
 
+                <?php if( get_field('livros_em_carousel') == 'Sim' ) { ?>	
                     <div class="livroSessao">
                         <h4><?php the_field('segundo_titulo') ?></h4>
                         <div class="glider-contain">
@@ -150,7 +152,9 @@
                             <button class="glider-next lC">&rsaquo;</button>
                         </div>
                     </div>
-
+                <?php }?>
+                
+                <?php if( get_field('autor_em_carousel') == 'Sim' ) { ?>	
                     <div class="autorSessao">
                         <h4><?php the_field('terceiro_titulo') ?></h4>
                         <div class="glider-contain">
@@ -172,6 +176,7 @@
                             <button class="glider-next aC">&rsaquo;</button>
                         </div>
                     </div>
+                <?php }?>
                 </div>
             </section>
         <?php }?>
