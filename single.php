@@ -192,9 +192,9 @@
                 <div class="glider-contain">
                     <div class="roteiroCarousel">
                         <?php if( have_rows('roteiro') ): ?>
-                            <?php while( have_rows('roteiro') ): the_row(); ?>
-                                <div class="data"><span><?php the_sub_field('dias') ?></span></div>
+                            <?php while( have_rows('roteiro') ): the_row(); ?>                                
                                 <div class="content">
+                                <div class="data"><span><?php the_sub_field('dias') ?></span></div>
                                     <div class="imagem">
                                         <img src="<?php the_sub_field('imagem') ?>" />
                                     </div>
