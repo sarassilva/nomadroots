@@ -3480,13 +3480,14 @@ footer .partners .wp-block-columns {
 .singleGroup .roteiro .data {
   text-align: center;
   font-size: 1.3rem;
+  margin-bottom: 40px;
 }
 .singleGroup .roteiro .data span {
   background-color: #c15c17;
   padding: 2px 3px;
 }
 .singleGroup .roteiro .glider-contain {
-  margin: 40px 0;
+  margin: 0 0 40px;
   text-align: left;
 }
 .singleGroup .roteiro .content {
