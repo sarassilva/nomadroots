@@ -199,6 +199,27 @@
                         </div>
                     </div>
                 <?php }?>
+
+                <?php if( get_field('autor_em_carousel') == 'Não' ) { ?>	
+                    <div class="autorSessao">
+                        <h4><?php the_field('terceiro_titulo') ?></h4>
+                        <div class="autorItem ">
+                            <?php if( have_rows('autores') ): ?>
+                                <?php while( have_rows('autores') ): the_row(); ?>
+                                    <div class="autor">
+                                        <div class="image">
+                                            <img src="<?php the_sub_field('imagem') ?>" />
+                                        </div>
+                                        <div class="content">			    						
+                                            <div class="name"><?php the_sub_field('nome') ?></div>
+                                            <div class="bio"><?php the_sub_field('descricao') ?></div>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>				    	
+                        </div>
+                    </div>
+                <?php }?>
                 </div>
             </section>
         <?php }?>
