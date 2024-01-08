@@ -34,7 +34,7 @@ window.addEventListener('load',function(){
 });
 
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.livroItem'), {
+	new Glider(document.querySelector('.LivroCarousel'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    draggable: true,
@@ -49,7 +49,7 @@ window.addEventListener('load',function(){
 });
 
 window.addEventListener('load',function(){
-	new Glider(document.querySelector('.autorItem'), {
+	new Glider(document.querySelector('.autorCarousel'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    draggable: true,
