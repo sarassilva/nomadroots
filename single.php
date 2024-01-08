@@ -193,7 +193,7 @@
                     <div class="roteiroCarousel">
                         <?php if( have_rows('roteiro') ): ?>
                             <?php while( have_rows('roteiro') ): the_row(); ?>
-                                <div class="data"><span><?php the_field('dias') ?></span></div>
+                                <div class="data"><span><?php the_sub_field('dias') ?></span></div>
                                 <div class="content">
                                     <div class="imagem">
                                         <img src="<?php the_sub_field('imagem') ?>" />
