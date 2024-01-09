@@ -158,8 +158,8 @@
                     <div class="livroSessao">
                         <h4><?php the_field('segundo_titulo') ?></h4>
                             <div class="livroItem">
-                                <?php if( have_rows('livros') ): ?>
-                                    <?php while( have_rows('livros') ): the_row(); ?>
+                                <?php if( have_rows('livro_unico') ): ?>
+                                    <?php while( have_rows('livro_unico') ): the_row(); ?>
                                         <div class="livro">
                                             <div class="image">
                                                 <img src="<?php the_sub_field('capa') ?>" />
@@ -204,8 +204,8 @@
                     <div class="autorSessao">
                         <h4><?php the_field('terceiro_titulo') ?></h4>
                         <div class="autorItem ">
-                            <?php if( have_rows('autores') ): ?>
-                                <?php while( have_rows('autores') ): the_row(); ?>
+                            <?php if( have_rows('autor_unico') ): ?>
+                                <?php while( have_rows('autor_unico') ): the_row(); ?>
                                     <div class="autor">
                                         <div class="image">
                                             <img src="<?php the_sub_field('imagem') ?>" />
