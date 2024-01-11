@@ -138,12 +138,13 @@ function calculoPrecoQtd() {
 }
 
 //faq
-const faqBox = document.querySelector('.faqBox');
-const seta = document.querySelector('.down');
 function faq() {
-	faqBox.classList.toggle('open');
-	seta.classList.toggle('rotate');
-;}
+    var faqBox = document.querySelector('.faqBox');
+    var seta = document.querySelector('.down');
+
+    faqBox.classList.toggle('open');
+    seta.classList.toggle('rotate');
+}
 
 //faq colapsed
 $(function () {
