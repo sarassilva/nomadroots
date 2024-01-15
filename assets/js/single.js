@@ -151,18 +151,20 @@ $(function () {
     $(".question").click(function () {
         var perguntaAtual = $(this);
         var respostaAtual = perguntaAtual.next('.answer');
-        respostaAtual.slideToggle('show');
+        
+        respostaAtual.slideToggle();
 
-        var todasPerguntas = $(".question").not(perguntaAtual);		
+        var todasPerguntas = $(".question").not(perguntaAtual);
         todasPerguntas.removeClass('aberta');
-
+        
         var respostasVisiveis = $('.answer:visible').not(respostaAtual);
 
         if (respostasVisiveis.length > 0) {
-            respostasVisiveis.slideUp('show');
+            respostasVisiveis.slideUp();
         }
 
         perguntaAtual.toggleClass('aberta');
     });
 });
+
 
