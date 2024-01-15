@@ -389,6 +389,30 @@
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+    $(".question").click(function () {
+        var perguntaAtual = $(this);
+        var respostaAtual = perguntaAtual.next('.answer');
+        
+        respostaAtual.slideToggle();
+
+        var todasPerguntas = $(".question").not(perguntaAtual);
+        todasPerguntas.removeClass('aberta');
+        
+        var respostasVisiveis = $('.answer:visible').not(respostaAtual);
+
+        if (respostasVisiveis.length > 0) {
+            respostasVisiveis.slideUp();
+        }
+
+        perguntaAtual.toggleClass('aberta');
+    });
+});
+
+</script>
+
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/single.js"></script>
  
 <?php get_footer(); ?>

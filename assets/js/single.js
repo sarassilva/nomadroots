@@ -146,25 +146,4 @@ function faq() {
     seta.classList.toggle('rotate');
 }
 
-//faq colapsed
-$(function () {
-    $(".question").click(function () {
-        var perguntaAtual = $(this);
-        var respostaAtual = perguntaAtual.next('.answer');
-        
-        respostaAtual.slideToggle();
-
-        var todasPerguntas = $(".question").not(perguntaAtual);
-        todasPerguntas.removeClass('aberta');
-        
-        var respostasVisiveis = $('.answer:visible').not(respostaAtual);
-
-        if (respostasVisiveis.length > 0) {
-            respostasVisiveis.slideUp();
-        }
-
-        perguntaAtual.toggleClass('aberta');
-    });
-});
-
 
