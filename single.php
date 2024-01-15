@@ -143,7 +143,7 @@
                                             <div class="content">			    						
                                                 <div class="name"><?php the_sub_field('nome_do_livro') ?></div>
                                                 <div class="bio"><?php the_sub_field('sinopse') ?></div>
-                                                <p><a href="<?php the_sub_field('link_de_compra') ?>" title="compre esse livro">Compre o seu aqui</a>
+                                                <p><a target="_blank" href="<?php the_sub_field('link_de_compra') ?>" title="compre esse livro">Compre o seu aqui</a>
                                             </div>
                                         </div>
                                     <?php endwhile; ?>
@@ -167,7 +167,7 @@
                                             <div class="content">			    						
                                                 <div class="name"><?php the_sub_field('nome_do_livro') ?></div>
                                                 <div class="bio"><?php the_sub_field('sinopse') ?></div>
-                                                <p><a href="<?php the_sub_field('link_de_compra') ?>" title="compre esse livro">Compre o seu aqui</a>
+                                                <p><a target="_blank" href="<?php the_sub_field('link_de_compra') ?>" title="compre esse livro">Compre o seu aqui</a>
                                             </div>
                                         </div>
                                     <?php endwhile; ?>
