@@ -308,8 +308,8 @@
                         <?php endwhile; ?>
                     <?php endif; ?>				    	
                 </div>
-                <button class="glider-prev g">&lsaquo;</button>
-                <button class="glider-next g">&rsaquo;</button>
+                <button aria-label="Previous" class="glider-prev g">&lsaquo;</button>
+                <button aria-label="Next" class="glider-next g">&rsaquo;</button>
             </div>
 
             <div class="container">		
