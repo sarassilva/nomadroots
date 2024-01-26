@@ -4006,7 +4006,7 @@ footer .partners .wp-block-columns {
 
 
 
-.glider-dots {
+.singleGroup .roteiro .glider-dots {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -4014,7 +4014,7 @@ footer .partners .wp-block-columns {
   margin-bottom: 40px;
 }
 
-.glider-dot {
+.singleGroup .roteiro .glider-dot {
   width: auto;
   height: auto;
   background-color: transparent;
@@ -4027,26 +4027,26 @@ footer .partners .wp-block-columns {
   gap: 10px;
 }
 
-.glider-dot.active, .glider-dot:hover, .glider-dot:focus {
+.singleGroup .roteiro .glider-dot.active, .glider-dot:hover, .glider-dot:focus {
   background-color: transparent;
   border-radius: 0;
 }
 
-.glider-dot span  {
+.singleGroup .roteiro .glider-dot span  {
   padding: 2px 3px;
 }
 
-.glider-dot.active span, .glider-dot:hover span {
+.singleGroup .roteiro .glider-dot.active span, .glider-dot:hover span {
   background-color: #c15c17;
   border-radius: 0;
   padding: 2px 3px;
 }
 
-.glider-dot::after {
+.singleGroup .roteiro .glider-dot::after {
   content: '>';
   display: inline-block;
 }
 
-.glider-dot:last-child::after {
+.singleGroup .roteiro .glider-dot:last-child::after {
   display: none;
 }
