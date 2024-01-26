@@ -1,6 +1,6 @@
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.meetGlider'), {
-	    slidesToShow: 3,
+	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
 	    itemWidth: 400,
 	    draggable: false,
@@ -14,24 +14,6 @@ window.addEventListener('load',function(){
 	});
 });
 
-//hide arrows on gallery > 4
-document.addEventListener('glider-loaded', function () {
-	var gliderWrapper = document.querySelector('.meetGlider');
-	var slides = gliderWrapper.querySelectorAll('.glider-slide');
-	var prevArrow = document.querySelector('.glider-prev');
-	var nextArrow = document.querySelector('.glider-next');
-
-	if (slides.length > 4) {
-	} else { 
-		// Esconde as setas
-		if (prevArrow) {
-			prevArrow.style.display = 'none';
-		}
-		if (nextArrow) {
-			nextArrow.style.display = 'none';
-		}
-	}
-});
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.testimonial'), {
