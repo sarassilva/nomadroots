@@ -4048,6 +4048,7 @@ footer .partners .wp-block-columns {
 .singleGroup .roteiro .glider-dot::after {
   content: '>';
   display: inline-block;
+  color: #fff;
 }
 
 .singleGroup .roteiro .glider-dot:last-child::after {
