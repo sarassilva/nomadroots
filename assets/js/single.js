@@ -76,15 +76,16 @@ window.addEventListener('load',function(){
 	        next: '.glider-next.rC'
 	    },
 	});
-});
 
 	var customDotsContainer = document.querySelector('#dots');
-        var dots = customDotsContainer.querySelectorAll('.glider-dot');
+	var dots = customDotsContainer.querySelectorAll('.glider-dot');
 
-        // Adicionar números aos dots imediatamente
-        dots.forEach(function (dot, index) {
-            dot.innerHTML = '<span> Dia ' + ( index + 1) + '</span>';
-        });   
+	// Adicionar números aos dots imediatamente
+	dots.forEach(function (dot, index) {
+		dot.innerHTML = '<span> Dia ' + ( index + 1) + '</span>';
+	}); 
+});
+  
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.galeria'), {
