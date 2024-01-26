@@ -69,7 +69,7 @@ window.addEventListener('load',function(){
 	    slidesToScroll: 1,
 	    draggable: true,
 	    scrollLock: false,
-	    dots: false,
+	    dots: '#dots',
 	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.rC',
@@ -77,6 +77,14 @@ window.addEventListener('load',function(){
 	    },
 	});
 });
+
+	var customDotsContainer = document.querySelector('#dots');
+        var dots = customDotsContainer.querySelectorAll('.glider-dot');
+
+        // Adicionar números aos dots imediatamente
+        dots.forEach(function (dot, index) {
+            dot.innerHTML = '<span> Dia ' + ( index + 1) + '</span>';
+        });   
 
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.galeria'), {

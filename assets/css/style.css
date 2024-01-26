@@ -4003,3 +4003,50 @@ footer .partners .wp-block-columns {
   position: relative;
   text-indent: -9999px;
 }
+
+
+
+.glider-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+}
+
+.glider-dot {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: #222;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.glider-dot.active, .glider-dot:hover, .glider-dot:focus {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.glider-dot span  {
+  padding: 2px 3px;
+}
+
+.glider-dot.active span, .glider-dot:hover span {
+  background-color: #c15c17;
+  border-radius: 0;
+  padding: 2px 3px;
+}
+
+.glider-dot::after {
+  content: '>';
+  display: inline-block;
+}
+
+.glider-dot:last-child::after {
+  display: none;
+}

@@ -238,6 +238,7 @@
                 <h3><?php the_field('titulo_roteiro') ?></h3>                
                                    
                 <div class="glider-contain">
+                    <div id="dots" class=""></div>
                     <div class="roteiroCarousel">
                         <?php if( have_rows('roteiro') ): ?>
                             <?php while( have_rows('roteiro') ): the_row(); ?>    
