@@ -4034,12 +4034,15 @@ footer .partners .wp-block-columns {
 
 .singleGroup .roteiro .glider-dot span  {
   padding: 2px 3px;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 .singleGroup .roteiro .glider-dot.active span, .glider-dot:hover span {
   background-color: #c15c17;
   border-radius: 0;
   padding: 2px 3px;
+
 }
 
 .singleGroup .roteiro .glider-dot::after {
