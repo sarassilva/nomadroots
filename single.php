@@ -255,6 +255,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>	
                     </div>
+                    <button class="glider-prev rC">&lsaquo;</button>
                     <button class="glider-next rC">&rsaquo;</button>
                 </div>
 

@@ -72,7 +72,7 @@ window.addEventListener('load',function(){
 	    dots: false,
 	    rewind: true,
 	    arrows: {
-	        prev: '.glider-prev.aC',
+	        prev: '.glider-prev.rC',
 	        next: '.glider-next.rC'
 	    },
 	});
