@@ -85,7 +85,7 @@ header {
   align-items: center;
 }
 header #mobile-menu {
-  background-image: url(images/menu-hamburguer.svg);
+  background-image: url(assets/images/menu-hamburguer.svg);
   background-color: transparent;
   border: 0;
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@ header #mobile-menu {
   position: relative;
 }
 header #mobile-menu.open {
-  background-image: url(images/close.webp);
+  background-image: url(assets//close.webp);
 }
 header .main-menu {
   z-index: 9999;
@@ -159,7 +159,7 @@ header .main-menu ul li.club a:hover {
   background-color: #0a2889;
 }
 header .logo {
-  background-image: url(images/logo2.webp);
+  background-image: url(assets/images/logo2.webp);
   background-repeat: no-repeat;
   display: block;
   height: 165px;
@@ -175,7 +175,7 @@ header .logo:hover {
   background-color: transparent;
 }
 header .logo-nomad {
-  background-image: url(images/logonomadsvg.svg);
+  background-image: url(assets/images/logonomadsvg.svg);
   background-repeat: no-repeat;
   display: block;
   height: 40px;
@@ -858,12 +858,12 @@ header .logo-nomad.hide {
   font-size: 0.9rem;
 }
 .testimonials .testimonial .glider-slide {
-  background-image: url(images/testimonial-bg.webp);
+  background-image: url(assets/images/testimonial-bg.webp);
   border-radius: 20px;
   padding: 30px 40px;
 }
 .testimonials .testimonial .glider-slide .aspas {
-  background-image: url(images/aspas1.webp);
+  background-image: url(assets/images/aspas1.webp);
   width: 39px;
   height: 36px;
   background-size: 100%;
@@ -872,11 +872,11 @@ header .logo-nomad.hide {
 }
 @media (min-width: 1024px) {
   .testimonials .testimonial .glider-slide.center {
-    background-image: url(images/testimonial-bg2.webp);
+    background-image: url(assets/images/testimonial-bg2.webp);
     color: #fff;
   }
   .testimonials .testimonial .glider-slide.center .aspas {
-    background-image: url(images/aspas2.webp);
+    background-image: url(assets/images/aspas2.webp);
   }
 }
 .testimonials .testimonial .name {
@@ -931,7 +931,7 @@ footer .footer .spotify a {
 }
 footer .footer .spotify a::before {
   background-size: 100%;
-  background-image: url(images/spotify.webp);
+  background-image: url(assets/images/spotify.webp);
   background-repeat: no-repeat;
   content: ' ';
   display: block;
@@ -961,18 +961,18 @@ footer .footer .wp-social-link svg {
   color: #c15c17;
 }
 footer .footer .wp-social-link.wp-social-link-instagram {
-  background-image: url('images/instagram.svg');
+  background-image: url('assets/images/instagram.svg');
 }
 footer .footer .wp-social-link.wp-social-link-spotify {
   background-image: none;
   text-indent: inherit;
 }
 footer .footer .wp-social-link.wp-social-link-whatsapp {
-  background-image: url('images/whatsapp.svg');
+  background-image: url('assets/images/whatsapp.svg');
   background-size: 90%;
 }
 footer .footer .wp-social-link.wp-social-link-mail {
-  background-image: url('images/envelope.svg');
+  background-image: url('assets/images/envelope.svg');
   background-size: 75%;
   margin-top: 9px;
 }
@@ -1077,7 +1077,7 @@ footer .partners .wp-block-columns {
   position: relative;
 }
 .clubeNomad .differences h1 span::before {
-  background-image: url('images/selection.webp');
+  background-image: url('assets/images/selection.webp');
   content: ' ';
   width: 105%;
   height: 53px;
@@ -1111,7 +1111,7 @@ footer .partners .wp-block-columns {
 }
 @media (min-width: 1024px) {
   .clubeNomad .differences {
-    background-image: url('images/clube-bg.webp');
+    background-image: url('assets/images/clube-bg.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -1192,7 +1192,7 @@ footer .partners .wp-block-columns {
   font-family: 'Planc';
 }
 .places h2 span::before {
-  background-image: url('images/selection.webp');
+  background-image: url('assets/images/selection.webp');
   content: ' ';
   width: 105%;
   height: 83px;
@@ -1339,7 +1339,7 @@ footer .partners .wp-block-columns {
   width: 100%;
   max-width: 250px;
   height: 129px;
-  background-image: url('images/selo.webp');
+  background-image: url('assets//selo.webp');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -1392,7 +1392,7 @@ footer .partners .wp-block-columns {
   font-family: 'Planc';
 }
 .next-books h2 span::before {
-  background-image: url('images/selection2.webp');
+  background-image: url('assets//selection2.webp');
   content: ' ';
   width: 107%;
   height: 92px;
@@ -1514,7 +1514,7 @@ footer .partners .wp-block-columns {
   font-family: 'Planc';
 }
 .clubeN h2 span.clubNomadLogo {
-  background-image: url('images/clubnomad.webp');
+  background-image: url('assets/images/clubnomad.webp');
   background-repeat: no-repeat;
   background-size: 100%;
   width: 246px;
@@ -1588,7 +1588,7 @@ footer .partners .wp-block-columns {
   font-family: 'Planc';
 }
 .turmas .container .content h3 span::before {
-  background-image: url('images/selection2.webp');
+  background-image: url('assets/images/selection2.webp');
   content: ' ';
   width: 107%;
   height: 82px;
@@ -1746,7 +1746,7 @@ footer .partners .wp-block-columns {
 }
 .faq .down {
   background-color: transparent;
-  background-image: url('images/seta.webp');
+  background-image: url('assets/images/seta.webp');
   border: 0;
   height: 22px;
   width: 42px;
@@ -1849,7 +1849,7 @@ footer .partners .wp-block-columns {
   color: #0a2889;
 }
 .page-template-clube .testimonials .glider-slide .aspas {
-  background-image: url(images/aspa3.webp);
+  background-image: url(assets/images/aspa3.webp);
   width: 39px;
   height: 36px;
   background-size: 100%;
@@ -1857,11 +1857,11 @@ footer .partners .wp-block-columns {
 }
 @media (min-width: 1024px) {
   .page-template-clube .testimonials .glider-slide.center {
-    background-image: url(images/testimonial-bg3.webp);
+    background-image: url(assets/images/testimonial-bg3.webp);
     color: #fff;
   }
   .page-template-clube .testimonials .glider-slide.center .aspas {
-    background-image: url(images/aspas2.webp);
+    background-image: url(assets/images/aspas2.webp);
   }
 }
 .page-template-clube .meetNomad {
@@ -1889,7 +1889,7 @@ footer .partners .wp-block-columns {
   font-family: 'Planc';
 }
 .page-template-clube .meetNomad h2 span::before {
-  background-image: url('images/selection.webp');
+  background-image: url('assets/images/selection.webp');
   content: ' ';
   width: 105%;
   height: 82px;
@@ -2275,7 +2275,7 @@ footer .partners .wp-block-columns {
   font-size: 2rem;
   display: block;
   color: #1d2a10;
-  background-image: url(images/setabaixo.svg);
+  background-image: url(assets/images/setabaixo.svg);
   background-size: 100%;
   transition: all 0.2s linear;
   width: 20px;
