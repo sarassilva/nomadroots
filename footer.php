@@ -13,7 +13,6 @@
 		</section>
 	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/less" ></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/fonts.css" />
 	<script  src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
 </body>

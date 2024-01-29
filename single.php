@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/single.css" type="text/css" media="screen" />
+
 
     <main class="singleGroup">
         <section class="main-banner" style="background-image: url('<?php the_field('imagem_destaque') ?>')">
