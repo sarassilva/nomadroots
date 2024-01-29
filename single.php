@@ -238,7 +238,13 @@
                 <h3><?php the_field('titulo_roteiro') ?></h3>                
                                    
                 <div class="glider-contain">
+
+                <div class="flex-dots-arrow">
+                    <button class="glider-prev rC">&lsaquo;</button>
                     <div id="dots" class=""></div>
+                    <button class="glider-next rC">&rsaquo;</button>
+                </div>
+                    
                     <div class="roteiroCarousel">
                         <?php if( have_rows('roteiro') ): ?>
                             <?php while( have_rows('roteiro') ): the_row(); ?>    
@@ -254,9 +260,7 @@
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>	
-                    </div>
-                    <button class="glider-prev rC">&lsaquo;</button>
-                    <button class="glider-next rC">&rsaquo;</button>
+                    </div>                    
                 </div>
 
                 <a href="<?php the_permalink();?>#comprar" title="" class="btn"><?php the_field('botao') ?></a>

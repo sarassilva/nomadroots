@@ -111,8 +111,6 @@ window.addEventListener('load',function(){
 	});
 });
 
-
-
 window.addEventListener('load',function(){
 	new Glider(document.querySelector('.hotelCarousel'), {
 	  // Mobile-first defaults
