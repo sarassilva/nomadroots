@@ -96,6 +96,7 @@ header .translate .gtranslate_wrapper {
   flex-direction: row-reverse;
   gap: 15px;
   font-family: 'Futura';
+  font-size: 0.9rem;
 }
 
 header .translate .gtranslate_wrapper a:nth-child(1) {
