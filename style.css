@@ -86,22 +86,30 @@ header {
 }
 
 header .translate {
-  position: absolute;
-  z-index: 999;
-  right: 0;
+  display: none;
 }
 
-header .translate .gtranslate_wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 15px;
-  font-family: 'Futura';
-  font-size: 0.9rem;
-}
+@media (min-width: 700px) {
+  header .translate {
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    display: block;
+  }
 
-header .translate .gtranslate_wrapper a:nth-child(1) {
-  border-left: 1px solid;
-  padding-left: 15px;
+  header .translate .gtranslate_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    font-family: 'Futura';
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  header .translate .gtranslate_wrapper a:nth-child(1) {
+    border-left: 1px solid;
+    padding-left: 15px;
+  }
 }
 
 header #mobile-menu {
