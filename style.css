@@ -120,7 +120,7 @@ header #mobile-menu {
   position: relative;
 }
 header #mobile-menu.open {
-  background-image: url(assets//close.webp);
+  background-image: url(assets/images/close.webp);
 }
 header .main-menu {
   z-index: 9999;
