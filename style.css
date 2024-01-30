@@ -144,6 +144,11 @@ header .main-menu.open {
   transition: ease-in-out 0.2s;
   bottom: 0;
 }
+
+header .main-menu.open .translate {
+  display: block;
+}
+
 header .main-menu ul {
   padding: 0;
   display: grid;
@@ -159,7 +164,7 @@ header .main-menu ul li a {
 }
 header .main-menu ul li a:hover {
   text-decoration: none;
-  background-color: #1d2a10;
+  background-color: #fff;
 }
 header .main-menu ul li.rot a:hover {
   color: #fff;
@@ -263,6 +268,10 @@ header .logo-nomad.hide {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 0.9rem;
+  }
+
+  header .main-menu ul li a:hover {
+    color: #1d2a10;
   }
 }
 .container {
