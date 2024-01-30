@@ -84,6 +84,25 @@ header {
   gap: 40px;
   align-items: center;
 }
+
+header .translate {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+}
+
+header .translate .gtranslate_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  font-family: 'Futura';
+}
+
+header .translate .gtranslate_wrapper a:nth-child(1) {
+  border-left: 1px solid;
+  padding-left: 15px;
+}
+
 header #mobile-menu {
   background-image: url(assets/images/menu-hamburguer.svg);
   background-color: transparent;
