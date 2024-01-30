@@ -19,10 +19,10 @@
 
 	<div class="main-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-		<a class="logo" title="NomadRoot" href="<?php echo get_home_url(); ?>" rel="Home">NomadRoot</a>
 		<div class="translate">
 			<?php echo do_shortcode('[gtranslate]'); ?>
 		</div>
+		<a class="logo" title="NomadRoot" href="<?php echo get_home_url(); ?>" rel="Home">NomadRoot</a>		
 	</div>
 
 	<div class="translate">
