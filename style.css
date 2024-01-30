@@ -149,6 +149,14 @@ header .main-menu.open .translate {
   display: block;
 }
 
+header .main-menu.open .translate .gtranslate_wrapper {
+  justify-content: flex-end;
+}
+
+header .main-menu.open .translate .gtranslate_wrapper a {
+  color: #1d2a10;
+}
+
 header .main-menu ul {
   padding: 0;
   display: grid;
@@ -165,6 +173,7 @@ header .main-menu ul li a {
 header .main-menu ul li a:hover {
   text-decoration: none;
   color: #fff;
+  background-color: #1d2a10;
 }
 header .main-menu ul li.rot a:hover {
   color: #fff;
