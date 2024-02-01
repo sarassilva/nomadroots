@@ -284,8 +284,8 @@
 			            <?php endwhile; else: endif;?>
 						<?php wp_reset_query(); ?>
 			        </div>
-			        <button class="glider-prev meetPrev">&lsaquo;</button>
-			        <button class="glider-next meetNext">&rsaquo;</button>
+			        <button aria-label="Previous" class="glider-prev meetPrev">&lsaquo;</button>
+			        <button aria-label="Next" class="glider-next meetNext">&rsaquo;</button>
 			    </div>
 			</div>
 		</section>
