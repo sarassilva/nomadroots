@@ -58,7 +58,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    rewind: true,
 	    arrows: false,
 	    arrows: {
 	        prev: '.glider-prev.nB',
