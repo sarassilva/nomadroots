@@ -6,7 +6,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.roteiro-um',
 	        next: '.glider-next.roteiro-um'
@@ -32,7 +31,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.roteiro-dois',
 	        next: '.glider-next.roteiro-dois'
@@ -58,7 +56,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.roteiro-tres',
 	        next: '.glider-next.roteiro-tres'
@@ -84,7 +81,6 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.roteiro-quatro',
 	        next: '.glider-next.roteiro-quatro'

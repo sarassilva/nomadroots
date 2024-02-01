@@ -24,9 +24,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.stps'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -52,9 +50,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.books'), {
 	    slidesToShow: 1.5,
 	    slidesToScroll: 1.5,
@@ -91,9 +87,7 @@ window.addEventListener('load',function(){
 
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.testimonial'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
@@ -117,15 +111,12 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.meets'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  scrollLock: false,
-	  rewind: true,
 	  arrows: {
 	    prev: '.glider-prev.meet',
 	    next: '.glider-next.meet'
@@ -143,9 +134,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.where'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
