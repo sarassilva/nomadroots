@@ -36,9 +36,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.roteiroGliderMobile'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -52,9 +50,7 @@ window.addEventListener('load',function(){
 	        next: '.glider-next.roteiroMobNext'
 	    },
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.roteiroGlider'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
@@ -68,9 +64,7 @@ window.addEventListener('load',function(){
 	        next: '.glider-next.roteiroNext'
 	    },
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.grupoGliderMobile'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -84,9 +78,7 @@ window.addEventListener('load',function(){
 	        next: '.glider-next.grupoMobNext'
 	    },
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.grupoGlider'), {
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
