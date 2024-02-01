@@ -4,18 +4,14 @@ window.addEventListener('load',function(){
 	    slidesToScroll: 1,
 	    itemWidth: 400,
 	    draggable: false,
-	    scrollLock: false,
+	    scrollLock: true,
 	    dots: false,
-	    rewind: true,
 	    arrows: {
 	        prev: '.glider-prev.meetPrev',
 	        next: '.glider-next.meetNext'
 	    },
 	});
-});
 
-
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.testimonial'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
