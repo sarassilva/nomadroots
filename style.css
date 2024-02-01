@@ -2218,7 +2218,8 @@ footer .partners .wp-block-columns {
   color: #272e19;
 }
 .roteirosNomad .destinos .glider-prev {
-  display: none;
+  display: block;
+  color: #272e19;
 }
 .roteirosNomad .destinos .image {
   width: 100%;

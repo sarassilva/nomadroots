@@ -24,9 +24,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.roteiro2'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -52,9 +50,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.roteiro3'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -80,9 +76,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.roteiro4'), {
 	    slidesToShow: 'auto',
 	    slidesToScroll: 1,
@@ -108,9 +102,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-});
 
-window.addEventListener('load',function(){
 	new Glider(document.querySelector('.testimonial'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,
