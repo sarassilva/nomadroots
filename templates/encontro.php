@@ -113,7 +113,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/glider.css" />
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/glider.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/roteiros.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/encontros.js"></script>
 
 
 <?php get_footer(); ?>
