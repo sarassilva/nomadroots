@@ -58,11 +58,7 @@ window.addEventListener('load',function(){
 	    draggable: true,
 	    scrollLock: false,
 	    dots: false,
-	    arrows: false,
-	    arrows: {
-	        prev: '.glider-prev.nB',
-	        next: '.glider-next.nB'
-	    },
+	    arrows: false,	    
 	    responsive: [
 		{
 	      // screens greater than >= 1024px
@@ -79,8 +75,10 @@ window.addEventListener('load',function(){
 	      settings: {
 	        slidesToShow: 3,
 	        slidesToScroll: 1,
-	        itemWidth: 150,
-	        duration: 0.25
+			arrows: {
+				prev: '.glider-prev.nB',
+				next: '.glider-next.nB'
+			},
 	      }
 	    }
 
