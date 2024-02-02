@@ -98,7 +98,7 @@ window.addEventListener('load',function(){
 	    }
 	  ]
 	});
-
+ 
 	new Glider(document.querySelector('.testimonial'), {
 	  // Mobile-first defaults
 	  slidesToShow: 1,

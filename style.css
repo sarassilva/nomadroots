@@ -587,7 +587,7 @@ header .logo-nomad.hide {
   .roteiros .container .desktop .grupoGlider,
   .clube .container .desktop .grupoGlider,
   .group .container .desktop .grupoGlider {
-    margin-right: calc((100vw - 1200px) / 2 * -1);
+    margin-right: calc((100vw - 1100px) / 2 * -1);
   }
 }
 .clube {
@@ -1346,7 +1346,7 @@ footer .partners .wp-block-columns {
 }
 @media (min-width: 1497px) {
   .places .where {
-    margin-right: calc((100vw - 1200px) / 2 * -1);
+    margin-right: calc((100vw - 1100px) / 2 * -1);
   }
 }
 .mediador {
@@ -2589,10 +2589,10 @@ footer .partners .wp-block-columns {
 }
 @media (min-width: 1497px) {
   .aboutNomad .nomadTeam .glider-next {
-    right: calc((100vw - 1200px) / 2 * -1);
+    right: calc((100vw - 1100px) / 2 * -1);
   }
   .aboutNomad .nomadTeam .tCarousel {
-    margin-right: calc((100vw - 1200px) / 2 * -1);
+    margin-right: calc((100vw - 1100px) / 2 * -1);
   }
 }
 .aboutNomad .houseNomad {
@@ -2677,7 +2677,7 @@ footer .partners .wp-block-columns {
 }
 @media (min-width: 1497px) {
   .aboutNomad .midia .glider-next {
-    right: calc((100vw - 1200px) / 2 * -1);
+    right: calc((100vw - 1100px) / 2 * -1);
   }
   .aboutNomad .midia .mCarousel {
     margin-right: calc((100vw - 1260px) / 2 * -1);
