@@ -78,6 +78,11 @@
     width: 100%;
 }
 
+.woocommerce-checkout .woocommerce h1 {
+    font-family: 'Clearface';
+    font-weight: 500;
+}
+
 .woocommerce-checkout .woocommerce h3 {
     font-weight: 500;
 }
@@ -85,6 +90,19 @@
 .woocommerce-checkout input {
     border: 1px solid #e3d6b5;
     padding: 10px;
+    font-family: 'Planc';
+}
+
+.woocommerce-checkout form .form-row label {
+    font-size: 13px !important;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment, .woocommerce-checkout #payment.woocommerce-checkout-payment .payment_box {
+    background: #f3ecdb;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment .payment_box::before {
+    display: none;
 }
 
 .woocommerce-additional-fields {
@@ -98,7 +116,7 @@
 @media (min-width: 1024px) {
     .woocommerce-checkout form.checkout {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 60px;
     }
 }
