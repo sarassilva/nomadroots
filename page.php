@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/checkout.css" type="text/css" media="screen" />
+
 
 <main>
     <div class="page-content">
