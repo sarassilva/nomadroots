@@ -803,6 +803,15 @@
   text-align: center;
   display: block !important;
 }
+
+.singleGroup .buy p.productPrice del {
+  text-decoration: none;
+}
+
+.singleGroup .buy p.productPrice ins {
+  display: none;
+}
+
 .singleGroup .buy .reset_variations {
   display: none !important;
 }

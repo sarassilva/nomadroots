@@ -198,11 +198,6 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-// remove woocommerce product description
-add_action( 'add_meta_boxes_product', 'remove_metaboxes_edit_product', 9999 );
- 
-function remove_metaboxes_edit_product() {	
-	remove_meta_box( 'woocommerce-product-data', 'product', 'normal' );
-}
+
  
 ?>
