@@ -70,3 +70,32 @@
   position: relative;
   text-indent: -9999px;
 }
+
+.woocommerce-checkout .woocommerce .col2-set .col-1 #customer_details {
+    width: 100%;
+}
+
+.woocommerce-checkout .woocommerce h3 {
+    font-weight: 500;
+}
+
+.woocommerce-checkout input {
+    border: 1px solid #e3d6b5;
+    padding: 10px;
+}
+
+.woocommerce-additional-fields {
+    display: none;
+}
+
+.woocommerce-checkout form.checkout #order_review_heading {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .woocommerce-checkout form.checkout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
