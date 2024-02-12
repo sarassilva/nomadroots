@@ -231,6 +231,9 @@
     flex-direction: row;
     align-items: center;
     text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
   }
   .singleGroup .guias .guiaCarousel2 .content {
     width: calc(100% - 330px);
