@@ -112,7 +112,7 @@
     font-weight: 500 !important;
 }
 
-.woocommerce table.shop_table td .product-name {
+.woocommerce table.shop_table td.product-name {
   display: flex;
   gap: 10px;
 }
