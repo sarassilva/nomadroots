@@ -119,9 +119,8 @@
 
 .woocommerce .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f4fff7;
-  border-color: #4ab866;
   align-items: stretch;
-  border: 1px solid;
+  border: 1px solid #4ab866;
   border-radius: 4px;
   box-sizing: border-box;
   color: #2f2f2f;
@@ -141,9 +140,9 @@
   left: auto;
 }
 
-.woocommerce .woocommerce-notices-wrapper .woocommerce-info {
+.woocommerce .woocommerce-info {
   align-items: stretch;
-  border: 1px solid;
+  border: 1px solid #007cba;
   border-radius: 4px;
   box-sizing: border-box;
   color: #2f2f2f;
@@ -155,10 +154,9 @@
   margin: 16px 0;
   padding: 16px!important;
   background-color: #f4f8ff;
-  border-color: #007cba;
 }
 
-.woocommerce .woocommerce-notices-wrapper .woocommerce-info::before {
+.woocommerce .woocommerce-info::before {
   color: #007cba;
   position: relative;
   top: auto;
