@@ -127,7 +127,7 @@ window.addEventListener('load',function(){
 });
 
 //update price when qtd change
-document.querySelector(".qty").addEventListener("change", calculoPrecoQtd);
+/*document.querySelector(".qty").addEventListener("change", calculoPrecoQtd);
 
 function calculoPrecoQtd() {
     var qtd = parseInt(document.querySelector('.qty').value, 10);
@@ -144,7 +144,7 @@ function calculoPrecoQtd() {
 });
 
     document.querySelector('.productPrice .woocommerce-Price-amount bdi').innerText = valorFinal;
-}
+}*/
 
 //faq
 function faq() {
