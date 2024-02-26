@@ -129,7 +129,7 @@
 			<h3><?php the_field('titulo_timeN') ?></h3>
 			<h4><?php the_field('titulo_2_timeN') ?></h4>
 			<p><?php the_field('chamada_timeN') ?></p>
-			<a href="<?php the_field('link_timeN') ?>">Nossas vagas <span class="arrow">→</span></a>
+			<a target="_blank" href="<?php the_field('link_timeN') ?>">Nossas vagas <span class="arrow">→</span></a>
 		</div>
 	</section>
 
