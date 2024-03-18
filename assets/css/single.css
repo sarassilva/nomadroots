@@ -982,3 +982,6 @@
     line-height: normal;
 }
 
+.woocommerce ul.products li.product .onsale {
+  display: none !important;
+}
